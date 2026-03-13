@@ -5,9 +5,41 @@ export const metadata = {
   description: 'In-person fibreglass pool assessment from an independent specialist. Available in South East Queensland. Request-based service.',
 }
 
+function OnSiteSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "On-Site Pool Assessment",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Fibreglass Pool Check",
+      "url": "https://fibreglasspoolcheck.com.au"
+    },
+    "description": "Comprehensive in-person inspection of a fibreglass pool by an independent specialist. Includes physical surface assessment, equipment observation, detailed findings discussion, and written report.",
+    "serviceType": "On-Site Fibreglass Pool Inspection",
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": -27.4698,
+        "longitude": 153.0251
+      },
+      "geoRadius": "150000",
+      "description": "South East Queensland"
+    }
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function OnSiteAssessment() {
   return (
     <>
+      <OnSiteSchema />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -27,7 +59,7 @@ export default function OnSiteAssessment() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">About the on-site assessment</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm">
                 <p>
-                  Our on-site assessment is a comprehensive in-person inspection of a fibreglass pool by our specialist. Unlike a photo-based report, the on-site assessment allows for physical examination — assessing surface texture by touch, testing fittings, and observing the pool from multiple angles including water level assessment.
+                  Our on-site assessment is a comprehensive in-person inspection of a fibreglass pool by our specialist. Unlike a photo-based report, the on-site assessment allows for physical examination â assessing surface texture by touch, testing fittings, and observing the pool from multiple angles including water level assessment.
                 </p>
                 <p>
                   This service is available in South East Queensland only and operates on a request basis. Availability depends on location and scheduling, and cannot be guaranteed.
@@ -75,7 +107,7 @@ export default function OnSiteAssessment() {
                   href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
                   className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors"
                 >
-                  Order a Pool Check Report — $149
+                  Order a Pool Check Report â $149
                 </Link>
               </div>
 
