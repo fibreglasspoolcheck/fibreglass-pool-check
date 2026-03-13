@@ -1,6 +1,17 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '../../../lib/supabase'
 
+// Increase body size limit for file uploads (default is ~1MB)
+export const config = {
+  api: {
+    bodyParser: false,
+  },
+}
+
+// Next.js App Router: increase max request body size
+export const maxDuration = 30 // seconds
+export const dynamic = 'force-dynamic'
+
 export async function POST(request) {
   try {
     const formData = await request.formData()
