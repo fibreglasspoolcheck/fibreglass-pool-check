@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Fibreglass Pool Buyer Checklist | What to Look For',
-  description: 'Our expert buyer checklist tells you exactly what to look for when inspecting a fibreglass pool yourself. Instant download. $29 AUD.',
+  description: 'This expert buyer checklist tells you exactly what to look for when inspecting a fibreglass pool yourself. Instant download. $29 AUD.',
 }
 
 function BuyerChecklistSchema() {
@@ -41,9 +41,10 @@ export default function BuyerChecklist() {
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">For buyers</div>
             <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Buyer Checklist</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Inspecting a property with a fibreglass pool? Know exactly what to look for. Our expert checklist walks you through everything a specialist would check — in plain language.
+              Inspecting a property with a fibreglass pool? Know exactly what to look for. This expert checklist walks you through everything a specialist would check — in plain language.
             </p>
             <div className="text-3xl font-bold mb-6">$29 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
+            <p className="text-slate-400 text-xs mb-4 italic">Instant download. If it doesn't meet your expectations, get in touch and I'll make it right.</p>
             <Link
               href="https://app.fibreglasspoolcheck.com.au/BuyerChecklist"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
