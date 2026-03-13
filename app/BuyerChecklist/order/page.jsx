@@ -1,10 +1,18 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
 export default function BuyerChecklistOrder() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><p className="text-slate-400">Loading...</p></div>}>
+      <BuyerChecklistOrderInner />
+    </Suspense>
+  )
+}
+
+function BuyerChecklistOrderInner() {
   const searchParams = useSearchParams()
   const isSuccess = searchParams.get('checkout') === 'success'
   const orderId = searchParams.get('orderId')

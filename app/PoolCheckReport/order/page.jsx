@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 
@@ -10,6 +10,14 @@ const MAX_PHOTOS = 10
 const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
 
 export default function PoolCheckReportOrder() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><p className="text-slate-400">Loading...</p></div>}>
+      <PoolCheckReportOrderInner />
+    </Suspense>
+  )
+}
+
+function PoolCheckReportOrderInner() {
   const searchParams = useSearchParams()
   const isSuccess = searchParams.get('checkout') === 'success'
   const orderId = searchParams.get('orderId')
