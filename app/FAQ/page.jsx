@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Frequently Asked Questions',
   description: 'Frequently asked questions about our fibreglass pool check reports, quote reviews, and buyer checklists.',
   alternates: {
-    canonical: '/faq',
+    canonical: '/FAQ',
   },
 }
 
@@ -19,11 +19,11 @@ const faqs = [
   },
   {
     q: 'How long does it take to get my report?',
-    a: 'Reports are delivered within 2–3 business days from when we receive your photos. If there\'s anything unusual about your situation, we\'ll let you know by email.',
+    a: 'Reports are delivered within 2\u20133 business days from when we receive your photos. If there\'s anything unusual about your situation, we\'ll let you know by email.',
   },
   {
     q: 'Can a photo-based report replace an in-person inspection?',
-    a: 'A photo-based report is different from an on-site inspection and has limitations — particularly around things that can only be assessed by touch or by moving through the water. However, for the vast majority of common fibreglass pool problems, a thorough photo assessment by a specialist is significantly more useful than a non-specialist on-site inspection. If you\'re in South East Queensland and need on-site assessment, see our On-Site Assessment service.',
+    a: 'A photo-based report is different from an on-site inspection and has limitations \u2014 particularly around things that can only be assessed by touch or by moving through the water. However, for the vast majority of common fibreglass pool problems, a thorough photo assessment by a specialist is significantly more useful than a non-specialist on-site inspection. If you\'re in South East Queensland and need on-site assessment, see our On-Site Assessment service.',
   },
   {
     q: 'What do you look for in the photos?',
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'I\'m buying a house with a pool. Do I need this?',
-    a: 'Yes — if the pool matters to you. Standard building inspectors do not have fibreglass pool specialist knowledge. They routinely miss problems that cost buyers tens of thousands of dollars. A $149 report is one of the most cost-effective pieces of due diligence you can do before exchanging contracts.',
+    a: 'Yes \u2014 if the pool matters to you. Standard building inspectors do not have fibreglass pool specialist knowledge. They routinely miss problems that cost buyers tens of thousands of dollars. A $149 report is one of the most cost-effective pieces of due diligence you can do before exchanging contracts.',
   },
   {
     q: 'Can the report be used to negotiate the purchase price?',
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: 'What is a Quote Review?',
-    a: 'A Quote Review is an expert assessment of a repair or resurfacing quote you\'ve already received. We review the scope of work, the methods and materials specified, and the price — and give you a written opinion on whether it\'s reasonable, what questions to ask, and any concerns.',
+    a: 'A Quote Review is an expert assessment of a repair or resurfacing quote you\'ve already received. We review the scope of work, the methods and materials specified, and the price \u2014 and give you a written opinion on whether it\'s reasonable, what questions to ask, and any concerns.',
   },
   {
     q: 'How many quotes can be included in a Quote Review?',
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: 'What is the Buyer Checklist?',
-    a: 'The Buyer Checklist is a document that tells you what to look for when inspecting a fibreglass pool yourself. It\'s ideal for early-stage property hunting — open homes, pre-offer inspections. If you\'re serious about a specific pool, the Pool Check Report provides expert assessment of that pool specifically.',
+    a: 'The Buyer Checklist is a document that tells you what to look for when inspecting a fibreglass pool yourself. It\'s ideal for early-stage property hunting \u2014 open homes, pre-offer inspections. If you\'re serious about a specific pool, the Pool Check Report provides expert assessment of that pool specifically.',
   },
   {
     q: 'What\'s the difference between the Buyer Checklist and the Pool Check Report?',
@@ -79,13 +79,36 @@ const faqs = [
   },
   {
     q: 'What if the pool turns out to be fine?',
-    a: 'That\'s a great result. A clean report means you can proceed with confidence — and that peace of mind has real value. Many buyers find the $149 worthwhile just to remove uncertainty from the decision.',
+    a: 'That\'s a great result. A clean report means you can proceed with confidence \u2014 and that peace of mind has real value. Many buyers find the $149 worthwhile just to remove uncertainty from the decision.',
   },
 ]
+
+function FAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.a,
+      },
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
 
 export default function FAQ() {
   return (
     <>
+      <FAQSchema />
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -111,8 +134,8 @@ export default function FAQ() {
           <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
             <h2 className="font-bold text-slate-900 mb-2">Still have questions?</h2>
             <p className="text-slate-600 text-sm mb-4">We&apos;re happy to help before you order.</p>
-            <Link href="/contact" className="text-sm font-medium text-slate-900 underline hover:text-orange-600 transition-colors">
-              Get in touch →
+            <Link href="/Contact" className="text-sm font-medium text-slate-900 underline hover:text-orange-600 transition-colors">
+              Get in touch &rarr;
             </Link>
           </div>
         </div>
