@@ -81,11 +81,11 @@ export default function Home() {
               Independent — not affiliated with any pool builder
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Know exactly what you're<br/>
-              <span className="text-orange-500">getting into</span> before you buy.
+              Independent fibreglass pool<br/>
+              <span className="text-orange-500">assessments you can trust.</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
-              Independent fibreglass pool assessments from Brady — a specialist with 10+ years experience and 250+ pools assessed. Written reports, quote reviews, and buyer guides delivered fast.
+              I'm Brady — a fibreglass pool specialist with 10+ years hands-on experience and 250+ pools assessed. I provide written reports, quote reviews, and buyer guides so you know exactly what you're getting into before you commit.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
@@ -101,6 +101,23 @@ export default function Home() {
                 Free Red Flags Guide
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Urgency banner for under-contract buyers */}
+      <section className="bg-orange-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-sm font-medium text-center sm:text-left">
+              <strong>Under contract?</strong> Don't wait — reports delivered within 2–3 business days, fast enough to act before your finance clause expires.
+            </p>
+            <Link
+              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              className="bg-white text-orange-700 hover:bg-orange-50 text-sm font-medium px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+            >
+              Order now
+            </Link>
           </div>
         </div>
       </section>
@@ -140,7 +157,7 @@ export default function Home() {
       {/* Services */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">What we offer</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">How I can help</h2>
           <p className="text-slate-600 mb-12 max-w-xl">Three ways to get expert eyes on a fibreglass pool before you commit your money.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -196,7 +213,7 @@ export default function Home() {
               <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-2">Buyers</div>
               <h3 className="text-lg font-semibold text-slate-900 mb-2">Buyer Checklist</h3>
               <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                Doing your own inspection? Our expert checklist tells you exactly what to look for when assessing a fibreglass pool.
+                Doing your own inspection? This expert checklist tells you exactly what to look for when assessing a fibreglass pool.
               </p>
               <div className="text-2xl font-bold text-slate-900 mb-4">$29</div>
               <Link
@@ -218,8 +235,8 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Why independent matters</h2>
               <div className="space-y-4">
                 {[
-                  { title: 'No conflicts of interest', body: 'We don\'t sell pool products, do repairs, or take referral fees. Our assessment is yours alone.' },
-                  { title: 'Specialist knowledge', body: 'Fibreglass pools have failure modes that general building inspectors routinely miss. We know what to look for.' },
+                  { title: 'No conflicts of interest', body: 'I don\'t sell pool products, do repairs, or take referral fees. My assessment is yours alone.' },
+                  { title: 'Specialist knowledge', body: 'Fibreglass pools have failure modes that general building inspectors routinely miss. I know what to look for.' },
                   { title: 'Negotiating power', body: 'A written report gives you documented leverage to renegotiate the price or walk away with confidence.' },
                   { title: 'Fast turnaround', body: 'Reports are delivered within 2–3 business days. No waiting around when you\'re under contract.' },
                 ].map((item) => (
@@ -242,6 +259,9 @@ export default function Home() {
               <p className="text-slate-600 text-sm mb-6">
                 The cost of a Pool Check Report is a fraction of what a surprise repair bill can run — often $5,000–$30,000+.
               </p>
+              <p className="text-slate-500 text-xs mb-6 italic">
+                If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
+              </p>
               <Link
                 href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center transition-colors font-medium"
@@ -260,7 +280,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">10+ years hands-on with fibreglass pools</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Before launching Fibreglass Pool Check, Brady spent over a decade resurfacing and repairing fibreglass pools across Queensland. That hands-on experience is what makes his assessments different.
+              Before launching Fibreglass Pool Check, I spent over a decade resurfacing and repairing fibreglass pools across Queensland. That hands-on experience is what makes my assessments different.
             </p>
           </div>
 
@@ -286,7 +306,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-4 bg-slate-50">
-                <p className="text-slate-600 text-sm">One of 250+ pools Brady has worked on. This kind of hands-on experience means he knows exactly what to look for in an assessment.</p>
+                <p className="text-slate-600 text-sm">One of 250+ pools I've worked on. This kind of hands-on experience means I know exactly what to look for in an assessment.</p>
               </div>
             </div>
 
@@ -298,7 +318,7 @@ export default function Home() {
                 className="w-full h-48 object-cover object-top"
               />
               <div className="p-4 bg-slate-50">
-                <p className="text-slate-600 text-sm">Brady on site. Not a desk-based consultant — a tradesman who has personally resurfaced, repaired and assessed hundreds of fibreglass pools.</p>
+                <p className="text-slate-600 text-sm">That's me on site. Not a desk-based consultant — a tradesman who has personally resurfaced, repaired and assessed hundreds of fibreglass pools.</p>
               </div>
             </div>
           </div>
@@ -337,7 +357,7 @@ export default function Home() {
 
           <div className="text-center mt-8">
             <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
-              See more of Brady's track record →
+              More about my background →
             </Link>
           </div>
         </div>
@@ -352,10 +372,10 @@ export default function Home() {
             <div className="text-xs font-medium text-orange-600 uppercase tracking-wide mb-2">Case study — Mary Valley, QLD</div>
             <h3 className="text-xl font-semibold text-slate-900 mb-3">Pool appeared sound. Wasn’t.</h3>
             <p className="text-slate-600 leading-relaxed mb-6 max-w-2xl">
-              A buyer under contract on a property in the Mary Valley contacted us after their building inspector gave the pool a clean bill of health. Our specialist assessment found significant osmotic blistering and structural concerns that would have cost tens of thousands to repair.
+              A buyer under contract on a property in the Mary Valley contacted me after their building inspector gave the pool a clean bill of health. My assessment found significant osmotic blistering and structural concerns that would have cost tens of thousands to repair.
             </p>
             <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
-              Learn more about our approach →
+              Learn more about my approach →
             </Link>
           </div>
         </div>
@@ -365,8 +385,11 @@ export default function Home() {
       <section className="bg-slate-900 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Don’t guess. Get a report.</h2>
-          <p className="text-slate-300 mb-8 max-w-xl mx-auto">
+          <p className="text-slate-300 mb-4 max-w-xl mx-auto">
             An independent assessment before you buy — or before you pay for repairs — is the smartest $149 you'll spend.
+          </p>
+          <p className="text-slate-400 text-sm mb-8 max-w-lg mx-auto italic">
+            If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
