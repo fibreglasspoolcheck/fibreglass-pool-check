@@ -2,95 +2,101 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'About Fibreglass Pool Check | Independent Fibreglass Pool Specialist',
-  description: 'Meet Brady — a fibreglass pool specialist with 10+ years experience and 250+ pools assessed. Learn why independent pool checks matter before you buy.',
+  description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
 }
 
 export default function About() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-slate-900 text-white py-16 lg:py-24">
+      <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <p className="text-orange-400 text-sm font-medium mb-4 uppercase tracking-wide">About</p>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Independent pool advice you can actually trust
-            </h1>
+          <div className="max-w-2xl">
+            <h1 className="text-4xl font-bold mb-4">About Fibreglass Pool Check</h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              No builder affiliations. No commissions. Just straight answers from someone who's seen inside 250+ fibreglass pools.
+              Independent assessment from a specialist who has spent over a decade working with fibreglass pools — not selling them.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Founder section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="aspect-[4/5] bg-slate-100 rounded-2xl overflow-hidden">
+              <div className="w-24 h-24 bg-slate-200 rounded-full mb-6 overflow-hidden">
                 <img
-                  src="https://cdn.base44.com/media/0f905ecb1_BradyFounderPhoto.png"
-                  alt="Brady — Fibreglass Pool Specialist"
+                  src="https://media.base44.com/0f905ecb1_BradyFounderPhoto.png"
+                  alt="Brady — fibreglass pool specialist"
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Hi, I'm Brady</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Brady</h2>
+              <div className="text-orange-600 text-sm font-medium mb-4">Fibreglass Pool Specialist</div>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  I've spent over a decade working hands-on with fibreglass pools — assessing, inspecting, and advising buyers and owners across Australia.
+                  Fibreglass Pool Check exists because buyers keep getting burned. Standard building inspectors routinely miss the specific failure modes that fibreglass pools are prone to — and the repair bills that follow can run into tens of thousands of dollars.
                 </p>
                 <p>
-                  After seeing the same problems show up again and again — buyers blindsided by defects, homeowners paying for unnecessary repairs, people accepting builder quotes without knowing if the price or scope was fair — I started Fibreglass Pool Check.
+                  With over 10 years working hands-on with fibreglass pools and 250+ assessments completed, I provide the independent expertise that buyers, owners and sellers need to make informed decisions.
                 </p>
                 <p>
-                  The idea is simple: give everyday people access to the same knowledge that industry insiders have, without the conflict of interest that comes when you ask a builder or repairer for advice.
-                </p>
-                <p>
-                  Every report I write is based on what I'd tell a friend. Nothing hidden, no upselling, no referrals to anyone.
+                  I have no affiliation with pool builders, contractors or suppliers. My assessment is yours alone.
                 </p>
               </div>
-              <div className="mt-8 grid grid-cols-2 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-slate-900">10+</div>
-                  <div className="text-slate-500 text-sm mt-1">Years of experience</div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-4">By the numbers</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { stat: '250+', label: 'Pools assessed' },
+                    { stat: '10+', label: 'Years experience' },
+                    { stat: 'AUS-wide', label: 'Digital reports' },
+                    { stat: '100%', label: 'Independent' },
+                  ].map((item) => (
+                    <div key={item.label} className="text-center py-4 border border-slate-200 rounded-lg bg-white">
+                      <div className="text-2xl font-bold text-slate-900">{item.stat}</div>
+                      <div className="text-xs text-slate-500 mt-1">{item.label}</div>
+                    </div>
+                  ))}
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-slate-900">250+</div>
-                  <div className="text-slate-500 text-sm mt-1">Pools assessed</div>
-                </div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">Case study: Mary Valley, QLD</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-3">
+                  A buyer under contract contacted us after a standard building inspection gave their pool a clean pass. Our specialist assessment identified significant osmotic blistering and early signs of delamination — repairs that would have cost tens of thousands of dollars.
+                </p>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Armed with the written report, the buyer renegotiated the purchase price and proceeded with the purchase on much better terms.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Why independent */}
-      <section className="py-16 bg-slate-50">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">Why independence matters</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-8">How we work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: 'No builder ties',
-                body: 'I'm not affiliated with any pool builder, repairer, or resurfacer. My advice isn't shaped by referral fees or ongoing business relationships.'
+                title: 'Completely independent',
+                body: 'No affiliation with any pool builder, contractor, or supplier. We have no financial interest in what you decide to do with your pool.'
               },
               {
-                title: 'No upselling',
-                body: 'I don't sell products or services beyond the assessment itself. There's no incentive to find problems that aren't there — or to miss ones that are.'
+                title: 'Specialist knowledge only',
+                body: 'We assess fibreglass pools only. This focus means our knowledge is deeper and more current than any generalist inspector.'
               },
               {
-                title: 'Straight talk',
-                body: 'My reports say what they mean. If a pool is fine, I'll tell you. If it has serious issues, I'll tell you that too — in plain language you can act on.'
-              }
+                title: 'Plain language',
+                body: 'Our reports are written to be understood by people who are not pool experts. No jargon — just clear findings and actionable guidance.'
+              },
             ].map((item) => (
-              <div key={item.title} className="bg-white rounded-xl p-6 border border-slate-200">
-                <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <div className="w-4 h-4 bg-orange-600 rounded-full"></div>
-                </div>
-                <h3 className="font-bold text-slate-900 mb-3">{item.title}</h3>
+              <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">
+                <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
@@ -98,58 +104,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* Case study teaser */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-slate-900 rounded-2xl p-8 lg:p-12 text-white">
-            <div className="max-w-2xl">
-              <p className="text-orange-400 text-sm font-medium mb-4 uppercase tracking-wide">Real example</p>
-              <h2 className="text-3xl font-bold mb-4">The Mary Valley pool — what a real assessment looks like</h2>
-              <p className="text-slate-300 leading-relaxed mb-6">
-                A buyer in rural Queensland found what looked like a great pool deal. Before signing, they got a Pool Check Report. What we found changed their negotiation entirely — and saved them from a costly surprise.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="rounded-lg overflow-hidden">
-                  <img
-                    src="https://ufrszbkjtoapxdmvpjug.supabase.co/storage/v1/object/public/app-assets/7d4f0f526_mary-valley-before.jpg"
-                    alt="Pool before assessment"
-                    className="w-full h-32 object-cover"
-                  />
-                  <p className="text-slate-400 text-xs mt-2">Before</p>
-                </div>
-                <div className="rounded-lg overflow-hidden">
-                  <img
-                    src="https://ufrszbkjtoapxdmvpjug.supabase.co/storage/v1/object/public/app-assets/2a595edd5_mary-valley-after.jpg"
-                    alt="Pool after assessment"
-                    className="w-full h-32 object-cover"
-                  />
-                  <p className="text-slate-400 text-xs mt-2">After</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Ready to get an independent view?</h2>
-          <p className="text-slate-600 mb-8 max-w-xl mx-auto">
-            Choose the service that fits your situation — or grab the free Red Flags Guide to start learning what to look for yourself.
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Ready to get started?</h2>
+          <p className="text-slate-600 mb-8 max-w-md mx-auto text-sm">
+            Order a report, review your quote, or grab the free Red Flags Guide.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
               className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Get a Pool Check Report — $149
+              Order a Pool Check Report
             </Link>
             <Link
-              href="/RedFlagsGuide"
+              href="/Contact"
               className="border border-slate-300 hover:border-slate-400 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Free Red Flags Guide
+              Get in touch
             </Link>
           </div>
         </div>
