@@ -50,9 +50,9 @@ export default function About() {
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">About Fibreglass Pool Check</h1>
+            <h1 className="text-4xl font-bold mb-4">10+ years hands-on with fibreglass pools</h1>
             <p className="text-slate-300 text-lg leading-relaxed">
-              Independent assessment from a specialist who has spent over a decade working with fibreglass pools — not selling them.
+              I've spent over a decade resurfacing, repairing, and assessing fibreglass pools across Queensland. Now I use that experience to give buyers, owners, and sellers the independent expertise they need before making expensive decisions.
             </p>
           </div>
         </div>
@@ -76,13 +76,13 @@ export default function About() {
               <div className="text-orange-600 text-sm font-medium mb-4">Fibreglass Pool Specialist</div>
               <div className="space-y-4 text-slate-600 leading-relaxed">
                 <p>
-                  Fibreglass Pool Check exists because buyers keep getting burned. Standard building inspectors routinely miss the specific failure modes that fibreglass pools are prone to — and the repair bills that follow can run into tens of thousands of dollars.
+                  I started Fibreglass Pool Check because I kept seeing the same thing: buyers getting burned by pool problems that could have been spotted by someone who knows what to look for. Building inspectors check the house — not the pool. And the repair bills that follow can run into tens of thousands of dollars.
                 </p>
                 <p>
-                  With over 10 years working hands-on with fibreglass pools and 250+ assessments completed, I provide the independent expertise that buyers, owners and sellers need to make informed decisions.
+                  Before launching this service, I spent over a decade on tools — resurfacing, repairing, and renovating fibreglass pools. I've seen every failure mode from the inside: osmotic blistering, delamination, gelcoat breakdown, structural flexing, fitting failures. That hands-on experience is what makes my assessments different from a desktop review.
                 </p>
                 <p>
-                  I have no affiliation with pool builders, contractors or suppliers. My assessment is yours alone.
+                  With 250+ pools assessed, I know what problems look like at every stage — from early warning signs through to major structural issues. I have no affiliation with any pool builder, contractor, or supplier. My assessment is yours alone.
                 </p>
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function About() {
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-3">Case study: Mary Valley, QLD</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-3">
-                  A buyer under contract contacted us after a standard building inspection gave their pool a clean pass. Our specialist assessment identified significant osmotic blistering and early signs of delamination — repairs that would have cost tens of thousands of dollars.
+                  A buyer under contract contacted me after a standard building inspection gave their pool a clean pass. My assessment identified significant osmotic blistering and early signs of delamination — repairs that would have cost tens of thousands of dollars.
                 </p>
                 <p className="text-slate-600 text-sm leading-relaxed">
                   Armed with the written report, the buyer renegotiated the purchase price and proceeded with the purchase on much better terms.
@@ -124,7 +124,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-3">Hands-on track record</h2>
           <p className="text-slate-600 mb-8 max-w-2xl">
-            Before launching Fibreglass Pool Check, Brady spent over a decade resurfacing and repairing fibreglass pools across Queensland. Here's what his clients had to say about his work.
+            Before launching Fibreglass Pool Check, I spent over a decade resurfacing and repairing fibreglass pools across Queensland. Here's what my clients had to say.
           </p>
 
           {/* Before/after gallery */}
@@ -226,20 +226,20 @@ export default function About() {
 
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">How we work</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-8">How I work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 title: 'Completely independent',
-                body: 'No affiliation with any pool builder, contractor, or supplier. We have no financial interest in what you decide to do with your pool.'
+                body: 'No affiliation with any pool builder, contractor, or supplier. I have no financial interest in what you decide to do with your pool.'
               },
               {
-                title: 'Specialist knowledge only',
-                body: 'We assess fibreglass pools only. This focus means our knowledge is deeper and more current than any generalist inspector.'
+                title: 'Fibreglass specialist only',
+                body: 'I assess fibreglass pools only. This focus means my knowledge is deeper and more current than any generalist inspector.'
               },
               {
                 title: 'Plain language',
-                body: 'Our reports are written to be understood by people who are not pool experts. No jargon — just clear findings and actionable guidance.'
+                body: 'My reports are written to be understood by people who are not pool experts. No jargon — just clear findings and actionable guidance.'
               },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">

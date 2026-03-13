@@ -35,6 +35,9 @@ export default function Nav() {
             <Link href="/BuyerChecklist" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               Buyer Checklist
             </Link>
+            <Link href="/blog" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+              Articles
+            </Link>
             <Link href="/FAQ" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               FAQ
             </Link>
@@ -81,6 +84,9 @@ export default function Nav() {
             </Link>
             <Link href="/BuyerChecklist" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               Buyer Checklist
+            </Link>
+            <Link href="/blog" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+              Articles
             </Link>
             <Link href="/FAQ" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               FAQ

@@ -74,5 +74,23 @@ export default function sitemap() {
             changeFrequency: 'yearly',
             priority: 0.5,
     },
+    {
+            url: `${baseUrl}/blog`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.7,
+    },
+    {
+            url: `${baseUrl}/blog/buying-house-with-fibreglass-pool`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-osmotic-blistering`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
       ]
 }

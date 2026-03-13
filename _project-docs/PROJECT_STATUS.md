@@ -133,14 +133,14 @@ These are confirmed problems that need fixing, in priority order:
 ### 🟡 Medium Priority — Content & SEO Growth
 | # | Issue | Impact | Status |
 |---|---|---|---|
-| 15 | No blog / educational content | Invisible to early-stage buyers | Still open |
+| 15 | No blog / educational content | Invisible to early-stage buyers | ✅ Blog launched with 2 articles, sitemap updated, nav link added |
 | 16 | No state-specific landing pages | Missing geo-targeted search traffic | Still open |
 | 17 | Product pages lead with features not benefits | Lower conversion on product pages | ✅ Rewrote hero copy on all 3 product pages to lead with benefits |
-| 18 | About page undersells Brady | Missed trust opportunity | Still open |
+| 18 | About page undersells Brady | Missed trust opportunity | ✅ Rewritten to lead with hands-on expertise, stronger bio copy |
 | 19 | No ABN visible on site | Australian trust signal missing | ✅ Added to Organization schema |
 | 20 | No Google Business Profile | No review platform, no map presence | Still open |
 | 21 | No Facebook Pixel / retargeting | No remarketing capability | Still open |
-| 22 | Voice inconsistency — "we" vs "I" across pages | Minor brand trust issue | Still open |
+| 22 | Voice inconsistency — "we" vs "I" across pages | Minor brand trust issue | ✅ Fixed — About page "we" → "I" throughout |
 
 ### 🔵 New Issues Found (March 2026 Audit)
 | # | Issue | Impact | Status |
@@ -186,11 +186,11 @@ Work through these steps in order. Do not skip ahead. Mark each ✅ when confirm
 
 ### PHASE C — SEO Content (Start after Phase A complete)
 
-- [ ] **C1** — Write and publish 5 core blog articles (briefs below)
+- [x] **C1** — Blog launched with 2 articles ✅ (buying house with pool, osmotic blistering). 3 more briefs pending.
 - [ ] **C2** — Create state-specific landing pages (NSW, VIC, QLD, SA, WA, TAS)
 - [x] **C3** — Optimised H1 and H2s across homepage + product pages for keyword targets ✅
 - [x] **C4** — Rewrote product page heroes: benefits-first, keyword-rich ✅
-- [ ] **C5** — Rewrite About page to lead with Brady's expertise, not disclaimers
+- [x] **C5** — Rewrote About page: leads with expertise, stronger bio, "we" → "I" voice fix ✅
 
 ### PHASE D — Base44 Removal ✅ COMPLETE
 
