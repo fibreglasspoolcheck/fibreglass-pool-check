@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
   alternates: {
     canonical: '/About',
-  },h
+  },
 }
 
 function AboutSchema() {
