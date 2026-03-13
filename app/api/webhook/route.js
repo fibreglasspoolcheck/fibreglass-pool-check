@@ -71,7 +71,7 @@ export async function POST(request) {
     try {
       if (productType === 'buyer_checklist') {
         // Auto-deliver checklist + mark delivered
-        await sendBuyerChecklistDelivery(order.full_name, order.email)
+        await sendBuyerChecklistDelivery(order.full_name, order.email, orderId)
         await supabase
           .from('checklist_orders')
           .update({ delivery_status: 'delivered', delivered_at: new Date().toISOString() })

@@ -12,17 +12,21 @@ export async function POST(request) {
 
     // Save lead to Supabase
     const supabase = createServerClient()
-    const { error: dbError } = await supabase
+    const { data: lead, error: dbError } = await supabase
       .from('red_flags_leads')
       .insert({ first_name: firstName, email })
+      .select('id')
+      .single()
 
     if (dbError) {
       console.error('Failed to save lead:', dbError)
       // Continue anyway — sending the guide is more important than saving the lead
     }
 
+    const leadId = lead?.id || 'fallback-token'
+
     // Send guide via Brevo
-    await sendRedFlagsGuide(firstName, email)
+    await sendRedFlagsGuide(firstName, email, leadId)
 
     // Update lead status
     if (!dbError) {
