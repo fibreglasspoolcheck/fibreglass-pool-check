@@ -49,7 +49,7 @@ export default function PoolCheckReport() {
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Most popular service</div>
             <h1 className="text-4xl font-bold mb-4">Pool Check Report</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              A comprehensive written assessment of a fibreglass pool's condition â based on photos you submit. Ideal for pre-purchase buyers, property sellers, and owners concerned about damage.
+              A comprehensive written assessment of a fibreglass pool's condition — based on photos you submit. Ideal for pre-purchase buyers, property sellers, and owners concerned about damage.
             </p>
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <Link
@@ -77,7 +77,7 @@ export default function PoolCheckReport() {
                   'Identified red flags and risk items',
                   'Actionable recommendations',
                   'Estimated urgency and priority of any repairs',
-                  'Plain-English summary â no jargon',
+                  'Plain-English summary — no jargon',
                 ].map((item) => (
                   <div key={item} className="flex gap-3">
                     <div className="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -121,9 +121,9 @@ export default function PoolCheckReport() {
           <h2 className="text-2xl font-bold text-slate-900 mb-8">Who orders this report</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: 'ð ', title: 'Pre-purchase buyers', body: 'About to exchange contracts on a property with a fibreglass pool? This report is critical due diligence.' },
-              { icon: 'ð', title: 'Pool owners', body: 'Noticing unusual marks, blistering, or discolouration? Find out if it\'s cosmetic or structural before spending on repairs.' },
-              { icon: 'ð°', title: 'Sellers', body: 'Know your pool\'s condition before listing so there are no surprises when buyers do their own due diligence.' },
+              { icon: '🏠', title: 'Pre-purchase buyers', body: 'About to exchange contracts on a property with a fibreglass pool? This report is critical due diligence.' },
+              { icon: '🏊', title: 'Pool owners', body: 'Noticing unusual marks, blistering, or discolouration? Find out if it\'s cosmetic or structural before spending on repairs.' },
+              { icon: '💰', title: 'Sellers', body: 'Know your pool\'s condition before listing so there are no surprises when buyers do their own due diligence.' },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">
                 <div className="text-2xl mb-3">{item.icon}</div>
@@ -147,7 +147,7 @@ export default function PoolCheckReport() {
               href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Order Report â $149
+              Order Report → $149
             </Link>
             <p className="text-xs text-slate-500 mt-4">
               Questions first? <Link href="/FAQ" className="underline hover:text-slate-300">Read the FAQ</Link> or <Link href="/Contact" className="underline hover:text-slate-300">get in touch</Link>.
