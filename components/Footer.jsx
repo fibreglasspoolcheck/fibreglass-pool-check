@@ -63,6 +63,9 @@ export default function Footer() {
           <p className="text-xs text-slate-500">
             Independent assessments. Not affiliated with any pool builder or contractor.
           </p>
+          <p className="text-xs text-slate-500">
+            ABN: 26 533 957 536
+          </p>
         </div>
       </div>
     </footer>
