@@ -1,14 +1,19 @@
 import ContactForm from '../../components/ContactForm'
 import Link from 'next/link'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Contact | Fibreglass Pool Check',
-  description: "Get in touch with Fibreglass Pool Check. We're happy to answer questions before you order.",
+  title: 'Contact Fibreglass Pool Check | Get in Touch',
+  description: 'Have questions about fibreglass pool inspections or quote reviews? Get in touch — I typically respond within a few hours.',
 }
 
 export default function Contact() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Contact', url: '/Contact' }
+      ]} />
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">

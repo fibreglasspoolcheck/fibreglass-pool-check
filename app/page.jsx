@@ -289,17 +289,21 @@ export default function Home() {
             <div className="rounded-xl overflow-hidden border border-slate-200">
               <div className="grid grid-cols-2">
                 <div className="relative">
-                  <img
+                  <Image
                     src="/images/hooper-before.jpg"
                     alt="Fibreglass pool before renovation — flaking, discoloured surface"
+                    width={600}
+                    height={400}
                     className="w-full h-48 object-cover"
                   />
                   <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-xs px-2 py-1 rounded">Before</span>
                 </div>
                 <div className="relative">
-                  <img
+                  <Image
                     src="/images/hooper-after.jpg"
                     alt="Same fibreglass pool after professional renovation — smooth, even finish"
+                    width={600}
+                    height={400}
                     className="w-full h-48 object-cover"
                   />
                   <span className="absolute bottom-2 left-2 bg-orange-600/90 text-white text-xs px-2 py-1 rounded">After</span>
@@ -312,9 +316,12 @@ export default function Home() {
 
             {/* Brady on-site */}
             <div className="rounded-xl overflow-hidden border border-slate-200">
-              <img
+              <Image
                 src="/images/Photo of Brady.jpg"
                 alt="Brady Smith — fibreglass pool specialist on site"
+                width={600}
+                height={450}
+                priority
                 className="w-full h-48 object-cover object-top"
               />
               <div className="p-4 bg-slate-50">

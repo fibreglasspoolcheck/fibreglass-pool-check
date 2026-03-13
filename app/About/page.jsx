@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import Image from 'next/image'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'About Fibreglass Pool Check | Independent Fibreglass Pool Specialist',
@@ -41,6 +43,10 @@ export default function About() {
   return (
     <>
       <AboutSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'About', url: '/About' }
+      ]} />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -57,9 +63,12 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <div className="w-24 h-24 bg-slate-200 rounded-full mb-6 overflow-hidden">
-                <img
+                <Image
                   src="/images/Photo of Brady.jpg"
                   alt="Brady Smith — fibreglass pool specialist"
+                  width={100}
+                  height={100}
+                  priority
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -123,11 +132,11 @@ export default function About() {
             <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
               <div className="grid grid-cols-2">
                 <div className="relative">
-                  <img src="/images/hooper-before.jpg" alt="Pool before renovation — Hooper project" className="w-full h-32 object-cover" />
+                  <Image src="/images/hooper-before.jpg" alt="Pool before renovation — Hooper project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
-                  <img src="/images/hooper-after.jpg" alt="Pool after renovation — Hooper project" className="w-full h-32 object-cover" />
+                  <Image src="/images/hooper-after.jpg" alt="Pool after renovation — Hooper project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>
@@ -139,11 +148,11 @@ export default function About() {
             <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
               <div className="grid grid-cols-2">
                 <div className="relative">
-                  <img src="/images/walsh-before.jpg" alt="Pool before renovation — Walsh project" className="w-full h-32 object-cover" />
+                  <Image src="/images/walsh-before.jpg" alt="Pool before renovation — Walsh project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
-                  <img src="/images/walsh-after.jpg" alt="Pool after renovation — Walsh project" className="w-full h-32 object-cover" />
+                  <Image src="/images/walsh-after.jpg" alt="Pool after renovation — Walsh project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>
@@ -155,11 +164,11 @@ export default function About() {
             <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
               <div className="grid grid-cols-2">
                 <div className="relative">
-                  <img src="/images/fowler-before.jpg" alt="Pool before renovation — Fowler project" className="w-full h-32 object-cover" />
+                  <Image src="/images/fowler-before.jpg" alt="Pool before renovation — Fowler project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
-                  <img src="/images/fowler-after.jpg" alt="Pool after renovation — Fowler project" className="w-full h-32 object-cover" />
+                  <Image src="/images/fowler-after.jpg" alt="Pool after renovation — Fowler project" width={300} height={260} className="w-full h-32 object-cover" />
                   <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>

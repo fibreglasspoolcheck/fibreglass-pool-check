@@ -52,6 +52,37 @@ export default function RootLayout({ children }) {
             gtag('config', 'AW-18010642704');
           `}
         </Script>
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": ["Organization", "LocalBusiness"],
+              "name": "Fibreglass Pool Check",
+              "url": "https://fibreglasspoolcheck.com.au",
+              "description": "Independent fibreglass pool inspection reports, quote reviews and buyer guidance from an independent specialist with 10+ years experience.",
+              "founder": {
+                "@type": "Person",
+                "name": "Brady Smith",
+                "jobTitle": "Fibreglass Pool Specialist"
+              },
+              "areaServed": {
+                "@type": "Country",
+                "name": "Australia"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "Customer Service",
+                "email": "help@fibreglasspoolcheck.com.au"
+              },
+              "identifier": {
+                "@type": "Text",
+                "value": "ABN 26 533 957 536"
+              }
+            })
+          }}
+        />
       </head>
       <body className="flex flex-col min-h-screen">
         <Nav />

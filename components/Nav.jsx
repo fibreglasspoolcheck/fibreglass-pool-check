@@ -29,6 +29,12 @@ export default function Nav() {
             <Link href="/PoolCheckReport" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               Get a Report
             </Link>
+            <Link href="/QuoteReview" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+              Quote Review
+            </Link>
+            <Link href="/BuyerChecklist" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+              Buyer Checklist
+            </Link>
             <Link href="/FAQ" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               FAQ
             </Link>

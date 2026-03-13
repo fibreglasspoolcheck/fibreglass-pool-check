@@ -1,4 +1,5 @@
 import RedFlagsForm from '../../components/RedFlagsForm'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Free Fibreglass Pool Red Flags Guide',
@@ -8,6 +9,11 @@ export const metadata = {
 export default function RedFlagsGuide() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Resources', url: '/' },
+        { name: 'Red Flags Guide', url: '/RedFlagsGuide' }
+      ]} />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -36,6 +42,9 @@ export default function RedFlagsGuide() {
                   'What staining patterns actually mean',
                   'The questions you should always ask before buying',
                   'When to walk away and when to negotiate hard',
+                  'How to check if the pool has been repaired or patched before',
+                  'Water line and tile condition clues that indicate neglect',
+                  'The warranty and documentation red flags to watch for',
                 ].map((item) => (
                   <div key={item} className="flex gap-3">
                     <div className="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

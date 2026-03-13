@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Fibreglass Pool Buyer Checklist | What to Look For',
@@ -35,6 +36,11 @@ export default function BuyerChecklist() {
   return (
     <>
       <BuyerChecklistSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Reports & Services', url: '/' },
+        { name: 'Buyer Checklist', url: '/BuyerChecklist' }
+      ]} />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -103,6 +109,23 @@ export default function BuyerChecklist() {
                 Order a Report — $149
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-link to Quote Review */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-xl p-6 text-center">
+            <p className="text-slate-700 text-sm mb-3">
+              Already have a repair quote? Get an expert second opinion for $79 →
+            </p>
+            <Link
+              href="/QuoteReview"
+              className="inline-block text-orange-600 hover:text-orange-700 font-medium text-sm underline"
+            >
+              Get a Quote Review
+            </Link>
           </div>
         </div>
       </section>

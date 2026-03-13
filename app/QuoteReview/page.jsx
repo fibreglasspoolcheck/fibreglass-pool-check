@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Fibreglass Pool Repair & Resurfacing Quote Review',
@@ -41,6 +42,11 @@ export default function QuoteReview() {
   return (
     <>
       <QuoteReviewSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Reports & Services', url: '/' },
+        { name: 'Quote Review', url: '/QuoteReview' }
+      ]} />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -109,6 +115,23 @@ export default function QuoteReview() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cross-link to Pool Check Report */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto bg-slate-50 border border-slate-200 rounded-xl p-6 text-center">
+            <p className="text-slate-700 text-sm mb-3">
+              Need a full condition assessment? Get a Pool Check Report for $149 →
+            </p>
+            <Link
+              href="/PoolCheckReport"
+              className="inline-block text-orange-600 hover:text-orange-700 font-medium text-sm underline"
+            >
+              Get a Pool Check Report
+            </Link>
           </div>
         </div>
       </section>
