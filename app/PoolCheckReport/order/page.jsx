@@ -121,27 +121,55 @@ function PoolCheckReportOrderInner() {
     setPhotos(prev => prev.filter((_, i) => i !== index))
   }
 
+  async function uploadFilesDirectly(files, fieldName) {
+    const urlRes = await fetch('/api/upload-url', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: currentOrderId,
+        productType: 'pool_check_report',
+        fieldName,
+        files: files.map(f => ({ name: f.name })),
+      }),
+    })
+    if (!urlRes.ok) throw new Error(`Failed to get upload URLs for ${fieldName}`)
+    const { signedUrls } = await urlRes.json()
+
+    const uploadedPaths = []
+    for (let i = 0; i < signedUrls.length; i++) {
+      const { signedUrl, path } = signedUrls[i]
+      const file = files[i]
+      const uploadRes = await fetch(signedUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': file.type },
+        body: file,
+      })
+      if (!uploadRes.ok) { console.error(`Failed to upload ${file.name}`); continue }
+      uploadedPaths.push(path)
+    }
+    if (uploadedPaths.length === 0) throw new Error(`All ${fieldName} uploads failed`)
+
+    const confirmRes = await fetch('/api/confirm-upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: currentOrderId,
+        productType: 'pool_check_report',
+        fieldName,
+        paths: uploadedPaths,
+      }),
+    })
+    if (!confirmRes.ok) throw new Error(`Failed to confirm ${fieldName} upload`)
+  }
+
   async function handleUploadAndCheckout() {
     setLoading(true)
     setError('')
 
     try {
-      // Upload photos if any
+      // Upload photos directly to Supabase Storage
       if (photos.length > 0) {
-        const formData = new FormData()
-        formData.append('orderId', currentOrderId)
-        formData.append('productType', 'pool_check_report')
-        formData.append('fieldName', 'photos')
-        photos.forEach(f => formData.append('files', f))
-
-        const uploadRes = await fetch('/api/upload', {
-          method: 'POST',
-          body: formData,
-        })
-
-        if (!uploadRes.ok) {
-          throw new Error('Photo upload failed')
-        }
+        await uploadFilesDirectly(photos, 'photos')
       }
 
       // Redirect to Stripe Checkout
