@@ -14,6 +14,18 @@ export const metadata = {
     siteName: 'Fibreglass Pool Check',
     locale: 'en_AU',
     type: 'website',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Fibreglass Pool Check — Independent fibreglass pool assessments',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/images/og-image.jpg'],
   },
   robots: {
     index: true,
