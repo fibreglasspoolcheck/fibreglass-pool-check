@@ -10,6 +10,18 @@ export const metadata = {
     template: '%s | Fibreglass Pool Check',
   },
   description: 'Expert fibreglass pool inspection reports, quote reviews and buyer guidance from an independent specialist with 10+ years experience.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    siteName: 'Fibreglass Pool Check',
+    locale: 'en_AU',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children }) {
