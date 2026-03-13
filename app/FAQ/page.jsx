@@ -1,8 +1,11 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'FAQ | Fibreglass Pool Check',
+  title: 'Frequently Asked Questions',
   description: 'Frequently asked questions about our fibreglass pool check reports, quote reviews, and buyer checklists.',
+  alternates: {
+    canonical: '/faq',
+  },
 }
 
 const faqs = [
@@ -107,8 +110,8 @@ export default function FAQ() {
 
           <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
             <h2 className="font-bold text-slate-900 mb-2">Still have questions?</h2>
-            <p className="text-slate-600 text-sm mb-4">We're happy to help before you order.</p>
-            <Link href="/Contact" className="text-sm font-medium text-slate-900 underline hover:text-orange-600 transition-colors">
+            <p className="text-slate-600 text-sm mb-4">We&apos;re happy to help before you order.</p>
+            <Link href="/contact" className="text-sm font-medium text-slate-900 underline hover:text-orange-600 transition-colors">
               Get in touch →
             </Link>
           </div>
