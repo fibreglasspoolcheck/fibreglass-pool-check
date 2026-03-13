@@ -81,8 +81,8 @@ export default function Home() {
               Independent — not affiliated with any pool builder
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Independent fibreglass pool<br/>
-              <span className="text-orange-500">assessments you can trust.</span>
+              Fibreglass pool inspection reports<br/>
+              <span className="text-orange-500">from an independent specialist.</span>
             </h1>
             <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
               I'm Brady — a fibreglass pool specialist with 10+ years hands-on experience and 250+ pools assessed. I provide written reports, quote reviews, and buyer guides so you know exactly what you're getting into before you commit.
@@ -157,7 +157,7 @@ export default function Home() {
       {/* Services */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">How I can help</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Fibreglass pool assessment services</h2>
           <p className="text-slate-600 mb-12 max-w-xl">Three ways to get expert eyes on a fibreglass pool before you commit your money.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -232,7 +232,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Why independent matters</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">Why an independent fibreglass pool inspection matters</h2>
               <div className="space-y-4">
                 {[
                   { title: 'No conflicts of interest', body: 'I don\'t sell pool products, do repairs, or take referral fees. My assessment is yours alone.' },
@@ -391,7 +391,7 @@ export default function Home() {
       {/* CTA */}
       <section className="bg-slate-900 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Don’t guess. Get a report.</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Get a fibreglass pool condition report before you buy</h2>
           <p className="text-slate-300 mb-4 max-w-xl mx-auto">
             An independent assessment before you buy — or before you pay for repairs — is the smartest $149 you'll spend.
           </p>

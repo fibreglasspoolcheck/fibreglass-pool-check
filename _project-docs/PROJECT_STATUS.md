@@ -124,18 +124,18 @@ These are confirmed problems that need fixing, in priority order:
 |---|---|---|---|
 | 8 | No customer testimonials or reviews | Primary conversion barrier | Still open |
 | 9 | No professional photo of Brady | Reduces trust in personal service | ✅ Photo added and compressed (14MB → 295KB) |
-| 10 | No satisfaction guarantee stated anywhere | Removes purchase hesitation | Still open |
-| 11 | No urgency copy for under-contract buyers | Missing highest-intent segment | Still open |
+| 10 | No satisfaction guarantee stated anywhere | Removes purchase hesitation | ✅ Already present on homepage and all product pages |
+| 11 | No urgency copy for under-contract buyers | Missing highest-intent segment | ✅ Added urgency banners to all product pages (homepage already had one) |
 | 12 | Zero images on entire site | Feels sparse, no emotional pull | ✅ Before/after case study images added and compressed |
-| 13 | H2s are brand narrative, not keyword-optimised | SEO weakness | Still open |
-| 14 | H1 doesn't contain primary keyword | SEO weakness | Still open |
+| 13 | H2s are brand narrative, not keyword-optimised | SEO weakness | ✅ Rewritten with target keywords |
+| 14 | H1 doesn't contain primary keyword | SEO weakness | ✅ Updated to "Fibreglass pool inspection reports" |
 
 ### 🟡 Medium Priority — Content & SEO Growth
 | # | Issue | Impact | Status |
 |---|---|---|---|
 | 15 | No blog / educational content | Invisible to early-stage buyers | Still open |
 | 16 | No state-specific landing pages | Missing geo-targeted search traffic | Still open |
-| 17 | Product pages lead with features not benefits | Lower conversion on product pages | Still open |
+| 17 | Product pages lead with features not benefits | Lower conversion on product pages | ✅ Rewrote hero copy on all 3 product pages to lead with benefits |
 | 18 | About page undersells Brady | Missed trust opportunity | Still open |
 | 19 | No ABN visible on site | Australian trust signal missing | ✅ Added to Organization schema |
 | 20 | No Google Business Profile | No review platform, no map presence | Still open |
@@ -179,8 +179,8 @@ Work through these steps in order. Do not skip ahead. Mark each ✅ when confirm
 - [ ] **B4** — Set up Google Business Profile
 - [x] **B5** — Add headshot to About page and homepage ✅
 - [ ] **B6** — Add testimonials to homepage (adjacent to primary CTA)
-- [ ] **B7** — Add satisfaction guarantee to homepage and all product pages
-- [ ] **B8** — Add urgency copy for under-contract buyers to homepage hero and product pages
+- [x] **B7** — Satisfaction guarantee already present on homepage + all product pages ✅
+- [x] **B8** — Urgency banners added to all product pages ✅ (homepage already had one)
 - [x] **B9** — Add pool imagery throughout site ✅
 - [x] **B10** — Add ABN to Organization schema ✅
 
@@ -188,8 +188,8 @@ Work through these steps in order. Do not skip ahead. Mark each ✅ when confirm
 
 - [ ] **C1** — Write and publish 5 core blog articles (briefs below)
 - [ ] **C2** — Create state-specific landing pages (NSW, VIC, QLD, SA, WA, TAS)
-- [ ] **C3** — Optimise H1 and H2s across homepage for keyword targets
-- [ ] **C4** — Rewrite product pages: benefits-first, not features-first
+- [x] **C3** — Optimised H1 and H2s across homepage + product pages for keyword targets ✅
+- [x] **C4** — Rewrote product page heroes: benefits-first, keyword-rich ✅
 - [ ] **C5** — Rewrite About page to lead with Brady's expertise, not disclaimers
 
 ### PHASE D — Base44 Removal ✅ COMPLETE

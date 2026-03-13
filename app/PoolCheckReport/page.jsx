@@ -2,8 +2,8 @@ import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Fibreglass Pool Check Report | Pre-Purchase & Condition Review',
-  description: 'Get a detailed fibreglass pool inspection report from an independent specialist. Submit your photos, receive a written assessment within 2-3 business days. $149 AUD.',
+  title: 'Fibreglass Pool Inspection Report | Independent Assessment $149',
+  description: 'Get a detailed fibreglass pool inspection report before you buy. Submit photos, receive an independent written assessment of pool condition, defects, and repair costs within 2-3 business days. $149 AUD.',
 }
 
 function PoolCheckReportSchema() {
@@ -53,9 +53,9 @@ export default function PoolCheckReport() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Most popular service</div>
-            <h1 className="text-4xl font-bold mb-4">Pool Check Report</h1>
+            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Inspection Report</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              A comprehensive written assessment of a fibreglass pool's condition — based on photos you submit. Ideal for pre-purchase buyers, property sellers, and owners concerned about damage.
+              Know exactly what you're buying before you sign. Submit photos and get a detailed written assessment of the pool's condition — covering defects, red flags, and repair cost estimates — within 2–3 business days.
             </p>
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
@@ -66,6 +66,15 @@ export default function PoolCheckReport() {
               Order Your Report
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Urgency banner */}
+      <section className="bg-orange-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <p className="text-sm font-medium text-center">
+            <strong>Under contract?</strong> Reports delivered within 2–3 business days — fast enough to act before your finance clause expires.
+          </p>
         </div>
       </section>
 

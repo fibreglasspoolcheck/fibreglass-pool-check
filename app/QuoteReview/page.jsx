@@ -2,8 +2,8 @@ import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Fibreglass Pool Repair & Resurfacing Quote Review',
-  description: 'Get an independent expert review of your fibreglass pool repair or resurfacing quote. Find out if the work and price are fair before you commit. $79 AUD.',
+  title: 'Fibreglass Pool Repair Quote Review | Independent Expert $79',
+  description: 'Get an independent expert review of your fibreglass pool resurfacing or repair quote. Find out if the scope, materials, and price are fair before you commit. $79 AUD.',
 }
 
 function QuoteReviewSchema() {
@@ -51,9 +51,9 @@ export default function QuoteReview() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Repair & resurfacing</div>
-            <h1 className="text-4xl font-bold mb-4">Quote Review</h1>
+            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Repair Quote Review</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Already have a quote for fibreglass pool repairs or resurfacing? Before you sign anything, get an independent expert opinion on whether the scope of work and price are fair.
+              Don't overpay for pool repairs. Upload your resurfacing or repair quote and get an independent expert assessment of whether the work is necessary, the scope is right, and the price is fair.
             </p>
             <div className="text-3xl font-bold mb-6">$79 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
@@ -64,6 +64,15 @@ export default function QuoteReview() {
               Order a Quote Review
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Urgency banner */}
+      <section className="bg-orange-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <p className="text-sm font-medium text-center">
+            <strong>Got a quote and need answers fast?</strong> Reviews delivered within 2–3 business days so you can make an informed decision before committing.
+          </p>
         </div>
       </section>
 

@@ -2,8 +2,8 @@ import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Fibreglass Pool Buyer Checklist | What to Look For',
-  description: 'This expert buyer checklist tells you exactly what to look for when inspecting a fibreglass pool yourself. Instant download. $29 AUD.',
+  title: 'Fibreglass Pool Buyer Inspection Checklist | What to Look For $29',
+  description: 'Know what to look for when buying a house with a fibreglass pool. This expert inspection checklist covers surface defects, structural red flags, and questions to ask. Instant download. $29 AUD.',
 }
 
 function BuyerChecklistSchema() {
@@ -45,9 +45,9 @@ export default function BuyerChecklist() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">For buyers</div>
-            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Buyer Checklist</h1>
+            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Buyer Inspection Checklist</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Inspecting a property with a fibreglass pool? Know exactly what to look for. This expert checklist walks you through everything a specialist would check — in plain language.
+              Catch the problems that building inspectors miss. This expert checklist walks you through everything a fibreglass pool specialist would check — so you can assess the pool yourself before making an offer.
             </p>
             <div className="text-3xl font-bold mb-6">$29 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">Instant download. If it doesn't meet your expectations, get in touch and I'll make it right.</p>
@@ -58,6 +58,15 @@ export default function BuyerChecklist() {
               Get the Checklist
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Urgency banner */}
+      <section className="bg-orange-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <p className="text-sm font-medium text-center">
+            <strong>Viewing this weekend?</strong> Instant delivery after purchase — have it on your phone before the open home.
+          </p>
         </div>
       </section>
 
