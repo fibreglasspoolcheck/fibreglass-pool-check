@@ -52,6 +52,7 @@ export default function PoolCheckReport() {
               A comprehensive written assessment of a fibreglass pool's condition — based on photos you submit. Ideal for pre-purchase buyers, property sellers, and owners concerned about damage.
             </p>
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
+            <p className="text-slate-400 text-xs mb-4 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <Link
               href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
@@ -95,8 +96,8 @@ export default function PoolCheckReport() {
               <div className="space-y-6">
                 {[
                   { step: '1', title: 'Place your order', body: 'Pay securely online. You\'ll receive an email confirming your order within minutes.' },
-                  { step: '2', title: 'Submit your photos', body: 'Upload photos of the pool following our photo guide. The more we can see, the more thorough the report.' },
-                  { step: '3', title: 'Expert assessment', body: 'Brady reviews your photos and prepares a detailed written report based on 10+ years of fibreglass pool specialist experience.' },
+                  { step: '2', title: 'Submit your photos', body: 'Upload photos of the pool following the photo guide. The more I can see, the more thorough the report.' },
+                  { step: '3', title: 'Expert assessment', body: 'I review your photos and prepare a detailed written report based on 10+ years of fibreglass pool specialist experience.' },
                   { step: '4', title: 'Receive your report', body: 'Your completed report is delivered within 2-3 business days.' },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
@@ -149,6 +150,7 @@ export default function PoolCheckReport() {
             >
               Order Report → $149
             </Link>
+            <p className="text-slate-400 text-xs mt-3 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <p className="text-xs text-slate-500 mt-4">
               Questions first? <Link href="/FAQ" className="underline hover:text-slate-300">Read the FAQ</Link> or <Link href="/Contact" className="underline hover:text-slate-300">get in touch</Link>.
             </p>
