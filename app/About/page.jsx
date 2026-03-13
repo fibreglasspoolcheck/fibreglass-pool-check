@@ -5,7 +5,7 @@ export const metadata = {
   description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
   alternates: {
     canonical: '/About',
-  },
+  },h
 }
 
 function AboutSchema() {
@@ -183,7 +183,7 @@ export default function About() {
                 context: "Pool renovation client"
               },
               {
-                quote: "My pool on completion looks fantastic. I would recommend SEQ Fibreglass to all and already have, even my local pool shop is recommending them to their customers.",
+                quote: "My pool on completion looks fantastic. I would recommend Brady to all and already have, even my local pool shop is recommending them to their customers.",
                 name: "R. Evans",
                 context: "Pool renovation client"
               },
