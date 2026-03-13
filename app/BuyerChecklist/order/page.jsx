@@ -25,7 +25,18 @@ function BuyerChecklistOrderInner() {
   const [email, setEmail] = useState('')
 
   useEffect(() => {
-    if (isSuccess && orderId) setStep('paid')
+    if (isSuccess && orderId) {
+      setStep('paid')
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-18010642704/buyer_checklist',
+          value: 29.0,
+          currency: 'AUD',
+          transaction_id: orderId,
+        })
+      }
+    }
   }, [isSuccess, orderId])
 
   async function handleSubmit(e) {

@@ -21,6 +21,14 @@ export default function RedFlagsForm() {
       })
       if (res.ok) {
         setSubmitted(true)
+        // Fire Google Ads lead conversion event
+        if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-18010642704/red_flags_guide',
+            value: 0,
+            currency: 'AUD',
+          })
+        }
       } else {
         setError('Something went wrong. Please try again or email help@fibreglasspoolcheck.com.au')
       }

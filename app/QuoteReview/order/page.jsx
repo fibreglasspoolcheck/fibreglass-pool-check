@@ -40,7 +40,18 @@ function QuoteReviewOrderInner() {
   const [poolPhotos, setPoolPhotos] = useState([])
 
   useEffect(() => {
-    if (isSuccess && orderId) setStep('paid')
+    if (isSuccess && orderId) {
+      setStep('paid')
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-18010642704/quote_review',
+          value: 79.0,
+          currency: 'AUD',
+          transaction_id: orderId,
+        })
+      }
+    }
   }, [isSuccess, orderId])
 
   function updateForm(field, value) {

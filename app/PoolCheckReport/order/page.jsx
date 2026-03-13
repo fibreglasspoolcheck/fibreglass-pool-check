@@ -49,6 +49,15 @@ function PoolCheckReportOrderInner() {
   useEffect(() => {
     if (isSuccess && orderId) {
       setStep('paid')
+      // Fire Google Ads conversion event
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-18010642704/pool_check_report',
+          value: 149.0,
+          currency: 'AUD',
+          transaction_id: orderId,
+        })
+      }
     }
   }, [isSuccess, orderId])
 
