@@ -25,7 +25,7 @@ function PoolCheckReportSchema() {
       "@type": "Offer",
       "price": "149",
       "priceCurrency": "AUD",
-      "url": "https://app.fibreglasspoolcheck.com.au/PoolCheckReport",
+      "url": "https://fibreglasspoolcheck.com.au/PoolCheckReport/order",
       "availability": "https://schema.org/InStock"
     }
   }
@@ -54,7 +54,7 @@ export default function PoolCheckReport() {
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="https://fibreglasspoolcheck.com.au/PoolCheckReport/order"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Order Your Report
@@ -145,7 +145,7 @@ export default function PoolCheckReport() {
               Secure payment online. Order confirmation within minutes. Report delivered within 2-3 business days.
             </p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="https://fibreglasspoolcheck.com.au/PoolCheckReport/order"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Order Report → $149

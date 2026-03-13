@@ -87,10 +87,10 @@ export default function PoolOwner() {
                   Resurfacing is a significant expense — typically $8,000 to $20,000 or more depending on pool size and the surface chosen. Repairers and resurfacers have an incentive to recommend it, even when it's not strictly necessary.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Before committing to resurfacing work, it's worth getting an independent assessment. We can review the condition of your pool and tell you honestly whether resurfacing is warranted, what to look for in quotes, and whether there are any underlying issues that need addressing first.
+                  Before committing to resurfacing work, it's worth getting an independent assessment. I can review the condition of your pool and tell you honestly whether resurfacing is warranted, what to look for in quotes, and whether there are any underlying issues that need addressing first.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  We can also review quotes you've received to assess whether the pricing and scope are reasonable.
+                  I can also review quotes you've received to assess whether the pricing and scope are reasonable.
                 </p>
               </div>
 
@@ -123,7 +123,7 @@ export default function PoolOwner() {
                     <div className="text-orange-600 font-bold mb-2">$149</div>
                     <p className="text-slate-500 text-xs leading-relaxed mb-3">Submit photos, get a written condition assessment. Good before any major repair decision.</p>
                     <Link
-                      href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                      href="/PoolCheckReport/order"
                       className="block bg-slate-900 hover:bg-slate-800 text-white text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors"
                     >
                       Order Report
@@ -132,9 +132,9 @@ export default function PoolOwner() {
                   <div className="p-4 bg-slate-50 rounded-lg">
                     <div className="font-semibold text-slate-900 text-sm mb-1">Quote Review</div>
                     <div className="text-orange-600 font-bold mb-2">$79</div>
-                    <p className="text-slate-500 text-xs leading-relaxed mb-3">Got a resurfacing or repair quote? We'll tell you if it's fair and what to watch out for.</p>
+                    <p className="text-slate-500 text-xs leading-relaxed mb-3">Got a resurfacing or repair quote? I'll tell you if it's fair and what to watch out for.</p>
                     <Link
-                      href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
+                      href="/QuoteReview/order"
                       className="block border border-slate-300 hover:border-slate-400 text-slate-700 text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors"
                     >
                       Get Quote Reviewed

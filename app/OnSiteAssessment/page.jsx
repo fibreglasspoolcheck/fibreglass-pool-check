@@ -94,7 +94,7 @@ export default function OnSiteAssessment() {
               <div className="bg-amber-50 border border-amber-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-2">Request-based service</h3>
                 <p className="text-slate-600 text-sm leading-relaxed">
-                  On-site assessments are not available for immediate online booking. Contact me to discuss your location, timeline, and requirements. We'll let you know availability and pricing specific to your situation.
+                  On-site assessments are not available for immediate online booking. Contact me to discuss your location, timeline, and requirements. I'll let you know availability and pricing specific to your situation.
                 </p>
               </div>
 
@@ -104,7 +104,7 @@ export default function OnSiteAssessment() {
                   My photo-based Pool Check Report is available Australia-wide and is the recommended option for most buyers and pool owners outside SEQ.
                 </p>
                 <Link
-                  href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                  href="/PoolCheckReport/order"
                   className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors"
                 >
                   Order a Pool Check Report — $149
@@ -113,9 +113,9 @@ export default function OnSiteAssessment() {
 
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-3">Request an on-site assessment</h3>
-                <p className="text-slate-600 text-sm mb-4">Tell us your location and what you need and we'll be in touch.</p>
+                <p className="text-slate-600 text-sm mb-4">Tell me your location and what you need and I'll be in touch.</p>
                 <Link
-                  href="https://app.fibreglasspoolcheck.com.au/OnSiteAssessment"
+                  href="/Contact"
                   className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors"
                 >
                   Submit a Request

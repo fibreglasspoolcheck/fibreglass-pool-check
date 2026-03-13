@@ -124,7 +124,7 @@ export default function BuyingAHouse() {
                     <div className="text-orange-600 font-bold mb-2">$149</div>
                     <p className="text-slate-500 text-xs leading-relaxed mb-3">Submit photos, get a written report covering condition, defects, and recommendations.</p>
                     <Link
-                      href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                      href="/PoolCheckReport/order"
                       className="block bg-slate-900 hover:bg-slate-800 text-white text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors"
                     >
                       Order Report
@@ -135,7 +135,7 @@ export default function BuyingAHouse() {
                     <div className="text-orange-600 font-bold mb-2">$29</div>
                     <p className="text-slate-500 text-xs leading-relaxed mb-3">Know exactly what to look for when you inspect the pool yourself.</p>
                     <Link
-                      href="https://app.fibreglasspoolcheck.com.au/BuyerChecklist"
+                      href="/BuyerChecklist/order"
                       className="block border border-slate-300 hover:border-slate-400 text-slate-700 text-center py-2 px-4 rounded-lg text-sm font-medium transition-colors"
                     >
                       Get Checklist

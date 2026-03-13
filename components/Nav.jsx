@@ -39,7 +39,7 @@ export default function Nav() {
               Contact
             </Link>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="/PoolCheckReport/order"
               className="bg-slate-900 text-white text-sm px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors"
             >
               Order Now
@@ -86,7 +86,7 @@ export default function Nav() {
               Contact
             </Link>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="/PoolCheckReport/order"
               className="bg-slate-900 text-white text-sm px-4 py-2 rounded-lg text-center hover:bg-slate-800 transition-colors"
               onClick={() => setOpen(false)}
             >

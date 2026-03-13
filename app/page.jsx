@@ -89,7 +89,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                href="/PoolCheckReport/order"
                 className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
               >
                 Get a Pool Check Report — $149
@@ -113,7 +113,7 @@ export default function Home() {
               <strong>Under contract?</strong> Don't wait — reports delivered within 2–3 business days, fast enough to act before your finance clause expires.
             </p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="/PoolCheckReport/order"
               className="bg-white text-orange-700 hover:bg-orange-50 text-sm font-medium px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
             >
               Order now
@@ -175,7 +175,7 @@ export default function Home() {
               </p>
               <div className="text-2xl font-bold text-slate-900 mb-4">$149</div>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                href="/PoolCheckReport/order"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
               >
                 Order Report
@@ -196,7 +196,7 @@ export default function Home() {
               </p>
               <div className="text-2xl font-bold text-slate-900 mb-4">$79</div>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
+                href="/QuoteReview/order"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
               >
                 Order Review
@@ -217,7 +217,7 @@ export default function Home() {
               </p>
               <div className="text-2xl font-bold text-slate-900 mb-4">$29</div>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/BuyerChecklist"
+                href="/BuyerChecklist/order"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
               >
                 Get Checklist
@@ -263,7 +263,7 @@ export default function Home() {
                 If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
               </p>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                href="/PoolCheckReport/order"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center transition-colors font-medium"
               >
                 Order a Report
@@ -393,7 +393,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="/PoolCheckReport/order"
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Get a Pool Check Report

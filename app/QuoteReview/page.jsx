@@ -25,7 +25,7 @@ function QuoteReviewSchema() {
       "@type": "Offer",
       "price": "79",
       "priceCurrency": "AUD",
-      "url": "https://app.fibreglasspoolcheck.com.au/QuoteReview",
+      "url": "https://fibreglasspoolcheck.com.au/QuoteReview/order",
       "availability": "https://schema.org/InStock"
     }
   }
@@ -52,7 +52,7 @@ export default function QuoteReview() {
             <div className="text-3xl font-bold mb-6">$79 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
+              href="https://fibreglasspoolcheck.com.au/QuoteReview/order"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Order a Quote Review
@@ -121,7 +121,7 @@ export default function QuoteReview() {
               Fibreglass pool resurfacing can cost anywhere from $5,000 to $20,000+. An independent review of your quote costs $79. The maths makes sense.
             </p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
+              href="https://fibreglasspoolcheck.com.au/QuoteReview/order"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Order Quote Review — $79

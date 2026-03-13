@@ -250,7 +250,7 @@ export default function About() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+              href="/PoolCheckReport/order"
               className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Order a Pool Check Report

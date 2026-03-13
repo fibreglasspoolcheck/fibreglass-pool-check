@@ -19,7 +19,7 @@ function BuyerChecklistSchema() {
       "@type": "Offer",
       "price": "29",
       "priceCurrency": "AUD",
-      "url": "https://app.fibreglasspoolcheck.com.au/BuyerChecklist",
+      "url": "/BuyerChecklist/order",
       "availability": "https://schema.org/InStock"
     }
   }
@@ -46,7 +46,7 @@ export default function BuyerChecklist() {
             <div className="text-3xl font-bold mb-6">$29 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">Instant download. If it doesn't meet your expectations, get in touch and I'll make it right.</p>
             <Link
-              href="https://app.fibreglasspoolcheck.com.au/BuyerChecklist"
+              href="/BuyerChecklist/order"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Get the Checklist
@@ -91,13 +91,13 @@ export default function BuyerChecklist() {
                 If you're under contract or serious about a specific pool, the <Link href="/PoolCheckReport" className="text-orange-600 hover:underline">Pool Check Report ($149)</Link> provides a full expert assessment based on your specific pool's photos.
               </p>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/BuyerChecklist"
+                href="/BuyerChecklist/order"
                 className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors mb-3"
               >
                 Get the Checklist — $29
               </Link>
               <Link
-                href="https://app.fibreglasspoolcheck.com.au/PoolCheckReport"
+                href="/PoolCheckReport/order"
                 className="block border border-slate-300 hover:border-slate-400 text-slate-700 text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors"
               >
                 Order a Report — $149
