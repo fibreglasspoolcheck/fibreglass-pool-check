@@ -103,31 +103,68 @@ function QuoteReviewOrderInner() {
     setPoolPhotos(prev => [...prev, ...files].slice(0, MAX_FILES))
   }
 
+  async function uploadFilesDirectly(files, fieldName) {
+    // 1. Get signed upload URLs from our API
+    const urlRes = await fetch('/api/upload-url', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: currentOrderId,
+        productType: 'quote_review',
+        fieldName,
+        files: files.map(f => ({ name: f.name })),
+      }),
+    })
+    if (!urlRes.ok) throw new Error(`Failed to get upload URLs for ${fieldName}`)
+    const { signedUrls } = await urlRes.json()
+
+    // 2. Upload each file directly to Supabase Storage
+    const uploadedPaths = []
+    for (let i = 0; i < signedUrls.length; i++) {
+      const { signedUrl, path } = signedUrls[i]
+      const file = files[i]
+
+      const uploadRes = await fetch(signedUrl, {
+        method: 'PUT',
+        headers: { 'Content-Type': file.type },
+        body: file,
+      })
+      if (!uploadRes.ok) {
+        console.error(`Failed to upload ${file.name}`)
+        continue
+      }
+      uploadedPaths.push(path)
+    }
+
+    if (uploadedPaths.length === 0) throw new Error(`All ${fieldName} uploads failed`)
+
+    // 3. Confirm upload — save paths to database
+    const confirmRes = await fetch('/api/confirm-upload', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        orderId: currentOrderId,
+        productType: 'quote_review',
+        fieldName,
+        paths: uploadedPaths,
+      }),
+    })
+    if (!confirmRes.ok) throw new Error(`Failed to confirm ${fieldName} upload`)
+  }
+
   async function handleUploadAndCheckout() {
     setLoading(true)
     setError('')
 
     try {
-      // Upload quote files
+      // Upload quote files directly to Supabase Storage
       if (quoteFiles.length > 0) {
-        const fd = new FormData()
-        fd.append('orderId', currentOrderId)
-        fd.append('productType', 'quote_review')
-        fd.append('fieldName', 'quote_files')
-        quoteFiles.forEach(f => fd.append('files', f))
-        const res = await fetch('/api/upload', { method: 'POST', body: fd })
-        if (!res.ok) throw new Error('Quote file upload failed')
+        await uploadFilesDirectly(quoteFiles, 'quote_files')
       }
 
-      // Upload pool photos
+      // Upload pool photos directly to Supabase Storage
       if (poolPhotos.length > 0) {
-        const fd = new FormData()
-        fd.append('orderId', currentOrderId)
-        fd.append('productType', 'quote_review')
-        fd.append('fieldName', 'pool_photos')
-        poolPhotos.forEach(f => fd.append('files', f))
-        const res = await fetch('/api/upload', { method: 'POST', body: fd })
-        if (!res.ok) throw new Error('Photo upload failed')
+        await uploadFilesDirectly(poolPhotos, 'pool_photos')
       }
 
       // Redirect to Stripe Checkout
