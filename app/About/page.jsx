@@ -5,9 +5,39 @@ export const metadata = {
   description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
 }
 
+function AboutSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Brady Smith',
+    jobTitle: 'Fibreglass Pool Specialist',
+    description: 'Independent fibreglass pool specialist with 10+ years hands-on experience and 250+ pools assessed across Australia.',
+    worksFor: {
+      '@type': 'ProfessionalService',
+      name: 'Fibreglass Pool Check',
+      url: 'https://fibreglasspoolcheck.com.au',
+    },
+    knowsAbout: [
+      'Fibreglass pool inspection',
+      'Fibreglass pool resurfacing',
+      'Osmotic blistering assessment',
+      'Pool condition assessment',
+      'Fibreglass pool delamination',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function About() {
   return (
     <>
+      <AboutSchema />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -44,7 +74,6 @@ export default function About() {
                 </p>
               </div>
             </div>
-
             <div className="space-y-6">
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-4">By the numbers</h3>
@@ -62,7 +91,6 @@ export default function About() {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
                 <h3 className="font-bold text-slate-900 mb-3">Case study: Mary Valley, QLD</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-3">
@@ -82,18 +110,9 @@ export default function About() {
           <h2 className="text-2xl font-bold text-slate-900 mb-8">How we work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              {
-                title: 'Completely independent',
-                body: 'No affiliation with any pool builder, contractor, or supplier. We have no financial interest in what you decide to do with your pool.'
-              },
-              {
-                title: 'Specialist knowledge only',
-                body: 'We assess fibreglass pools only. This focus means our knowledge is deeper and more current than any generalist inspector.'
-              },
-              {
-                title: 'Plain language',
-                body: 'Our reports are written to be understood by people who are not pool experts. No jargon — just clear findings and actionable guidance.'
-              },
+              { title: 'Completely independent', body: 'No affiliation with any pool builder, contractor, or supplier. We have no financial interest in what you decide to do with your pool.' },
+              { title: 'Specialist knowledge only', body: 'We assess fibreglass pools only. This focus means our knowledge is deeper and more current than any generalist inspector.' },
+              { title: 'Plain language', body: 'Our reports are written to be understood by people who are not pool experts. No jargon — just clear findings and actionable guidance.' },
             ].map((item) => (
               <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">
                 <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
