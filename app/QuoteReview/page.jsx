@@ -50,6 +50,7 @@ export default function QuoteReview() {
               Already have a quote for fibreglass pool repairs or resurfacing? Before you sign anything, get an independent expert opinion on whether the scope of work and price are fair.
             </p>
             <div className="text-3xl font-bold mb-6">$79 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
+            <p className="text-slate-400 text-xs mb-4 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <Link
               href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
@@ -64,7 +65,7 @@ export default function QuoteReview() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">What we assess</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">What I assess</h2>
               <div className="space-y-4">
                 {[
                   'Is the recommended work actually necessary?',
@@ -92,8 +93,8 @@ export default function QuoteReview() {
               <div className="space-y-6">
                 {[
                   { step: '1', title: 'Place your order', body: 'Pay securely online and you\'ll receive an order confirmation immediately.' },
-                  { step: '2', title: 'Upload your quote(s)', body: 'Send us the quote documents and any photos of the pool you have. Up to 3 quotes can be reviewed.' },
-                  { step: '3', title: 'Expert review', body: 'Brady assesses the quotes against real-world knowledge of fibreglass pool repair costs, methods and common contractor practices.' },
+                  { step: '2', title: 'Upload your quote(s)', body: 'Send me the quote documents and any photos of the pool you have. Up to 3 quotes can be reviewed.' },
+                  { step: '3', title: 'Expert review', body: 'I assess the quotes against real-world knowledge of fibreglass pool repair costs, methods and common contractor practices.' },
                   { step: '4', title: 'Receive your review', body: 'Your written review is delivered within 2-3 business days with clear, plain-English guidance.' },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
@@ -125,6 +126,7 @@ export default function QuoteReview() {
             >
               Order Quote Review — $79
             </Link>
+            <p className="text-slate-500 text-xs mt-3 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
           </div>
         </div>
       </section>
