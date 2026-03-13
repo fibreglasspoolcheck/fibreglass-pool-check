@@ -5,9 +5,42 @@ export const metadata = {
   description: 'Get an independent expert review of your fibreglass pool repair or resurfacing quote. Find out if the work and price are fair before you commit. $79 AUD.',
 }
 
+function QuoteReviewSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Quote Review",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Fibreglass Pool Check",
+      "url": "https://fibreglasspoolcheck.com.au"
+    },
+    "description": "Independent expert review of fibreglass pool repair or resurfacing quotes. Assesses whether the recommended work is necessary, the scope is appropriate, materials and methods are correct, and the price is within market range.",
+    "serviceType": "Pool Repair Quote Assessment",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Australia"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "79",
+      "priceCurrency": "AUD",
+      "url": "https://app.fibreglasspoolcheck.com.au/QuoteReview",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function QuoteReview() {
   return (
     <>
+      <QuoteReviewSchema />
       <section className="bg-slate-900 text-white py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -61,7 +94,7 @@ export default function QuoteReview() {
                   { step: '1', title: 'Place your order', body: 'Pay securely online and you\'ll receive an order confirmation immediately.' },
                   { step: '2', title: 'Upload your quote(s)', body: 'Send us the quote documents and any photos of the pool you have. Up to 3 quotes can be reviewed.' },
                   { step: '3', title: 'Expert review', body: 'Brady assesses the quotes against real-world knowledge of fibreglass pool repair costs, methods and common contractor practices.' },
-                  { step: '4', title: 'Receive your review', body: 'Your written review is delivered within 2–3 business days with clear, plain-English guidance.' },
+                  { step: '4', title: 'Receive your review', body: 'Your written review is delivered within 2â3 business days with clear, plain-English guidance.' },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
@@ -90,7 +123,7 @@ export default function QuoteReview() {
               href="https://app.fibreglasspoolcheck.com.au/QuoteReview"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Order Quote Review — $79
+              Order Quote Review â $79
             </Link>
           </div>
         </div>
