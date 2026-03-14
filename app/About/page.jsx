@@ -225,6 +225,12 @@ export default function About() {
                 location: "Nanango",
                 image: "/images/lumsford-after.jpg",
               },
+              {
+                quote: "Our pool had lost its gloss and stains were regularly appearing. Not to mention the severe osmosis all over the pool shell. Brady came to visit, saw the problem firsthand, and explained in detail what he could do. We received our quote — much much much less than a new pool — and straight away organised a time for Brady to start work. In just four days they had turned one very sad looking little pool into a sparkling gem. We cannot say enough about Brady's attention to detail and his determination to not be defeated by a little thing such as threatening bad weather.",
+                name: "Leanne & Les Fleet",
+                location: "Mary Valley",
+                image: "/images/maryvalley-after.jpg",
+              },
             ].map((item) => (
               <div key={item.name} className="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col sm:flex-row">
                 <div className="relative w-full sm:w-48 h-40 sm:h-auto flex-shrink-0">

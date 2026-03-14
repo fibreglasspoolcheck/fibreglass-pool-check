@@ -377,6 +377,12 @@ export default function Home() {
                 location: "Nanango",
                 image: "/images/lumsford-after.jpg",
               },
+              {
+                quote: "Our pool had lost its gloss, stains were appearing, and severe osmosis was all over the shell. Brady came to visit, saw the problem firsthand, and explained in detail what he could do. In just four days they had turned one very sad looking little pool into a sparkling gem.",
+                name: "Leanne & Les Fleet",
+                location: "Mary Valley",
+                image: "/images/maryvalley-after.jpg",
+              },
             ].map((item) => (
               <div key={item.name} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
                 <div className="relative h-40">
