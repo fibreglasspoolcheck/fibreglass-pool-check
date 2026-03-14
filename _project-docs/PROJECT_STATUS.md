@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 ## fibreglasspoolcheck.com.au — Master Source of Truth
-**Last updated:** March 14, 2026 (Session 2)
+**Last updated:** March 14, 2026 (Session 3)
 **Instructions:** Paste the full contents of this file at the start of every new Claude session. Claude treats this as gospel and updates it at the end of every session.
 
 ---
@@ -256,6 +256,7 @@ Write in this priority order:
 | March 14, 2026 (S2) | Blog launched | 2 articles live: "Buying a house with a fibreglass pool" and "Fibreglass pool osmotic blistering". Blog index page, nav link, sitemap entries added. |
 | March 14, 2026 (S2) | All product page heroes rewritten | Benefits-first copy, urgency banners, keyword-optimised H1/H2s on all 3 product pages + homepage |
 | March 14, 2026 (S2) | About page rewritten | Leads with expertise, "we" → "I" voice fix throughout |
+| March 14, 2026 (S3) | PROJECT_STATUS.md updated with available connectors | Added Section 11 documenting all connected tools (GitHub, Google Drive, Gmail, Google Calendar, Notion, Stripe, Supabase, Vercel, Wix, Claude in Chrome, Brevo MCP pending) |
 
 ---
 
@@ -275,7 +276,27 @@ Say: "Please give me an updated PROJECT_STATUS.md reflecting what we did today."
 
 ---
 
-## 11. PROJECT DOCS FOLDER STRUCTURE
+## 11. AVAILABLE CONNECTORS & TOOLS
+
+These connectors are configured in Claude Desktop / Cowork and available for use in sessions:
+
+| Connector | Status | Notes |
+|---|---|---|
+| GitHub | Connected | Repo access for `fibreglass-pool-check` |
+| Google Drive | Connected | File access |
+| Gmail | Connected | Email read/draft/search |
+| Google Calendar | Connected | Event management |
+| Notion | Connected | Page/database management |
+| Stripe | Connected | Payment data, customers, subscriptions |
+| Supabase | Connected | Database queries, migrations, edge functions |
+| Vercel | Connected | Deployments, logs, project management. Team: `team_CRXCCm5mIgwhtD7mp2EdV86C`, Project: `fibreglass-pool-check` |
+| Wix | Connected | Site management (not currently used) |
+| Claude in Chrome | Connected | Browser automation for tasks requiring web UI interaction |
+| Brevo MCP | Pending | Config file created (`claude_desktop_config.json`). Brady needs to paste config into Claude Desktop Developer settings and restart. |
+
+---
+
+## 12. PROJECT DOCS FOLDER STRUCTURE
 
 All non-code project documents live in `_project-docs/` in the repo root. The underscore keeps it sorted at the top, separate from the Next.js app code. Vercel ignores this folder entirely.
 
