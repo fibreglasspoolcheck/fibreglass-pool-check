@@ -330,33 +330,72 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Testimonial quotes */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Testimonial quotes with pool photos */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                quote: "He really knows his stuff. Everything that he said he would do he did — on time and with a smile.",
-                name: "Kelvin O'Reilly",
-                context: "Pool renovation client"
-              },
-              {
-                quote: "Even our water carter said he's never seen a better looking renovated pool. Brady displays amazing attention to detail.",
+                quote: "We bought a house with a pool, and the pool was not all it seemed. Brady displays amazing attention to detail. He loves doing what he does. Even our water carter said he's never seen a better looking renovated pool.",
                 name: "Warren & Allison Fowler",
-                context: "Pool renovation client"
+                image: "/images/fowler-after.jpg",
               },
               {
-                quote: "Even my local pool shop is recommending them to their customers. My pool on completion looks fantastic.",
+                quote: "My fibreglass pool was an absolute mess. Brady was fantastic, a hard worker with very high standards. In Brady's mind — the job had to be done right — and it certainly was. The pictures tell the story.",
+                name: "Russell Walsh",
+                location: "Gympie",
+                image: "/images/walsh-after.jpg",
+              },
+              {
+                quote: "From our very first contact, we were impressed with the responsiveness and professionalism. The final result is perfect. I can unreservedly recommend Brady for both his quality workmanship and his commitment to customer satisfaction.",
+                name: "Michael & Gaynor Hooper",
+                location: "Jindalee",
+                image: "/images/hooper-after.jpg",
+              },
+              {
+                quote: "Brady arrived on time each day and would work all day without much of a break. I had a lot of osmosis in my pool but no problem for Brady, just got on with the job. My pool on completion looks fantastic.",
                 name: "R. Evans",
-                context: "Pool renovation client"
+                image: "/images/evans-after.jpg",
+              },
+              {
+                quote: "Brady's knowledge of the pool industry, methods and equipment used to provide a quality finish was impressive. My pool has been renovated to a quality that will enhance the value of my house.",
+                name: "Linton Passmore",
+                image: "/images/passmore-after.jpg",
+              },
+              {
+                quote: "My fibreglass pool was in very poor condition and Brady gave me excellent advice and very personal service. The final result looks fabulous.",
+                name: "Andrew Newcombe",
+                location: "Noosa Heads",
+                image: "/images/newcombe-after.jpg",
+              },
+              {
+                quote: "We approached resurfacing our grotty old pool with some trepidation. Brady worked hard to guide us through the process and the pool now looks fantastic. The original quote was very competitive.",
+                name: "Glen & Tracey Leeder",
+                image: "/images/leeder-after.jpg",
+              },
+              {
+                quote: "The work was long and tiring but everything was exactly right to achieve an excellent result. The pool was meticulously resurfaced with the utmost professionalism.",
+                name: "R. & C. Lumsford",
+                location: "Nanango",
+                image: "/images/lumsford-after.jpg",
               },
             ].map((item) => (
-              <div key={item.name} className="bg-slate-50 border border-slate-200 rounded-xl p-6">
-                <svg className="w-6 h-6 text-orange-600/40 mb-3" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                </svg>
-                <p className="text-slate-700 text-sm leading-relaxed mb-4">{item.quote}</p>
-                <div className="text-sm">
-                  <span className="font-semibold text-slate-900">{item.name}</span>
-                  <span className="text-slate-400 ml-2">— {item.context}</span>
+              <div key={item.name} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
+                <div className="relative h-40">
+                  <Image
+                    src={item.image}
+                    alt={`Fibreglass pool renovated by Brady — ${item.name}`}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <svg className="w-5 h-5 text-orange-600/40 mb-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                  </svg>
+                  <p className="text-slate-700 text-sm leading-relaxed mb-3">{item.quote}</p>
+                  <div className="text-sm">
+                    <span className="font-semibold text-slate-900">{item.name}</span>
+                    {item.location && <span className="text-slate-400 ml-1">— {item.location}</span>}
+                  </div>
                 </div>
               </div>
             ))}

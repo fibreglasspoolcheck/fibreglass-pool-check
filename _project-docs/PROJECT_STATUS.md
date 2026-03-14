@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 ## fibreglasspoolcheck.com.au — Master Source of Truth
-**Last updated:** March 14, 2026 (Session 3)
+**Last updated:** March 14, 2026 (Session 4)
 **Instructions:** Paste the full contents of this file at the start of every new Claude session. Claude treats this as gospel and updates it at the end of every session.
 
 ---
@@ -39,7 +39,7 @@
 | Payments processor | Stripe | Direct integration via Next.js API routes |
 | File storage | Supabase Storage | Direct browser-to-storage uploads via signed URLs |
 | Email (transactional) | Brevo | Domain authenticated, DKIM/DMARC/SPF verified |
-| Email (marketing/nurture) | Brevo | Automation created in Brevo (ID #1), trigger configured for "Red Flags Guide" list (#3). Email templates need content. Brevo MCP server configured for future sessions. |
+| Email (marketing/nurture) | Brevo | Automation #1 active — 5 nurture emails (2-6) with time delays, all content populated, sender set to Brady Smith. Triggered by "Red Flags Guide" list (#3). |
 | Analytics | Google Analytics (GA4) | Present in site source |
 | Google Ads tag | AW-18010642704 | In root layout on every page, conversion events on all checkout success pages + Red Flags Guide download |
 | Google site verification TXT | `google-site-verification=3EoSEdhGbyLvFmuHxDAbm6rJqulpv9yPy47ttGoy550` | Already in VentraIP DNS |
@@ -51,7 +51,7 @@
 | Database | Supabase (free tier) | ✅ Live — tables for all products |
 | File storage | Supabase Storage | ✅ Live — direct signed-URL uploads |
 | Transactional email | Brevo (free tier) | ✅ Live — domain authenticated |
-| Email nurture | Brevo Automations | ✅ Automation #1 created, trigger set to "Red Flags Guide" list #3. API code connects guide downloads to list. Email template content pending. |
+| Email nurture | Brevo Automations | ✅ Complete — Automation #1 active. 5 nurture emails (2-6) built with correct delays (2, 3, 3, 4, 4 days). All content, subject lines, sender names configured. |
 | Payments | Stripe direct (Next.js API routes) | ✅ Live |
 
 ---
@@ -146,17 +146,17 @@ These are confirmed problems that need fixing, in priority order:
 | # | Issue | Impact | Status |
 |---|---|---|---|
 | 23 | No Google Ads conversion events | Can't measure ROAS, flying blind on ad spend | ✅ Added to all 3 checkout success pages + Red Flags Guide download |
-| 24 | No email nurture sequence after Red Flags Guide download | Leads captured but never followed up | ✅ Partial — Copy written (6 emails), Brevo list #3 created, API code adds contacts to list on guide download, automation #1 created with trigger. Email template content still needs populating. |
+| 24 | No email nurture sequence after Red Flags Guide download | Leads captured but never followed up | ✅ Complete — 6-email nurture sequence live. Copy written, Brevo list #3 created, API adds contacts on download, automation #1 active with all 5 emails (2-6) built in Simple editor, subject lines set, sender "Brady Smith", hyperlinks configured. |
 | 25 | Quote Review upload failing with 413 error on large files | Customers can't complete orders with multiple/large photos | ✅ Fixed — direct-to-Supabase uploads via signed URLs |
 | 26 | Desktop nav missing Quote Review and Buyer Checklist links | Products only visible in mobile hamburger menu | ✅ Fixed — added to desktop nav |
 | 27 | Red Flags Guide page claims "10 warning signs" but only shows 7 | Trust/credibility issue | ✅ Fixed — added 3 more items |
 | 28 | Brady photo 14MB uncompressed causing 38s LCP on mobile | Terrible mobile performance, high bounce rate | ✅ Compressed to 295KB, converted to Next.js Image component |
 | 29 | No cross-links between service pages | Poor internal linking, weak SEO | ✅ Added cross-links between product pages |
 | 30 | Brevo domain not authenticated (DKIM failing) | Emails may land in spam | ✅ DNS records correct, domain now authenticated |
-| 31 | Brevo nurture email templates need content | Automation workflow has placeholder template, 5 emails need HTML content from EMAIL_NURTURE_SEQUENCE.md | Open — use Brevo MCP in next session |
+| 31 | Brevo nurture email templates need content | Automation workflow has placeholder template, 5 emails need HTML content from EMAIL_NURTURE_SEQUENCE.md | ✅ Complete — All 5 email templates populated via Claude in Chrome browser automation. Simple editor used for clean text emails. |
 | 32 | Google Ads conversion labels are placeholders | Labels like `AW-18010642704/buyer_checklist` need replacing with real labels from Google Ads console | Open — Brady needs to create conversion actions in Google Ads |
 | 33 | BREVO_API_KEY in .env.production may need updating | New API key generated for MCP (`oddwuOmd1PTA065a` suffix). Check if Vercel env var needs updating. | Needs verification |
-| 34 | Brevo MCP server not yet connected | Config file created but Claude Desktop needs restart with config applied | Pending Brady action |
+| 34 | Brevo MCP server not yet connected | Config file created but Claude Desktop needs restart with config applied. Not critical — nurture automation completed via browser automation. | Low priority — optional |
 
 ---
 
@@ -257,6 +257,7 @@ Write in this priority order:
 | March 14, 2026 (S2) | All product page heroes rewritten | Benefits-first copy, urgency banners, keyword-optimised H1/H2s on all 3 product pages + homepage |
 | March 14, 2026 (S2) | About page rewritten | Leads with expertise, "we" → "I" voice fix throughout |
 | March 14, 2026 (S3) | PROJECT_STATUS.md updated with available connectors | Added Section 11 documenting all connected tools (GitHub, Google Drive, Gmail, Google Calendar, Notion, Stripe, Supabase, Vercel, Wix, Claude in Chrome, Brevo MCP pending) |
+| March 14, 2026 (S4) | Brevo nurture automation fully built and activated | All 5 nurture emails (2-6) created in Brevo automation #1 via Claude in Chrome browser automation. Used Simple editor for clean text emails. Subject lines, sender names ("Brady Smith"), content from EMAIL_NURTURE_SEQUENCE.md, and hyperlinks all configured. Time delays set (2, 3, 3, 4, 4 days). Automation activated and live. Issues #24 and #31 marked complete. |
 
 ---
 
