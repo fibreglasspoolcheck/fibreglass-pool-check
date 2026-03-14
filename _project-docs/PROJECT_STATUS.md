@@ -122,7 +122,7 @@ These are confirmed problems that need fixing, in priority order:
 ### 🟠 High Priority — Trust & Conversion
 | # | Issue | Impact | Status |
 |---|---|---|---|
-| 8 | No customer testimonials or reviews | Primary conversion barrier | Still open |
+| 8 | No customer testimonials or reviews | Primary conversion barrier | ✅ Complete — 9 client testimonials with pool photos added to homepage (4-column card grid) and About page (2-column layout). Content cleaned from SEQ Fibreglass client files. |
 | 9 | No professional photo of Brady | Reduces trust in personal service | ✅ Photo added and compressed (14MB → 295KB) |
 | 10 | No satisfaction guarantee stated anywhere | Removes purchase hesitation | ✅ Already present on homepage and all product pages |
 | 11 | No urgency copy for under-contract buyers | Missing highest-intent segment | ✅ Added urgency banners to all product pages (homepage already had one) |
@@ -179,10 +179,10 @@ Work through these steps in order. Do not skip ahead. Mark each ✅ when confirm
 
 - [x] **B1** — Brady photo added to About page and homepage ✅ (compressed from 14MB to 295KB)
 - [x] **B2** — Pool before/after case study images added ✅ (Hooper, Fowler, Walsh)
-- [ ] **B3** — Collect 5+ written testimonials from past clients
+- [x] **B3** — Collect 5+ written testimonials from past clients ✅ (9 testimonials extracted from SEQ Fibreglass client files, cleaned)
 - [ ] **B4** — Set up Google Business Profile
 - [x] **B5** — Add headshot to About page and homepage ✅
-- [ ] **B6** — Add testimonials to homepage (adjacent to primary CTA)
+- [x] **B6** — Add testimonials to homepage (adjacent to primary CTA) ✅ (9 testimonials with pool photos, 4-column card grid)
 - [x] **B7** — Satisfaction guarantee already present on homepage + all product pages ✅
 - [x] **B8** — Urgency banners added to all product pages ✅ (homepage already had one)
 - [x] **B9** — Add pool imagery throughout site ✅
@@ -258,6 +258,7 @@ Write in this priority order:
 | March 14, 2026 (S2) | About page rewritten | Leads with expertise, "we" → "I" voice fix throughout |
 | March 14, 2026 (S3) | PROJECT_STATUS.md updated with available connectors | Added Section 11 documenting all connected tools (GitHub, Google Drive, Gmail, Google Calendar, Notion, Stripe, Supabase, Vercel, Wix, Claude in Chrome, Brevo MCP pending) |
 | March 14, 2026 (S4) | Brevo nurture automation fully built and activated | All 5 nurture emails (2-6) created in Brevo automation #1 via Claude in Chrome browser automation. Used Simple editor for clean text emails. Subject lines, sender names ("Brady Smith"), content from EMAIL_NURTURE_SEQUENCE.md, and hyperlinks all configured. Time delays set (2, 3, 3, 4, 4 days). Automation activated and live. Issues #24 and #31 marked complete. |
+| March 14, 2026 (S4) | 9 client testimonials added to site | Extracted from SEQ Fibreglass client files, cleaned (removed old business name, non-Brady references). Each paired with compressed pool photo. Added to homepage (4-column card grid) and About page (2-column layout with photo). Clients: Fowler, Walsh, Hooper, Evans, Passmore, Newcombe, Leeder, Lumsford, Fleet. Issues #8, B3, B6 marked complete. |
 
 ---
 
