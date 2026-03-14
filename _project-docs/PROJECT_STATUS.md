@@ -1,6 +1,6 @@
 # PROJECT_STATUS.md
 ## fibreglasspoolcheck.com.au — Master Source of Truth
-**Last updated:** March 2026  
+**Last updated:** March 14, 2026 (Session 2)
 **Instructions:** Paste the full contents of this file at the start of every new Claude session. Claude treats this as gospel and updates it at the end of every session.
 
 ---
@@ -39,7 +39,7 @@
 | Payments processor | Stripe | Direct integration via Next.js API routes |
 | File storage | Supabase Storage | Direct browser-to-storage uploads via signed URLs |
 | Email (transactional) | Brevo | Domain authenticated, DKIM/DMARC/SPF verified |
-| Email (marketing/nurture) | Brevo | Automation sequence written, needs setup in Brevo UI |
+| Email (marketing/nurture) | Brevo | Automation created in Brevo (ID #1), trigger configured for "Red Flags Guide" list (#3). Email templates need content. Brevo MCP server configured for future sessions. |
 | Analytics | Google Analytics (GA4) | Present in site source |
 | Google Ads tag | AW-18010642704 | In root layout on every page, conversion events on all checkout success pages + Red Flags Guide download |
 | Google site verification TXT | `google-site-verification=3EoSEdhGbyLvFmuHxDAbm6rJqulpv9yPy47ttGoy550` | Already in VentraIP DNS |
@@ -51,7 +51,7 @@
 | Database | Supabase (free tier) | ✅ Live — tables for all products |
 | File storage | Supabase Storage | ✅ Live — direct signed-URL uploads |
 | Transactional email | Brevo (free tier) | ✅ Live — domain authenticated |
-| Email nurture | Brevo Automations | Sequence copy written, needs setup in Brevo UI |
+| Email nurture | Brevo Automations | ✅ Automation #1 created, trigger set to "Red Flags Guide" list #3. API code connects guide downloads to list. Email template content pending. |
 | Payments | Stripe direct (Next.js API routes) | ✅ Live |
 
 ---
@@ -146,13 +146,17 @@ These are confirmed problems that need fixing, in priority order:
 | # | Issue | Impact | Status |
 |---|---|---|---|
 | 23 | No Google Ads conversion events | Can't measure ROAS, flying blind on ad spend | ✅ Added to all 3 checkout success pages + Red Flags Guide download |
-| 24 | No email nurture sequence after Red Flags Guide download | Leads captured but never followed up | Copy written (6 emails), needs setup in Brevo Automations |
+| 24 | No email nurture sequence after Red Flags Guide download | Leads captured but never followed up | ✅ Partial — Copy written (6 emails), Brevo list #3 created, API code adds contacts to list on guide download, automation #1 created with trigger. Email template content still needs populating. |
 | 25 | Quote Review upload failing with 413 error on large files | Customers can't complete orders with multiple/large photos | ✅ Fixed — direct-to-Supabase uploads via signed URLs |
 | 26 | Desktop nav missing Quote Review and Buyer Checklist links | Products only visible in mobile hamburger menu | ✅ Fixed — added to desktop nav |
 | 27 | Red Flags Guide page claims "10 warning signs" but only shows 7 | Trust/credibility issue | ✅ Fixed — added 3 more items |
 | 28 | Brady photo 14MB uncompressed causing 38s LCP on mobile | Terrible mobile performance, high bounce rate | ✅ Compressed to 295KB, converted to Next.js Image component |
 | 29 | No cross-links between service pages | Poor internal linking, weak SEO | ✅ Added cross-links between product pages |
 | 30 | Brevo domain not authenticated (DKIM failing) | Emails may land in spam | ✅ DNS records correct, domain now authenticated |
+| 31 | Brevo nurture email templates need content | Automation workflow has placeholder template, 5 emails need HTML content from EMAIL_NURTURE_SEQUENCE.md | Open — use Brevo MCP in next session |
+| 32 | Google Ads conversion labels are placeholders | Labels like `AW-18010642704/buyer_checklist` need replacing with real labels from Google Ads console | Open — Brady needs to create conversion actions in Google Ads |
+| 33 | BREVO_API_KEY in .env.production may need updating | New API key generated for MCP (`oddwuOmd1PTA065a` suffix). Check if Vercel env var needs updating. | Needs verification |
+| 34 | Brevo MCP server not yet connected | Config file created but Claude Desktop needs restart with config applied | Pending Brady action |
 
 ---
 
@@ -246,6 +250,12 @@ Write in this priority order:
 | March 14, 2026 | Google Ads conversion tracking added | Events on all 3 checkout success pages (with value/currency/transaction_id) + Red Flags Guide lead event |
 | March 14, 2026 | Email nurture sequence written | 6-email sequence for Red Flags Guide leads → paid product conversion. Copy in `_project-docs/EMAIL_NURTURE_SEQUENCE.md`. Needs manual setup in Brevo Automations UI |
 | March 14, 2026 | PROJECT_STATUS.md updated | Reflects all work done, Phase A complete, Phase D mostly complete |
+| March 14, 2026 (S2) | Brevo nurture automation infrastructure built | Created "Red Flags Guide" list (#3) in Brevo. Added `addContactToBrevoList()` to `lib/brevo.js`. Updated `/api/red-flags-guide/route.js` to add contacts to Brevo list on guide download. Created automation #1 in Brevo with "contact added to list" trigger. |
+| March 14, 2026 (S2) | Brevo MCP server configured | Generated MCP API key in Brevo, created `claude_desktop_config.json` for Claude Desktop MCP integration. Will allow direct Brevo management in future sessions. |
+| March 14, 2026 (S2) | Deleted old `/api/upload/route.js` | Had `export const config` (Pages Router pattern) breaking Next.js 14 build. Pool Check Report migrated to signed URL uploads. |
+| March 14, 2026 (S2) | Blog launched | 2 articles live: "Buying a house with a fibreglass pool" and "Fibreglass pool osmotic blistering". Blog index page, nav link, sitemap entries added. |
+| March 14, 2026 (S2) | All product page heroes rewritten | Benefits-first copy, urgency banners, keyword-optimised H1/H2s on all 3 product pages + homepage |
+| March 14, 2026 (S2) | About page rewritten | Leads with expertise, "we" → "I" voice fix throughout |
 
 ---
 

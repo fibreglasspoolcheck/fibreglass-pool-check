@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '../../../lib/supabase'
-import { sendRedFlagsGuide } from '../../../lib/brevo'
+import { sendRedFlagsGuide, addContactToBrevoList } from '../../../lib/brevo'
 
 export async function POST(request) {
   try {
@@ -27,6 +27,9 @@ export async function POST(request) {
 
     // Send guide via Brevo
     await sendRedFlagsGuide(firstName, email, leadId)
+
+    // Add contact to Brevo "Red Flags Guide" list (triggers nurture automation)
+    await addContactToBrevoList(email, firstName)
 
     // Update lead status
     if (!dbError) {
