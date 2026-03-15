@@ -45,9 +45,9 @@ export default function BuyerChecklist() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">For buyers</div>
-            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Buyer Inspection Checklist</h1>
+            <h1 className="text-4xl font-bold mb-4">The checklist that stops you missing the red flags other buyers miss</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Catch the problems that building inspectors miss. This expert checklist walks you through everything a fibreglass pool specialist would check — so you can assess the pool yourself before making an offer.
+              Building inspectors aren&apos;t trained to assess fibreglass pools. This expert checklist walks you through exactly what a specialist would check — surface defects, structural red flags, and the questions to ask — so you can spot problems before you commit.
             </p>
             <div className="text-3xl font-bold mb-6">$29 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">Instant download. If it doesn't meet your expectations, get in touch and I'll make it right.</p>
@@ -118,6 +118,21 @@ export default function BuyerChecklist() {
                 Order a Report — $149
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* BRE cross-promo */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex-1">
+              <p className="text-slate-900 font-semibold text-sm mb-1">Need fibreglass pool repairs or resurfacing?</p>
+              <p className="text-slate-600 text-sm">BRE Fibreglass is a Gold Coast specialist in pool resurfacing, osmosis repair, and structural fibreglass work.</p>
+            </div>
+            <a href="https://brefibreglass.com.au" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-orange-600 font-medium text-sm whitespace-nowrap transition-colors">
+              Visit brefibreglass.com.au &rarr;
+            </a>
           </div>
         </div>
       </section>

@@ -7,19 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 bg-white/10 rounded flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 18 18" fill="none">
-                  <path d="M3 14 Q9 4 15 14" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                  <circle cx="9" cy="7" r="2" fill="#ea580c"/>
-                </svg>
-              </div>
-              <span className="text-white font-semibold text-sm">
-                Fibreglass Pool Check
-              </span>
-            </div>
+            <span className="text-white font-bold text-base block mb-3">
+              Fibreglass Pool Check
+            </span>
             <p className="text-sm text-slate-400 leading-relaxed">
-              Independent fibreglass pool assessments from a specialist with 10+ years experience.
+              Specialist fibreglass pool assessment. Independent, practical, and honest.
             </p>
           </div>
 

@@ -11,32 +11,14 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-slate-900 rounded flex items-center justify-center">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path d="M3 14 Q9 4 15 14" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none"/>
-                <circle cx="9" cy="7" r="2" fill="#ea580c"/>
-              </svg>
-            </div>
-            <span className="font-semibold text-slate-900 text-sm leading-tight">
-              Fibreglass Pool<br/>
-              <span className="text-orange-600">Check</span>
-            </span>
+          <Link href="/" className="font-bold text-slate-900 text-lg tracking-tight">
+            Fibreglass Pool Check
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/PoolCheckReport" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-              Get a Report
-            </Link>
-            <Link href="/QuoteReview" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-              Quote Review
-            </Link>
-            <Link href="/BuyerChecklist" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-              Buyer Checklist
-            </Link>
-            <Link href="/blog" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
-              Articles
+              Get Report
             </Link>
             <Link href="/FAQ" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               FAQ
@@ -46,12 +28,6 @@ export default function Nav() {
             </Link>
             <Link href="/Contact" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               Contact
-            </Link>
-            <Link
-              href="/PoolCheckReport/order"
-              className="bg-slate-900 text-white text-sm px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors"
-            >
-              Order Now
             </Link>
           </nav>
 

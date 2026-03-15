@@ -51,9 +51,9 @@ export default function QuoteReview() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Repair & resurfacing</div>
-            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Repair Quote Review</h1>
+            <h1 className="text-4xl font-bold mb-4">Find out if your contractor&apos;s quote is fair before you commit</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Don't overpay for pool repairs. Upload your resurfacing or repair quote and get an independent expert assessment of whether the work is necessary, the scope is right, and the price is fair.
+              Pool resurfacing quotes range from $5,000 to $20,000+. Are you being overquoted? Is the scope right? Are they using the right materials? Get an independent expert review from someone who&apos;s done the work — not someone trying to sell you more.
             </p>
             <div className="text-3xl font-bold mb-6">$79 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>

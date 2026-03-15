@@ -53,9 +53,9 @@ export default function PoolCheckReport() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Most popular service</div>
-            <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Inspection Report</h1>
+            <h1 className="text-4xl font-bold mb-4">Know exactly what you&apos;re buying before it costs you thousands</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Know exactly what you're buying before you sign. Submit photos and get a detailed written assessment of the pool's condition — covering defects, red flags, and repair cost estimates — within 2–3 business days.
+              Fibreglass pool repairs can run $5,000–$30,000+. Building inspectors aren&apos;t trained to catch fibreglass-specific issues. Get a detailed, independent assessment from a specialist who&apos;s worked on 250+ pools — delivered within 2–3 business days.
             </p>
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
@@ -164,6 +164,21 @@ export default function PoolCheckReport() {
             >
               Get a Quote Review
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* BRE cross-promo */}
+      <section className="py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex-1">
+              <p className="text-slate-900 font-semibold text-sm mb-1">Need fibreglass pool repairs or resurfacing?</p>
+              <p className="text-slate-600 text-sm">BRE Fibreglass is a Gold Coast specialist in pool resurfacing, osmosis repair, and structural fibreglass work.</p>
+            </div>
+            <a href="https://brefibreglass.com.au" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-orange-600 font-medium text-sm whitespace-nowrap transition-colors">
+              Visit brefibreglass.com.au &rarr;
+            </a>
           </div>
         </div>
       </section>

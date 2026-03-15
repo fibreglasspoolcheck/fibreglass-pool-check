@@ -72,391 +72,373 @@ export default function Home() {
   return (
     <>
       <HomeSchema />
-      {/* Hero */}
-      <section className="bg-slate-900 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs px-3 py-1.5 rounded-full mb-6">
-              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-              Independent — not affiliated with any pool builder
-            </div>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Fibreglass pool inspection reports<br/>
-              <span className="text-orange-500">from an independent specialist.</span>
-            </h1>
-            <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
-              I'm Brady — a fibreglass pool specialist with 10+ years hands-on experience and 250+ pools assessed. I provide written reports, quote reviews, and buyer guides so you know exactly what you're getting into before you commit.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link
-                href="/PoolCheckReport/order"
-                className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
-              >
-                Get a Pool Check Report — $149
-              </Link>
-              <Link
-                href="/RedFlagsGuide"
-                className="border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-medium text-center transition-colors"
-              >
-                Free Red Flags Guide
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Urgency banner for under-contract buyers */}
-      <section className="bg-orange-600 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-            <p className="text-sm font-medium text-center sm:text-left">
-              <strong>Under contract?</strong> Don't wait — reports delivered within 2–3 business days, fast enough to act before your finance clause expires.
-            </p>
-            <Link
-              href="/PoolCheckReport/order"
-              className="bg-white text-orange-700 hover:bg-orange-50 text-sm font-medium px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
-            >
-              Order now
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust bar */}
-      <section className="border-b border-slate-100 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-wrap items-center gap-8 text-sm text-slate-600">
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              250+ pools assessed
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              10+ years experience
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              Australia-wide (digital reports)
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-              </svg>
-              Fully independent
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Fibreglass pool assessment services</h2>
-          <p className="text-slate-600 mb-12 max-w-xl">Three ways to get expert eyes on a fibreglass pool before you commit your money.</p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Report */}
-            <div className="border border-slate-200 rounded-xl p-6 hover:border-slate-300 transition-colors">
-              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </div>
-              <div className="text-xs font-medium text-orange-600 uppercase tracking-wide mb-2">Most popular</div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Pool Check Report</h3>
-              <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                Submit photos of the pool and get a detailed written assessment covering condition, red flags, and recommendations.
-              </p>
-              <div className="text-2xl font-bold text-slate-900 mb-4">$149</div>
-              <Link
-                href="/PoolCheckReport/order"
-                className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
-              >
-                Order Report
-              </Link>
-            </div>
-
-            {/* Quote Review */}
-            <div className="border border-slate-200 rounded-xl p-6 hover:border-slate-300 transition-colors">
-              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-                </svg>
-              </div>
-              <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-2">Resurfacing / Repair</div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Quote Review</h3>
-              <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                Already have a repair or resurfacing quote? Get an expert second opinion before you hand over your money.
-              </p>
-              <div className="text-2xl font-bold text-slate-900 mb-4">$79</div>
-              <Link
-                href="/QuoteReview/order"
-                className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
-              >
-                Order Review
-              </Link>
-            </div>
-
-            {/* Checklist */}
-            <div className="border border-slate-200 rounded-xl p-6 hover:border-slate-300 transition-colors">
-              <div className="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                </svg>
-              </div>
-              <div className="text-xs font-medium text-slate-400 uppercase tracking-wide mb-2">Buyers</div>
-              <h3 className="text-lg font-semibold text-slate-900 mb-2">Buyer Checklist</h3>
-              <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                Doing your own inspection? This expert checklist tells you exactly what to look for when assessing a fibreglass pool.
-              </p>
-              <div className="text-2xl font-bold text-slate-900 mb-4">$29</div>
-              <Link
-                href="/BuyerChecklist/order"
-                className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg text-center transition-colors"
-              >
-                Get Checklist
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why independent matters */}
-      <section className="bg-slate-50 py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero — clean white, matching Base44 aesthetic */}
+      <section className="bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900 mb-6">Why an independent fibreglass pool inspection matters</h2>
-              <div className="space-y-4">
-                {[
-                  { title: 'No conflicts of interest', body: 'I don\'t sell pool products, do repairs, or take referral fees. My assessment is yours alone.' },
-                  { title: 'Specialist knowledge', body: 'Fibreglass pools have failure modes that general building inspectors routinely miss. I know what to look for.' },
-                  { title: 'Negotiating power', body: 'A written report gives you documented leverage to renegotiate the price or walk away with confidence.' },
-                  { title: 'Fast turnaround', body: 'Reports are delivered within 2–3 business days. No waiting around when you\'re under contract.' },
-                ].map((item) => (
-                  <div key={item.title} className="flex gap-3">
-                    <div className="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-900 text-sm">{item.title}</div>
-                      <div className="text-slate-600 text-sm mt-0.5">{item.body}</div>
-                    </div>
-                  </div>
-                ))}
+              <p className="text-sm font-medium text-slate-500 tracking-wide uppercase mb-4">
+                Fibreglass Pool Specialist &middot; Independent Assessment
+              </p>
+              <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
+                Independent Fibreglass Pool Checks & Quote Reviews
+              </h1>
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                Photo-based fibreglass pool assessment and decision support for buyers and owners who want practical clarity before they buy, accept a quote, or spend money on repairs or resurfacing.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/PoolCheckReport/order"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3.5 rounded-lg font-medium text-center transition-colors"
+                >
+                  Order Pool Check Report — $149 AUD
+                </Link>
+                <Link
+                  href="/RedFlagsGuide"
+                  className="border border-slate-300 hover:border-slate-400 text-slate-700 px-6 py-3.5 rounded-lg font-medium text-center transition-colors"
+                >
+                  Get Free Red Flags Guide
+                </Link>
               </div>
             </div>
-            <div className="bg-white border border-slate-200 rounded-xl p-8">
-              <div className="text-orange-600 text-4xl font-bold mb-2">$149</div>
-              <p className="text-slate-600 text-sm mb-6">
-                The cost of a Pool Check Report is a fraction of what a surprise repair bill can run — often $5,000–$30,000+.
-              </p>
-              <p className="text-slate-500 text-xs mb-6 italic">
-                If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
-              </p>
-              <Link
-                href="/PoolCheckReport/order"
-                className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center transition-colors font-medium"
-              >
-                Order a Report
-              </Link>
-              <p className="text-xs text-slate-400 text-center mt-3">Or <Link href="/RedFlagsGuide" className="underline hover:text-slate-600">get the free Red Flags Guide</Link> first</p>
+            <div className="relative rounded-2xl overflow-hidden">
+              <Image
+                src="/images/hooper-after.jpg"
+                alt="Clean fibreglass pool after professional assessment and renovation"
+                width={700}
+                height={500}
+                priority
+                className="w-full h-auto object-cover rounded-2xl"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Hands-on experience / credibility */}
+      {/* 3-step process */}
+      <section className="border-y border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+            {[
+              { step: '1', text: 'Submit your photos and pool details' },
+              { step: '2', text: 'Receive a written Pool Check Report in 3\u20135 business days' },
+              { step: '3', text: 'Know what to ask before you buy, repair, or resurface' },
+            ].map((item) => (
+              <div key={item.step} className="flex items-start gap-3">
+                <span className="text-sm font-bold text-slate-900 bg-slate-100 w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">
+                  {item.step}
+                </span>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About This Service */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">10+ years hands-on with fibreglass pools</h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Before launching Fibreglass Pool Check, I spent over a decade resurfacing and repairing fibreglass pools across Queensland. That hands-on experience is what makes my assessments different.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Before/after */}
-            <div className="rounded-xl overflow-hidden border border-slate-200">
-              <div className="grid grid-cols-2">
-                <div className="relative">
-                  <Image
-                    src="/images/hooper-before.jpg"
-                    alt="Fibreglass pool before renovation — flaking, discoloured surface"
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover"
-                  />
-                  <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-xs px-2 py-1 rounded">Before</span>
-                </div>
-                <div className="relative">
-                  <Image
-                    src="/images/hooper-after.jpg"
-                    alt="Same fibreglass pool after professional renovation — smooth, even finish"
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover"
-                  />
-                  <span className="absolute bottom-2 left-2 bg-orange-600/90 text-white text-xs px-2 py-1 rounded">After</span>
-                </div>
-              </div>
-              <div className="p-4 bg-slate-50">
-                <p className="text-slate-600 text-sm">One of 250+ pools I've worked on. This kind of hands-on experience means I know exactly what to look for in an assessment.</p>
-              </div>
-            </div>
-
-            {/* Brady on-site */}
-            <div className="rounded-xl overflow-hidden border border-slate-200">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded-2xl overflow-hidden">
               <Image
                 src="/images/Photo of Brady.jpg"
                 alt="Brady Smith — fibreglass pool specialist on site"
                 width={600}
                 height={450}
-                priority
-                className="w-full h-48 object-cover object-top"
+                className="w-full h-auto object-cover object-top rounded-2xl"
               />
-              <div className="p-4 bg-slate-50">
-                <p className="text-slate-600 text-sm">That's me on site. Not a desk-based consultant — a tradesman who has personally resurfaced, repaired and assessed hundreds of fibreglass pools.</p>
+            </div>
+            <div>
+              <p className="text-sm font-medium text-slate-500 tracking-wide uppercase mb-3">About This Service</p>
+              <h2 className="text-3xl font-bold text-slate-900 mb-6">
+                Built by a fibreglass pool specialist, not a generic content site
+              </h2>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Fibreglass Pool Check is backed by hands-on fibreglass pool resurfacing, repair, and restoration experience. This is not recycled content from a marketing agency.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Every assessment is written by someone who has personally worked on 250+ fibreglass pools — grinding, laminating, resurfacing, troubleshooting water loss, repairing structural damage, and explaining to owners what went wrong and what to do next.
+              </p>
+              <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                More about this service &rarr;
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-10">What clients say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Amazing attention to detail',
+                quote: 'We bought a house with a pool, and the pool was not all it seemed. Brady displays amazing attention to detail. Even our water carter said he\'s never seen a better looking renovated pool.',
+                name: 'Kelvin O.',
+                label: 'pool owner',
+              },
+              {
+                title: 'Responsive and professional',
+                quote: 'From our very first contact, we were impressed with the responsiveness and professionalism. The final result is perfect. I can unreservedly recommend Brady for both quality workmanship and commitment to customer satisfaction.',
+                name: 'Kelvin O.',
+                label: 'pool owner',
+              },
+              {
+                title: 'Clear scope. Clear communication.',
+                quote: 'From the beginning I was informed of the scope of works, possible variations and the time frames to complete the work.',
+                name: 'Linton P.',
+                label: 'pool owner',
+              },
+              {
+                title: 'Done properly, not rushed',
+                quote: 'In Brady\'s mind, the job had to be done right, and it certainly was.',
+                name: 'Russell W.',
+                label: 'pool owner',
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">
+                <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-4">&ldquo;{item.quote}&rdquo;</p>
+                <p className="text-sm text-slate-500">{item.name}, {item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Example */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-sm font-medium text-slate-500 tracking-wide uppercase mb-3">Case Example</p>
+          <h2 className="text-3xl font-bold text-slate-900 mb-2">What the right fibreglass assessment can reveal</h2>
+          <p className="text-slate-600 mb-10">From tired and neglected to a pool people wanted to use again</p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <div>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                An older fibreglass pool had lost gloss, stained badly, and showed severe signs of surface deterioration. It looked tired, neglected, and like a candidate for expensive guesswork.
+              </p>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                The damaged areas were properly addressed and the pool was refinished instead of being treated like a quick cosmetic cover-up. The result was a bright, clean, usable pool the owners were proud of.
+              </p>
+              <div className="flex gap-3">
+                <Link
+                  href="/PoolCheckReport/order"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-3 rounded-lg font-medium text-sm transition-colors"
+                >
+                  Order Pool Check Report — $149 AUD
+                </Link>
+                <Link
+                  href="/BuyerChecklist"
+                  className="text-slate-600 hover:text-slate-900 px-5 py-3 text-sm font-medium transition-colors"
+                >
+                  Not sure yet? Start with the Buyer Checklist &rarr;
+                </Link>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <Image
+                  src="/images/hooper-before.jpg"
+                  alt="Fibreglass pool before — flaking, discoloured surface"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-xl"
+                />
+                <p className="text-xs text-slate-500 mt-2">Before</p>
+              </div>
+              <div>
+                <Image
+                  src="/images/hooper-after.jpg"
+                  alt="Same pool after proper assessment and renovation"
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-cover rounded-xl"
+                />
+                <p className="text-xs text-slate-500 mt-2">After</p>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Testimonial quotes with pool photos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {/* Stats bar */}
+      <section className="bg-slate-50 border-y border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
-              {
-                quote: "We bought a house with a pool, and the pool was not all it seemed. Brady displays amazing attention to detail. He loves doing what he does. Even our water carter said he's never seen a better looking renovated pool.",
-                name: "Warren & Allison Fowler",
-                image: "/images/fowler-after.jpg",
-              },
-              {
-                quote: "My fibreglass pool was an absolute mess. Brady was fantastic, a hard worker with very high standards. In Brady's mind — the job had to be done right — and it certainly was. The pictures tell the story.",
-                name: "Russell Walsh",
-                location: "Gympie",
-                image: "/images/walsh-after.jpg",
-              },
-              {
-                quote: "From our very first contact, we were impressed with the responsiveness and professionalism. The final result is perfect. I can unreservedly recommend Brady for both his quality workmanship and his commitment to customer satisfaction.",
-                name: "Michael & Gaynor Hooper",
-                location: "Jindalee",
-                image: "/images/hooper-after.jpg",
-              },
-              {
-                quote: "Brady arrived on time each day and would work all day without much of a break. I had a lot of osmosis in my pool but no problem for Brady, just got on with the job. My pool on completion looks fantastic.",
-                name: "R. Evans",
-                image: "/images/evans-after.jpg",
-              },
-              {
-                quote: "Brady's knowledge of the pool industry, methods and equipment used to provide a quality finish was impressive. My pool has been renovated to a quality that will enhance the value of my house.",
-                name: "Linton Passmore",
-                image: "/images/passmore-after.jpg",
-              },
-              {
-                quote: "My fibreglass pool was in very poor condition and Brady gave me excellent advice and very personal service. The final result looks fabulous.",
-                name: "Andrew Newcombe",
-                location: "Noosa Heads",
-                image: "/images/newcombe-after.jpg",
-              },
-              {
-                quote: "We approached resurfacing our grotty old pool with some trepidation. Brady worked hard to guide us through the process and the pool now looks fantastic. The original quote was very competitive.",
-                name: "Glen & Tracey Leeder",
-                image: "/images/leeder-after.jpg",
-              },
-              {
-                quote: "The work was long and tiring but everything was exactly right to achieve an excellent result. The pool was meticulously resurfaced with the utmost professionalism.",
-                name: "R. & C. Lumsford",
-                location: "Nanango",
-                image: "/images/lumsford-after.jpg",
-              },
-              {
-                quote: "Our pool had lost its gloss, stains were appearing, and severe osmosis was all over the shell. Brady came to visit, saw the problem firsthand, and explained in detail what he could do. In just four days they had turned one very sad looking little pool into a sparkling gem.",
-                name: "Leanne & Les Fleet",
-                location: "Mary Valley",
-                image: "/images/maryvalley-after.jpg",
-              },
+              { stat: '10+ years', label: 'Hands-on fibreglass pool experience' },
+              { stat: '250+', label: 'Fibreglass pools assessed, repaired and resurfaced' },
+              { stat: 'Fibreglass only', label: 'Not generic pool advice' },
+              { stat: 'Independent', label: 'No sales agenda, no contractor referrals' },
             ].map((item) => (
-              <div key={item.name} className="bg-white border border-slate-200 rounded-xl overflow-hidden">
-                <div className="relative h-40">
-                  <Image
-                    src={item.image}
-                    alt={`Fibreglass pool renovated by Brady — ${item.name}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <svg className="w-5 h-5 text-orange-600/40 mb-2" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                  </svg>
-                  <p className="text-slate-700 text-sm leading-relaxed mb-3">{item.quote}</p>
-                  <div className="text-sm">
-                    <span className="font-semibold text-slate-900">{item.name}</span>
-                    {item.location && <span className="text-slate-400 ml-1">— {item.location}</span>}
+              <div key={item.stat}>
+                <div className="text-xl font-bold text-slate-900">{item.stat}</div>
+                <p className="text-sm text-slate-500 mt-1">{item.label}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-sm text-slate-500">
+              For buyers and owners who need fibreglass-specific clarity before they buy, accept a quote, or spend money on repairs or resurfacing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who This Is For */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-10">Who This Is For</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="border border-slate-200 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">You&apos;re Buying a Property with a Fibreglass Pool</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                If you&apos;re buying a property with a fibreglass pool, this helps you understand visible condition, likely concerns, and what may deserve closer review before you commit.
+              </p>
+              <Link href="/BuyingAHouse" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                See how this helps buyers &rarr;
+              </Link>
+            </div>
+            <div className="border border-slate-200 rounded-xl p-6">
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">You Own the Pool and Need Clarity</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                If you&apos;re seeing cracks, surface wear, staining, roughness, suspected leaks, or resurfacing quotes, this helps you understand what you may actually be dealing with before spending money.
+              </p>
+              <Link href="/PoolOwner" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                See how this helps owners &rarr;
+              </Link>
+            </div>
+          </div>
+          <div className="border border-slate-200 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <p className="text-xs font-medium text-slate-500 tracking-wide uppercase mb-1">Additional Service — South East Queensland</p>
+              <h3 className="text-lg font-semibold text-slate-900">On-Site Assessment</h3>
+              <p className="text-slate-600 text-sm">In-person inspection for Gold Coast, Brisbane, and surrounding areas. Request-only — reviewed manually before booking.</p>
+            </div>
+            <Link href="/OnSiteAssessment" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors whitespace-nowrap">
+              Request Assessment &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* What This Helps You Avoid */}
+      <section className="bg-slate-50 py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">What This Helps You Avoid</h2>
+          <p className="text-slate-600 mb-10 max-w-2xl">
+            Fibreglass pool issues are easy to misread. This service helps you avoid expensive assumptions before you buy, accept a quote, or commit to the wrong repair path.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { title: 'Buying into hidden repair or resurfacing scope', body: 'A pool that looks acceptable in a listing photo can have visible signs that deserve closer review before you buy or negotiate.' },
+              { title: 'Accepting a resurfacing quote that excludes key prep', body: 'Some quotes look cheaper because important preparation or repair scope sits outside the quoted price.' },
+              { title: 'Assuming a water loss issue is minor', body: 'Some leaks are simple. Others are not. Understanding what you\'re seeing first can prevent wasted spend on guesswork.' },
+              { title: 'Underestimating scope that only appears once the pool is drained', body: 'Visible surface symptoms do not always tell the full story. Some issues become clearer only when work begins.' },
+              { title: 'Confusing a cosmetic refresh with a larger preparation job', body: 'A fibreglass pool may need more than a visual refresh if underlying condition or previous repairs are poor.' },
+              { title: 'Relying on generic pool advice for a fibreglass-specific problem', body: 'Fibreglass pools have their own failure patterns. Generic advice can miss what actually matters.' },
+            ].map((item) => (
+              <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-5">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full border-2 border-orange-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-orange-400 text-xs font-bold">!</span>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900 text-sm mb-1">{item.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-8">
-            <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
-              More about my background →
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Case study teaser */}
-      <section className="bg-slate-50 py-20">
+      {/* How to Get Started — 3 product cards */}
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Real assessments. Real results.</h2>
-          <p className="text-slate-600 mb-10">What independent assessment looks like in practice.</p>
-          <div className="bg-white border border-slate-200 rounded-xl p-8">
-            <div className="text-xs font-medium text-orange-600 uppercase tracking-wide mb-2">Case study — Mary Valley, QLD</div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">Pool appeared sound. Wasn’t.</h3>
-            <p className="text-slate-600 leading-relaxed mb-6 max-w-2xl">
-              A buyer under contract on a property in the Mary Valley contacted me after their building inspector gave the pool a clean bill of health. My assessment found significant osmotic blistering and structural concerns that would have cost tens of thousands to repair.
-            </p>
-            <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
-              Learn more about my approach →
+          <h2 className="text-3xl font-bold text-slate-900 mb-3">How to Get Started</h2>
+          <p className="text-slate-600 mb-10">Three ways to get useful information about your fibreglass pool situation.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="border border-slate-200 rounded-xl p-6 hover:border-slate-300 transition-colors">
+              <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">Free</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Red Flags Guide</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                10 warning signs buyers and owners often miss before inspection, quote comparison, or purchase.
+              </p>
+              <Link href="/RedFlagsGuide" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                Read the guide &rarr;
+              </Link>
+            </div>
+            <div className="border border-slate-200 rounded-xl p-6 hover:border-slate-300 transition-colors">
+              <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">$29 AUD</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Buyer Checklist</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                Structured due-diligence tool for buyers who want better questions to ask before purchasing a property with a fibreglass pool.
+              </p>
+              <Link href="/BuyerChecklist" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
+                Get the checklist &rarr;
+              </Link>
+            </div>
+            <div className="border-2 border-slate-900 rounded-xl p-6 relative">
+              <div className="absolute top-4 right-4">
+                <span className="bg-slate-900 text-white text-xs font-medium px-2.5 py-1 rounded-full">Most Popular</span>
+              </div>
+              <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">$149 AUD</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Pool Check Report</h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">
+                The main decision product. Photo-based fibreglass pool assessment for buyers and owners who want practical clarity before committing.
+              </p>
+              <Link
+                href="/PoolCheckReport/order"
+                className="inline-block bg-slate-900 hover:bg-slate-800 text-white text-sm px-5 py-2.5 rounded-lg font-medium transition-colors"
+              >
+                Order Report — $149 AUD
+              </Link>
+            </div>
+          </div>
+          <div className="text-center mt-6">
+            <Link href="/About" className="text-sm text-slate-500 hover:text-slate-700 transition-colors">
+              More about this service &rarr;
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Need repairs? BRE cross-promo */}
+      <section className="py-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4">
+            <div className="flex-1">
+              <p className="text-slate-900 font-semibold text-sm mb-1">Need fibreglass pool repairs or resurfacing?</p>
+              <p className="text-slate-600 text-sm">BRE Fibreglass is a Gold Coast specialist in pool resurfacing, osmosis repair, and structural fibreglass work.</p>
+            </div>
+            <a href="https://brefibreglass.com.au" target="_blank" rel="noopener noreferrer" className="text-slate-900 hover:text-orange-600 font-medium text-sm whitespace-nowrap transition-colors">
+              Visit brefibreglass.com.au &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="bg-slate-900 py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Get a fibreglass pool condition report before you buy</h2>
-          <p className="text-slate-300 mb-4 max-w-xl mx-auto">
-            An independent assessment before you buy — or before you pay for repairs — is the smartest $149 you'll spend.
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to find out what you&apos;re really dealing with before you commit?
+          </h2>
+          <p className="text-slate-300 mb-8 max-w-xl mx-auto">
+            Send your pool photos and get a practical fibreglass-specific condition assessment within 3&ndash;5 business days.
           </p>
-          <p className="text-slate-400 text-sm mb-8 max-w-lg mx-auto italic">
-            If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/PoolCheckReport/order"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Get a Pool Check Report
-            </Link>
-            <Link
-              href="/FAQ"
-              className="border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Read the FAQ
-            </Link>
-          </div>
+          <Link
+            href="/PoolCheckReport/order"
+            className="inline-block bg-white text-slate-900 hover:bg-slate-100 px-6 py-3.5 rounded-lg font-medium transition-colors"
+          >
+            Order Pool Check Report — $149 AUD
+          </Link>
         </div>
       </section>
     </>
