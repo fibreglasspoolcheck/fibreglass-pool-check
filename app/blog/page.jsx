@@ -21,6 +21,27 @@ const articles = [
     date: '2026-03-14',
     readTime: '7 min read',
   },
+  {
+    slug: 'fibreglass-pool-resurfacing-cost-australia',
+    title: 'How much does fibreglass pool resurfacing cost in Australia?',
+    description: 'A realistic breakdown of resurfacing costs from patch repairs to full resurfaces — what affects the price, what to ask your contractor, and how to spot overquoting.',
+    date: '2026-03-16',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'fibreglass-pool-inspection-vs-building-inspection',
+    title: 'Fibreglass pool inspection vs building inspection: what\'s the difference?',
+    description: 'What building inspectors actually check on pools (and what they miss). When you need a specialist assessment and why it matters before buying.',
+    date: '2026-03-16',
+    readTime: '7 min read',
+  },
+  {
+    slug: 'fibreglass-pool-delamination',
+    title: 'Fibreglass pool delamination: what it is, what it costs, and what to do',
+    description: 'What delamination looks like, what causes it, how serious it is, and your repair options — from a specialist who\'s seen hundreds of pools.',
+    date: '2026-03-16',
+    readTime: '8 min read',
+  },
 ]
 
 export default function BlogIndex() {
