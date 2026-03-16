@@ -29,6 +29,11 @@ yarn-error.log*
 # Vercel
 .vercel
 
+# Archive / reference files
+/_archive
+/CLAUDE.md
+/package-lock.json
+
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
