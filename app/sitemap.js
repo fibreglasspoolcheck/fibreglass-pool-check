@@ -92,5 +92,23 @@ export default function sitemap() {
             changeFrequency: 'monthly',
             priority: 0.8,
     },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-resurfacing-cost-australia`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-inspection-vs-building-inspection`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-delamination`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
       ]
 }
