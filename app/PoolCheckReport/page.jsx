@@ -199,7 +199,7 @@ export default function PoolCheckReport() {
             </Link>
             <p className="text-slate-400 text-xs mt-3 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
             <p className="text-xs text-slate-500 mt-4">
-              Questions first? <Link href="/FAQ" className="underline hover:text-slate-300">Read the FAQ</Link> or <Link href="/Contact" className="underline hover:text-slate-300">get in touch</Link>.
+              Questions first? <Link href="/faq" className="underline hover:text-slate-300">Read the FAQ</Link> or <Link href="/Contact" className="underline hover:text-slate-300">get in touch</Link>.
             </p>
           </div>
         </div>

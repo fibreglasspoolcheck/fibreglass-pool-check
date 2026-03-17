@@ -31,7 +31,7 @@ export default function Contact() {
             <div>
               <h2 className="text-xl font-bold text-slate-900 mb-4">Before you message</h2>
               <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                You might find your answer faster in our <Link href="/FAQ" className="text-orange-600 hover:underline">FAQ</Link>.
+                You might find your answer faster in our <Link href="/faq" className="text-orange-600 hover:underline">FAQ</Link>.
               </p>
               <div className="space-y-4">
                 <div className="flex gap-3">

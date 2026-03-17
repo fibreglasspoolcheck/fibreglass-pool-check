@@ -63,7 +63,7 @@ export default function sitemap() {
             priority: 0.6,
     },
     {
-            url: `${baseUrl}/FAQ`,
+            url: `${baseUrl}/faq`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.6,

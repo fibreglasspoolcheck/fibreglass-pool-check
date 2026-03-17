@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Fibreglass Pool FAQ — Common Questions Answered',
   description: 'Answers to 17 common questions about fibreglass pool inspections, quote reviews, and what to look for before buying a property with a pool.',
   alternates: {
-    canonical: '/FAQ',
+    canonical: '/faq',
   },
 }
 
@@ -112,7 +112,7 @@ export default function FAQ() {
       <FAQSchema />
       <BreadcrumbSchema items={[
         { name: 'Home', url: '/' },
-        { name: 'FAQ', url: '/FAQ' }
+        { name: 'FAQ', url: '/faq' }
       ]} />
       <section className="bg-slate-900 text-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

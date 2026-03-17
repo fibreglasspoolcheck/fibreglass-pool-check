@@ -20,7 +20,7 @@ export default function Nav() {
             <Link href="/PoolCheckReport" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               Get Report
             </Link>
-            <Link href="/FAQ" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <Link href="/faq" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
               FAQ
             </Link>
             <Link href="/About" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
@@ -64,7 +64,7 @@ export default function Nav() {
             <Link href="/blog" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               Articles
             </Link>
-            <Link href="/FAQ" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/faq" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               FAQ
             </Link>
             <Link href="/About" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>

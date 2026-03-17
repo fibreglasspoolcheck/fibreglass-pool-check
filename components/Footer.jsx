@@ -33,7 +33,7 @@ export default function Footer() {
               <li><Link href="/RedFlagsGuide" className="text-sm text-slate-400 hover:text-white transition-colors">Free Red Flags Guide</Link></li>
               <li><Link href="/BuyingAHouse" className="text-sm text-slate-400 hover:text-white transition-colors">Buying a House with a Pool</Link></li>
               <li><Link href="/PoolOwner" className="text-sm text-slate-400 hover:text-white transition-colors">Pool Owner Advice</Link></li>
-              <li><Link href="/FAQ" className="text-sm text-slate-400 hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link href="/faq" className="text-sm text-slate-400 hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
