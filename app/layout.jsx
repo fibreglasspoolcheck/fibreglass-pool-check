@@ -32,7 +32,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: './',
+    canonical: 'https://fibreglasspoolcheck.com.au/',
   },
 }
 
