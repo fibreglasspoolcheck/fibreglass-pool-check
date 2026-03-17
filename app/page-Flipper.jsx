@@ -78,7 +78,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 text-white/80 text-xs px-3 py-1.5 rounded-full mb-6">
               <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-              Independent — not affiliated with any pool builder
+              Independent assessments — transparent about our background
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
               Fibreglass pool inspection reports<br/>
@@ -314,18 +314,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Brady on-site */}
+            {/* Before/after showcase */}
             <div className="rounded-xl overflow-hidden border border-slate-200">
-              <Image
-                src="/images/Photo of Brady.jpg"
-                alt="Brady Smith — fibreglass pool specialist on site"
-                width={600}
-                height={450}
-                priority
-                className="w-full h-48 object-cover object-top"
-              />
+              <div className="grid grid-cols-2">
+                <div className="relative">
+                  <Image src="/images/hooper-before.jpg" alt="Pool before assessment" width={300} height={225} className="w-full h-48 object-cover" />
+                  <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-[10px] px-2 py-0.5 rounded">Before</span>
+                </div>
+                <div className="relative">
+                  <Image src="/images/hooper-after.jpg" alt="Pool after renovation" width={300} height={225} className="w-full h-48 object-cover" />
+                  <span className="absolute bottom-2 left-2 bg-orange-600/90 text-white text-[10px] px-2 py-0.5 rounded">After</span>
+                </div>
+              </div>
               <div className="p-4 bg-slate-50">
-                <p className="text-slate-600 text-sm">That's me on site. Not a desk-based consultant — a tradesman who has personally resurfaced, repaired and assessed hundreds of fibreglass pools.</p>
+                <p className="text-slate-600 text-sm">Not a desk-based consultant — backed by hands-on experience resurfacing, repairing and assessing hundreds of fibreglass pools.</p>
               </div>
             </div>
           </div>

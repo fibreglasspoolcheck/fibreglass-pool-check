@@ -53,7 +53,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Fibreglass Pool Check. All rights reserved.
           </p>
           <p className="text-xs text-slate-500">
-            Independent assessments. Not affiliated with any pool builder or contractor.
+            Independent assessments. Full transparency about our background on the <a href="/About" class="underline hover:text-white">About</a> page.
           </p>
           <p className="text-xs text-slate-500">
             ABN: 26 533 957 536

@@ -62,15 +62,8 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="w-24 h-24 bg-slate-200 rounded-full mb-6 overflow-hidden">
-                <Image
-                  src="/images/Photo of Brady.jpg"
-                  alt="Brady Smith — fibreglass pool specialist"
-                  width={100}
-                  height={100}
-                  priority
-                  className="w-full h-full object-cover object-top"
-                />
+              <div className="w-24 h-24 bg-slate-900 rounded-full mb-6 flex items-center justify-center">
+                <span className="text-white text-2xl font-bold">BS</span>
               </div>
               <h2 className="text-2xl font-bold text-slate-900 mb-2">Brady</h2>
               <div className="text-orange-600 text-sm font-medium mb-4">Fibreglass Pool Specialist</div>
@@ -82,7 +75,7 @@ export default function About() {
                   Before launching this service, I spent over a decade on tools — resurfacing, repairing, and renovating fibreglass pools. I've seen every failure mode from the inside: osmotic blistering, delamination, gelcoat breakdown, structural flexing, fitting failures. That hands-on experience is what makes my assessments different from a desktop review.
                 </p>
                 <p>
-                  With 250+ pools assessed, I know what problems look like at every stage — from early warning signs through to major structural issues. I have no affiliation with any pool builder, contractor, or supplier. My assessment is yours alone.
+                  With 250+ pools assessed, I know what problems look like at every stage — from early warning signs through to major structural issues. While my wife runs BRE Fibreglass (a pool resurfacing business), my assessments are completely independent — I have no financial interest in what you decide to do with your pool.
                 </p>
               </div>
             </div>
@@ -264,7 +257,7 @@ export default function About() {
             {[
               {
                 title: 'Completely independent',
-                body: 'No affiliation with any pool builder, contractor, or supplier. I have no financial interest in what you decide to do with your pool.'
+                body: 'My wife runs BRE Fibreglass, a pool resurfacing business — but my assessments are completely independent. I have no financial interest in what you decide to do with your pool.'
               },
               {
                 title: 'Fibreglass specialist only',

@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: 'Are you affiliated with any pool builders or contractors?',
-    a: 'No. We are completely independent. We have no affiliation with any pool builder, contractor, resurfacing company, or pool product supplier. We have no financial interest in what you decide to do.',
+    a: 'We operate independently. While Brady\'s wife runs BRE Fibreglass (a pool resurfacing business), all assessments are conducted without any influence from that relationship. We have no financial interest in what you decide to do with your pool.',
   },
   {
     q: 'What types of pools do you assess?',

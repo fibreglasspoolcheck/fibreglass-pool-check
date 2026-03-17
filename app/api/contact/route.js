@@ -1,5 +1,14 @@
 import { NextResponse } from 'next/server'
 
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
+
 export async function POST(request) {
   try {
     const { full_name, email, message } = await request.json()
@@ -7,6 +16,10 @@ export async function POST(request) {
     if (!full_name || !email || !message) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
+
+    const safeName = escapeHtml(full_name)
+    const safeEmail = escapeHtml(email)
+    const safeMessage = escapeHtml(message)
 
     // Forward to help@ via Brevo transactional email
     const res = await fetch('https://api.brevo.com/v3/smtp/email', {
@@ -20,12 +33,12 @@ export async function POST(request) {
         sender: { name: 'Fibreglass Pool Check Website', email: 'deliver@send.fibreglasspoolcheck.com.au' },
         to: [{ email: 'help@fibreglasspoolcheck.com.au', name: 'Brady' }],
         replyTo: { email: email, name: full_name },
-        subject: `New contact message from ${full_name}`,
+        subject: `New contact message from ${safeName}`,
         htmlContent: `
-          <p><strong>Name:</strong> ${full_name}</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Name:</strong> ${safeName}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
           <p><strong>Message:</strong></p>
-          <p>${message.replace(/\n/g, '<br/>')}</p>
+          <p>${safeMessage.replace(/\n/g, '<br/>')}</p>
         `,
       }),
     })

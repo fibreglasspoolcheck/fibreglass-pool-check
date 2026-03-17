@@ -140,14 +140,23 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="/images/Photo of Brady.jpg"
-                alt="Brady Smith — fibreglass pool specialist on site"
-                width={600}
-                height={450}
-                className="w-full h-auto object-cover object-top rounded-2xl"
-              />
+            <div className="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden">
+              <div className="relative">
+                <Image src="/images/walsh-before.jpg" alt="Fibreglass pool before assessment — surface damage visible" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
+                <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-[10px] px-2 py-0.5 rounded">Before</span>
+              </div>
+              <div className="relative">
+                <Image src="/images/walsh-after.jpg" alt="Same pool after professional fibreglass resurfacing" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
+                <span className="absolute bottom-2 left-2 bg-orange-600/90 text-white text-[10px] px-2 py-0.5 rounded">After</span>
+              </div>
+              <div className="relative">
+                <Image src="/images/fowler-before.jpg" alt="Fibreglass pool showing wear and deterioration" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
+                <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-[10px] px-2 py-0.5 rounded">Before</span>
+              </div>
+              <div className="relative">
+                <Image src="/images/fowler-after.jpg" alt="Pool restored to pristine condition" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
+                <span className="absolute bottom-2 left-2 bg-orange-600/90 text-white text-[10px] px-2 py-0.5 rounded">After</span>
+              </div>
             </div>
             <div>
               <p className="text-sm font-medium text-slate-500 tracking-wide uppercase mb-3">About This Service</p>

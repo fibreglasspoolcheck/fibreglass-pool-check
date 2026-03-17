@@ -30,7 +30,7 @@ export default function ServiceBoundaries() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">What Fibreglass Pool Check is</h2>
               <div className="space-y-3">
                 {[
-                  'An independent assessment service — we have no commercial relationships with builders or repairers',
+                  'An independent assessment service — while Brady\'s wife runs BRE Fibreglass, all assessments are conducted independently with no influence from that relationship',
                   'A specialist opinion based on photos, documentation, or on-site inspection',
                   'A written report summarising findings and recommendations in plain language',
                   'A quote review service for resurfacing and repair quotes',

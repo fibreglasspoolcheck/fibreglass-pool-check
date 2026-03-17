@@ -283,7 +283,7 @@ export default function FibreglassPoolInspectionVsBuildingInspection() {
           <div>
             <p className="font-semibold text-slate-900 text-sm">Brady Smith</p>
             <p className="text-slate-500 text-xs mt-1">
-              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent — no affiliation with any pool builder, contractor, or supplier.
+              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent assessments — Brady's wife runs BRE Fibreglass, but all assessments are conducted independently.
             </p>
           </div>
         </div>
