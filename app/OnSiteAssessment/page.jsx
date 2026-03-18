@@ -59,7 +59,7 @@ export default function OnSiteAssessment() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">About the on-site assessment</h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-sm">
                 <p>
-                  My on-site assessment is a comprehensive in-person inspection of your fibreglass pool. Unlike a photo-based report, the on-site assessment allows for physical examination — assessing surface texture by touch, testing fittings, and observing the pool from multiple angles including water level assessment.
+                  My on-site assessment is a comprehensive in-person inspection of your fibreglass pool. Unlike a photo-based report, the on-site assessment allows for physical examination  -  assessing surface texture by touch, testing fittings, and observing the pool from multiple angles including water level assessment.
                 </p>
                 <p>
                   This service is available in South East Queensland only and operates on a request basis. Availability depends on location and scheduling, and cannot be guaranteed.
@@ -107,7 +107,7 @@ export default function OnSiteAssessment() {
                   href="/PoolCheckReport/order"
                   className="block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-3 rounded-lg text-center font-medium transition-colors"
                 >
-                  Order a Pool Check Report — $149
+                  Order a Pool Check Report  -  $149
                 </Link>
               </div>
 

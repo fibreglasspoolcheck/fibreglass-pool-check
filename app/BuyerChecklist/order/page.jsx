@@ -87,7 +87,7 @@ function BuyerChecklistOrderInner() {
     }
   }
 
-  // Payment confirmed — checklist auto-delivered via email
+  // Payment confirmed  -  checklist auto-delivered via email
   if (step === 'paid') {
     return (
       <div className="min-h-screen bg-white py-16">
@@ -98,7 +98,7 @@ function BuyerChecklistOrderInner() {
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-slate-900 mb-4">Payment confirmed</h1>
-          <p className="text-slate-600 mb-6">Your Buyer Checklist has been emailed to you. Check your inbox (and spam folder) — it should arrive within a few minutes.</p>
+          <p className="text-slate-600 mb-6">Your Buyer Checklist has been emailed to you. Check your inbox (and spam folder)  -  it should arrive within a few minutes.</p>
           <hr className="my-8 border-slate-200" />
           <p className="text-slate-600 text-sm mb-4">Looking at a specific pool? A full Pool Check Report gives you an expert written assessment based on your photos.</p>
           <Link href="/PoolCheckReport" className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg text-sm font-medium transition-colors">
@@ -115,7 +115,7 @@ function BuyerChecklistOrderInner() {
         <div className="max-w-xl mx-auto px-4">
           <Link href="/BuyerChecklist" className="text-slate-400 text-sm hover:text-white mb-4 inline-block">&larr; Back to Buyer Checklist</Link>
           <h1 className="text-3xl font-bold mb-2">Get Your Buyer Checklist</h1>
-          <p className="text-slate-300">$29 AUD — delivered instantly via email</p>
+          <p className="text-slate-300">$29 AUD  -  delivered instantly via email</p>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ function BuyerChecklistOrderInner() {
           </div>
 
           <button type="submit" disabled={loading} className="w-full bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors">
-            {loading ? 'Processing...' : 'Pay $29 — Get Instant Access'}
+            {loading ? 'Processing...' : 'Pay $29  -  Get Instant Access'}
           </button>
 
           <p className="text-xs text-slate-400 text-center italic">If it doesn't meet your expectations, get in touch and I'll make it right.</p>

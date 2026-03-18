@@ -221,7 +221,7 @@ function PoolCheckReportOrderInner() {
         <div className="max-w-2xl mx-auto px-4">
           <Link href="/PoolCheckReport" className="text-slate-400 text-sm hover:text-white mb-4 inline-block">&larr; Back to Pool Check Report</Link>
           <h1 className="text-3xl font-bold mb-2">Order Your Pool Check Report</h1>
-          <p className="text-slate-300">$149 AUD — delivered within 2-3 business days</p>
+          <p className="text-slate-300">$149 AUD  -  delivered within 2-3 business days</p>
         </div>
       </section>
 
@@ -368,7 +368,7 @@ function PoolCheckReportOrderInner() {
                 disabled={loading}
                 className="flex-1 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
               >
-                {loading ? 'Processing...' : `Continue to payment — $149`}
+                {loading ? 'Processing...' : `Continue to payment  -  $149`}
               </button>
             </div>
             <p className="text-xs text-slate-400 text-center">You can also email additional photos after ordering by replying to your confirmation email.</p>

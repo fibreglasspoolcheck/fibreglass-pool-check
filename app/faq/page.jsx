@@ -2,7 +2,7 @@ import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Fibreglass Pool FAQ — Common Questions Answered',
+  title: 'Fibreglass Pool FAQ  -  Common Questions Answered',
   description: 'Answers to 17 common questions about fibreglass pool inspections, quote reviews, and what to look for before buying a property with a pool.',
   alternates: {
     canonical: '/faq',

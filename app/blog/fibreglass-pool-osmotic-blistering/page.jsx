@@ -69,7 +69,7 @@ export default function FibreglassPoolOsmoticBlistering() {
         {/* Content */}
         <div className="prose prose-slate max-w-none">
           <p className="text-lg text-slate-700 leading-relaxed">
-            Osmotic blistering is the most common serious problem I see on fibreglass pools. It looks minor — small raised bumps on the pool surface — but it's a sign that water is penetrating the gelcoat and getting into the structural laminate underneath. Left unchecked, it leads to delamination, and that's when repair costs escalate.
+            Osmotic blistering is the most common serious problem I see on fibreglass pools. It looks minor  -  small raised bumps on the pool surface  -  but it's a sign that water is penetrating the gelcoat and getting into the structural laminate underneath. Left unchecked, it leads to delamination, and that's when repair costs escalate.
           </p>
 
           <p className="text-slate-600 leading-relaxed mt-4">
@@ -85,10 +85,10 @@ export default function FibreglassPoolOsmoticBlistering() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">What osmotic blistering looks like</h2>
           <p className="text-slate-600 leading-relaxed">
-            Osmotic blisters appear as small, raised bumps on the pool surface — usually below the waterline. They can be as small as a few millimetres or as large as a 50-cent coin. In early stages, you might only notice them when the light hits the wall at a certain angle. In advanced cases, the surface looks visibly bumpy and uneven.
+            Osmotic blisters appear as small, raised bumps on the pool surface  -  usually below the waterline. They can be as small as a few millimetres or as large as a 50-cent coin. In early stages, you might only notice them when the light hits the wall at a certain angle. In advanced cases, the surface looks visibly bumpy and uneven.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            If you press a blister and it feels soft or spongy, that's a sign it's filled with fluid — a mix of water and dissolved chemicals from the laminate. If you break a blister open (which I don't recommend doing without professional assessment), you'll often find a dark, vinegar-smelling liquid inside. That liquid is acidic and is actively breaking down the fibreglass beneath the surface.
+            If you press a blister and it feels soft or spongy, that's a sign it's filled with fluid  -  a mix of water and dissolved chemicals from the laminate. If you break a blister open (which I don't recommend doing without professional assessment), you'll often find a dark, vinegar-smelling liquid inside. That liquid is acidic and is actively breaking down the fibreglass beneath the surface.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">What causes osmotic blistering</h2>
@@ -104,16 +104,16 @@ export default function FibreglassPoolOsmoticBlistering() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Is it always serious?</h2>
           <p className="text-slate-600 leading-relaxed">
-            Not always — but it always needs attention.
+            Not always  -  but it always needs attention.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             A small number of scattered blisters on an older pool (15+ years) might be cosmetic-level. They can sometimes be individually repaired without a full resurface, especially if the underlying laminate is still solid.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            Widespread blistering — dozens of blisters across large areas of the pool — is a different story. That indicates the osmotic process is well underway and the gelcoat barrier has failed across a significant area. At that point, individual blister repair is a waste of money. The pool needs a full resurface: stripping the old gelcoat, treating the laminate, and applying a new surface system.
+            Widespread blistering  -  dozens of blisters across large areas of the pool  -  is a different story. That indicates the osmotic process is well underway and the gelcoat barrier has failed across a significant area. At that point, individual blister repair is a waste of money. The pool needs a full resurface: stripping the old gelcoat, treating the laminate, and applying a new surface system.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            The biggest risk with osmotic blistering isn't the blisters themselves — it's delamination. If water penetrates deep enough into the laminate, the fibreglass layers start to separate from each other. Delamination weakens the structural integrity of the pool shell and is significantly more expensive to repair than surface blistering alone.
+            The biggest risk with osmotic blistering isn't the blisters themselves  -  it's delamination. If water penetrates deep enough into the laminate, the fibreglass layers start to separate from each other. Delamination weakens the structural integrity of the pool shell and is significantly more expensive to repair than surface blistering alone.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">What does it cost to fix?</h2>
@@ -146,7 +146,7 @@ export default function FibreglassPoolOsmoticBlistering() {
             </div>
           </div>
           <p className="text-slate-600 leading-relaxed">
-            These are indicative ranges based on pools I've assessed and resurfaced. Actual costs vary by pool size, location, the coating system used, and the contractor. Which is exactly why I recommend getting quotes reviewed before you commit — the difference between contractors can be thousands of dollars for the same pool.
+            These are indicative ranges based on pools I've assessed and resurfaced. Actual costs vary by pool size, location, the coating system used, and the contractor. Which is exactly why I recommend getting quotes reviewed before you commit  -  the difference between contractors can be thousands of dollars for the same pool.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">How to tell if you need a full resurface</h2>
@@ -176,7 +176,7 @@ export default function FibreglassPoolOsmoticBlistering() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">What to do if you're buying a property with a blistered pool</h2>
           <p className="text-slate-600 leading-relaxed">
-            If you notice blistering during a property inspection, don't panic — but don't ignore it either. Get an independent assessment of the severity and likely repair cost. That information gives you three options: renegotiate the purchase price to account for the repair cost, request the vendor fix it before settlement, or walk away if the numbers don't work.
+            If you notice blistering during a property inspection, don't panic  -  but don't ignore it either. Get an independent assessment of the severity and likely repair cost. That information gives you three options: renegotiate the purchase price to account for the repair cost, request the vendor fix it before settlement, or walk away if the numbers don't work.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             A $149 pool assessment that identifies a $15,000 problem is one of the best returns on investment you'll ever get in property.
@@ -184,7 +184,7 @@ export default function FibreglassPoolOsmoticBlistering() {
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Can you prevent osmotic blistering?</h2>
           <p className="text-slate-600 leading-relaxed">
-            You can reduce the risk, but you can't eliminate it entirely — because the primary factor is how the pool was manufactured, which you can't change after the fact.
+            You can reduce the risk, but you can't eliminate it entirely  -  because the primary factor is how the pool was manufactured, which you can't change after the fact.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             What you can control is water chemistry. Keeping pH balanced (7.2–7.6), avoiding prolonged low pH conditions, and maintaining proper sanitiser levels all help protect the gelcoat. High water temperatures accelerate osmosis, so pools in tropical climates tend to develop blisters sooner than pools in cooler regions.
@@ -206,20 +206,20 @@ export default function FibreglassPoolOsmoticBlistering() {
         <div className="bg-slate-900 rounded-xl p-8 mt-12 text-center">
           <h3 className="text-xl font-bold text-white mb-3">Not sure how serious your pool blistering is?</h3>
           <p className="text-slate-300 text-sm mb-6 max-w-md mx-auto">
-            Send me photos and I'll give you a straight assessment — what I'm seeing, how serious it is, and what I'd recommend.
+            Send me photos and I'll give you a straight assessment  -  what I'm seeing, how serious it is, and what I'd recommend.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/PoolCheckReport/order"
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Get a Pool Check Report — $149
+              Get a Pool Check Report  -  $149
             </Link>
             <Link
               href="/QuoteReview/order"
               className="inline-block border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Get a Quote Review — $79
+              Get a Quote Review  -  $79
             </Link>
           </div>
           <p className="text-slate-400 text-xs mt-3 italic">
@@ -232,7 +232,7 @@ export default function FibreglassPoolOsmoticBlistering() {
           <div>
             <p className="font-semibold text-slate-900 text-sm">Brady Smith</p>
             <p className="text-slate-500 text-xs mt-1">
-              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent assessments — Brady's wife runs BRE Fibreglass, but all assessments are conducted independently.
+              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent assessments  -  Brady's wife runs BRE Fibreglass, but all assessments are conducted independently.
             </p>
           </div>
         </div>

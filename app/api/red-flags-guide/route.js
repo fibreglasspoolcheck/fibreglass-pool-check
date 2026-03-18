@@ -20,7 +20,7 @@ export async function POST(request) {
 
     if (dbError) {
       console.error('Failed to save lead:', dbError)
-      // Continue anyway — sending the guide is more important than saving the lead
+      // Continue anyway  -  sending the guide is more important than saving the lead
     }
 
     const leadId = lead?.id || 'fallback-token'

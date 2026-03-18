@@ -10,7 +10,7 @@ const articles = [
   {
     slug: 'buying-house-with-fibreglass-pool',
     title: 'What to look for when buying a house with a fibreglass pool',
-    description: 'A practical guide to assessing a fibreglass pool before you exchange contracts — what building inspectors miss and what can cost you thousands.',
+    description: 'A practical guide to assessing a fibreglass pool before you exchange contracts  -  what building inspectors miss and what can cost you thousands.',
     date: '2026-03-14',
     readTime: '8 min read',
   },
@@ -24,7 +24,7 @@ const articles = [
   {
     slug: 'fibreglass-pool-resurfacing-cost-australia',
     title: 'How much does fibreglass pool resurfacing cost in Australia?',
-    description: 'A realistic breakdown of resurfacing costs from patch repairs to full resurfaces — what affects the price, what to ask your contractor, and how to spot overquoting.',
+    description: 'A realistic breakdown of resurfacing costs from patch repairs to full resurfaces  -  what affects the price, what to ask your contractor, and how to spot overquoting.',
     date: '2026-03-16',
     readTime: '9 min read',
   },
@@ -38,7 +38,7 @@ const articles = [
   {
     slug: 'fibreglass-pool-delamination',
     title: 'Fibreglass pool delamination: what it is, what it costs, and what to do',
-    description: 'What delamination looks like, what causes it, how serious it is, and your repair options — from a specialist who\'s seen hundreds of pools.',
+    description: 'What delamination looks like, what causes it, how serious it is, and your repair options  -  from a specialist who\'s seen hundreds of pools.',
     date: '2026-03-16',
     readTime: '8 min read',
   },
@@ -56,7 +56,7 @@ export default function BlogIndex() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Articles & Guides</h1>
           <p className="text-slate-300 text-lg">
-            Practical advice on fibreglass pool problems, repair costs, and buying decisions — from a specialist with 10+ years hands-on experience.
+            Practical advice on fibreglass pool problems, repair costs, and buying decisions  -  from a specialist with 10+ years hands-on experience.
           </p>
         </div>
       </section>
@@ -92,7 +92,7 @@ export default function BlogIndex() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/PoolCheckReport/order" className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              Get a Pool Check Report — $149
+              Get a Pool Check Report  -  $149
             </Link>
             <Link href="/RedFlagsGuide" className="border border-slate-300 hover:border-slate-400 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors">
               Free Red Flags Guide

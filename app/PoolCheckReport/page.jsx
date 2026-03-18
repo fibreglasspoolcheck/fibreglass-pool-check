@@ -55,7 +55,7 @@ export default function PoolCheckReport() {
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Most popular service</div>
             <h1 className="text-4xl font-bold mb-4">Know exactly what you&apos;re buying before it costs you thousands</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Fibreglass pool repairs can run $5,000–$30,000+. Building inspectors aren&apos;t trained to catch fibreglass-specific issues. Get a detailed, independent assessment from a specialist who&apos;s worked on 250+ pools — delivered within 2–3 business days.
+              Fibreglass pool repairs can run $5,000–$30,000+. Building inspectors aren&apos;t trained to catch fibreglass-specific issues. Get a detailed, independent assessment from a specialist who&apos;s worked on 250+ pools  -  delivered within 2–3 business days.
             </p>
             <div className="text-3xl font-bold mb-6">$149 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
@@ -73,7 +73,7 @@ export default function PoolCheckReport() {
       <section className="bg-orange-600 text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-sm font-medium text-center">
-            <strong>Under contract?</strong> Reports delivered within 2–3 business days — fast enough to act before your finance clause expires.
+            <strong>Under contract?</strong> Reports delivered within 2–3 business days  -  fast enough to act before your finance clause expires.
           </p>
         </div>
       </section>
@@ -93,7 +93,7 @@ export default function PoolCheckReport() {
                   'Identified red flags and risk items',
                   'Actionable recommendations',
                   'Estimated urgency and priority of any repairs',
-                  'Plain-English summary — no jargon',
+                  'Plain-English summary  -  no jargon',
                 ].map((item) => (
                   <div key={item} className="flex gap-3">
                     <div className="w-5 h-5 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">

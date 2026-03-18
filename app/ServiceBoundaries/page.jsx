@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Service Scope & Boundaries | Fibreglass Pool Check',
-  description: 'Understanding what Fibreglass Pool Check does and doesn\'t cover — service scope, limitations, and what to expect from each assessment type.',
+  description: 'Understanding what Fibreglass Pool Check does and doesn\'t cover  -  service scope, limitations, and what to expect from each assessment type.',
 }
 
 export default function ServiceBoundaries() {
@@ -13,7 +13,7 @@ export default function ServiceBoundaries() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-orange-400 text-sm font-medium mb-4 uppercase tracking-wide">Service Scope</p>
-            <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-4">What we do — and don't — cover</h1>
+            <h1 className="text-3xl lg:text-4xl font-bold leading-tight mb-4">What we do  -  and don't  -  cover</h1>
             <p className="text-slate-300 leading-relaxed">
               We're upfront about the scope and limitations of each service. This page explains what you can expect and what falls outside what we provide.
             </p>
@@ -30,7 +30,7 @@ export default function ServiceBoundaries() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">What Fibreglass Pool Check is</h2>
               <div className="space-y-3">
                 {[
-                  'An independent assessment service — while Brady\'s wife runs BRE Fibreglass, all assessments are conducted independently with no influence from that relationship',
+                  'An independent assessment service  -  while Brady\'s wife runs BRE Fibreglass, all assessments are conducted independently with no influence from that relationship',
                   'A specialist opinion based on photos, documentation, or on-site inspection',
                   'A written report summarising findings and recommendations in plain language',
                   'A quote review service for resurfacing and repair quotes',
@@ -49,9 +49,9 @@ export default function ServiceBoundaries() {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">What Fibreglass Pool Check is not</h2>
               <div className="space-y-3">
                 {[
-                  'A licensed structural engineer or building inspector — our reports are specialist assessments, not structural certifications',
-                  'A pool repairer or resurfacer — we do not carry out remediation work',
-                  'A real estate agent or solicitor — our reports are informational and should be considered alongside professional legal and property advice',
+                  'A licensed structural engineer or building inspector  -  our reports are specialist assessments, not structural certifications',
+                  'A pool repairer or resurfacer  -  we do not carry out remediation work',
+                  'A real estate agent or solicitor  -  our reports are informational and should be considered alongside professional legal and property advice',
                   'A substitute for a formal pre-purchase inspection where your contract requires one',
                   'Able to inspect components that are buried, concealed, or otherwise inaccessible from the pool interior or equipment bay',
                 ].map(item => (
@@ -73,7 +73,7 @@ export default function ServiceBoundaries() {
                 {[
                   'We can only assess what is visible in the photos provided',
                   'Some issues (particularly osmotic blistering) may require physical inspection to confirm',
-                  'Equipment can only be assessed from what is visible — internal component condition requires hands-on testing',
+                  'Equipment can only be assessed from what is visible  -  internal component condition requires hands-on testing',
                   'Water clarity affects our ability to assess the pool floor and lower shell areas',
                   'We may request additional photos if the initial submission is insufficient',
                 ].map(item => (

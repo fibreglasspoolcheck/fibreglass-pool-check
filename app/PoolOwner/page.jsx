@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Fibreglass Pool Owner Guide | Maintenance, Repairs & What to Expect',
-  description: 'Practical information for fibreglass pool owners — maintenance basics, common issues, repair costs, and when to get an independent assessment before paying for work.',
+  description: 'Practical information for fibreglass pool owners  -  maintenance basics, common issues, repair costs, and when to get an independent assessment before paying for work.',
 }
 
 export default function PoolOwner() {
@@ -30,7 +30,7 @@ export default function PoolOwner() {
             <div className="lg:col-span-2 space-y-12">
 
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">What's normal wear — and what isn't</h2>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">What's normal wear  -  and what isn't</h2>
                 <p className="text-slate-600 leading-relaxed mb-6">
                   Fibreglass pools are durable and low maintenance, but they're not maintenance-free. Over time, the gel coat surface can show signs of age. The key is knowing what's cosmetic, what's structural, and what's urgent.
                 </p>
@@ -61,7 +61,7 @@ export default function PoolOwner() {
                       colour: 'red',
                       items: [
                         'Structural cracking through the shell layer (not just gel coat)',
-                        'Delamination — sections of surface lifting or separating',
+                        'Delamination  -  sections of surface lifting or separating',
                         'Significant unexplained water loss (potential structural leak)',
                         'Ground movement causing shell displacement or visible bowing',
                       ],
@@ -82,9 +82,9 @@ export default function PoolOwner() {
               </div>
 
               <div>
-                <h2 className="text-2xl font-bold text-slate-900 mb-4">Resurfacing — do you actually need it?</h2>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">Resurfacing  -  do you actually need it?</h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  Resurfacing is a significant expense — typically $8,000 to $20,000 or more depending on pool size and the surface chosen. Repairers and resurfacers have an incentive to recommend it, even when it's not strictly necessary.
+                  Resurfacing is a significant expense  -  typically $8,000 to $20,000 or more depending on pool size and the surface chosen. Repairers and resurfacers have an incentive to recommend it, even when it's not strictly necessary.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   Before committing to resurfacing work, it's worth getting an independent assessment. I can review the condition of your pool and tell you honestly whether resurfacing is warranted, what to look for in quotes, and whether there are any underlying issues that need addressing first.
@@ -100,7 +100,7 @@ export default function PoolOwner() {
                   {[
                     { title: 'Water chemistry', body: 'Maintain correct pH (7.2–7.6), alkalinity (80–120 ppm), and sanitiser levels. Poor chemistry accelerates surface degradation and equipment wear.' },
                     { title: 'Regular brushing', body: 'Brush the shell surface weekly to prevent algae and calcium buildup, particularly around fittings and steps.' },
-                    { title: 'Equipment servicing', body: 'Annual equipment check — pump seals, filter cartridges or media, and chlorinator cell — extends life significantly.' },
+                    { title: 'Equipment servicing', body: 'Annual equipment check  -  pump seals, filter cartridges or media, and chlorinator cell  -  extends life significantly.' },
                     { title: 'Waterline attention', body: 'The waterline is often the first area to show wear. Keep it clean and watch for early signs of gel coat breakdown.' },
                   ].map(({ title, body }) => (
                     <div key={title} className="border border-slate-200 rounded-xl p-4">

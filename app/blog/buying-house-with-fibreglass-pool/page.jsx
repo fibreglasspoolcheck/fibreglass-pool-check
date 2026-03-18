@@ -69,11 +69,11 @@ export default function BuyingHouseWithFibreglassPool() {
         {/* Content */}
         <div className="prose prose-slate max-w-none">
           <p className="text-lg text-slate-700 leading-relaxed">
-            A fibreglass pool can add real value to a property — or it can add $5,000 to $30,000 in surprise repair costs that nobody mentioned during the sale. The difference comes down to knowing what to look for before you exchange contracts.
+            A fibreglass pool can add real value to a property  -  or it can add $5,000 to $30,000 in surprise repair costs that nobody mentioned during the sale. The difference comes down to knowing what to look for before you exchange contracts.
           </p>
 
           <p className="text-slate-600 leading-relaxed mt-4">
-            I've assessed over 250 fibreglass pools across Australia, and the same problems come up again and again. Most of them are invisible to someone who hasn't worked with fibreglass — and that includes most building inspectors.
+            I've assessed over 250 fibreglass pools across Australia, and the same problems come up again and again. Most of them are invisible to someone who hasn't worked with fibreglass  -  and that includes most building inspectors.
           </p>
 
           <p className="text-slate-600 leading-relaxed mt-4">
@@ -87,7 +87,7 @@ export default function BuyingHouseWithFibreglassPool() {
             </p>
           </div>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">1. The pool surface — look for blistering, flaking, and discolouration</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">1. The pool surface  -  look for blistering, flaking, and discolouration</h2>
           <p className="text-slate-600 leading-relaxed">
             The gelcoat is the coloured, glossy surface you see when you look at a fibreglass pool. It's the first line of defence against water ingress, and it's where most problems become visible first.
           </p>
@@ -95,10 +95,10 @@ export default function BuyingHouseWithFibreglassPool() {
             Walk around the pool and look closely at the walls and floor. You're looking for small raised bumps (blisters), areas where the surface is peeling or flaking, chalky patches, or colour changes that aren't consistent with normal wear.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            A few small blisters on an older pool might be cosmetic. Widespread blistering — especially below the waterline — is a sign of osmosis, which means water is getting through the gelcoat and into the laminate. That's not cosmetic. That's a structural concern that typically costs $8,000 to $15,000+ to fix through a full resurface.
+            A few small blisters on an older pool might be cosmetic. Widespread blistering  -  especially below the waterline  -  is a sign of osmosis, which means water is getting through the gelcoat and into the laminate. That's not cosmetic. That's a structural concern that typically costs $8,000 to $15,000+ to fix through a full resurface.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">2. The waterline — check for staining and tide marks</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">2. The waterline  -  check for staining and tide marks</h2>
           <p className="text-slate-600 leading-relaxed">
             The waterline area takes the most chemical and UV punishment on any pool. Look at the first 10–15 centimetres above and below the water level.
           </p>
@@ -106,7 +106,7 @@ export default function BuyingHouseWithFibreglassPool() {
             A faded or slightly stained waterline on an older pool is normal. What you're watching for is a visible ring of discolouration, crazing (fine hairline cracks in the gelcoat), or any areas where the surface texture changes noticeably. These can indicate chemical damage, UV degradation, or early-stage gelcoat failure.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">3. The skimmer box and returns — check the fittings</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">3. The skimmer box and returns  -  check the fittings</h2>
           <p className="text-slate-600 leading-relaxed">
             Fittings are one of the most common failure points on a fibreglass pool. Look at the skimmer box, the return jets, the suction points, and any lights. Check for cracks around the fittings, gaps between the fitting and the pool shell, and any signs of movement or sealant repair.
           </p>
@@ -114,23 +114,23 @@ export default function BuyingHouseWithFibreglassPool() {
             A cracked skimmer box or a fitting that's pulled away from the shell can cause leaks that are difficult and expensive to repair. If you can see old sealant or multiple layers of repair around fittings, that's a sign the pool has had ongoing leak issues.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">4. The pool shell — check for flex, bulging, or separation</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">4. The pool shell  -  check for flex, bulging, or separation</h2>
           <p className="text-slate-600 leading-relaxed">
-            A fibreglass pool is essentially a large moulded shell sitting in the ground, supported by a sand or concrete backfill. If the backfill wasn't done properly — or if ground conditions have changed — the shell can move.
+            A fibreglass pool is essentially a large moulded shell sitting in the ground, supported by a sand or concrete backfill. If the backfill wasn't done properly  -  or if ground conditions have changed  -  the shell can move.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            Look along the top edge of the pool (the bond beam or coping line). It should be level and even. If one side is sitting higher than the other, or if you can see the pool wall bulging inward or outward, that's a structural issue. Also check the pool floor — stand at one end and look along the floor surface. Any visible warping, bubbling, or unevenness could indicate groundwater pressure pushing up from below.
+            Look along the top edge of the pool (the bond beam or coping line). It should be level and even. If one side is sitting higher than the other, or if you can see the pool wall bulging inward or outward, that's a structural issue. Also check the pool floor  -  stand at one end and look along the floor surface. Any visible warping, bubbling, or unevenness could indicate groundwater pressure pushing up from below.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">5. The coping and surrounds — where the pool meets the deck</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">5. The coping and surrounds  -  where the pool meets the deck</h2>
           <p className="text-slate-600 leading-relaxed">
             The junction between the pool shell and the surrounding paving or decking is a critical point. Look for gaps, cracked coping stones, or separation between the pool edge and the deck.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            Separation at the coping can let surface water drain behind the pool shell, which accelerates backfill erosion and can eventually lead to shell movement. It also makes the pool look worse than it is — which affects your resale value.
+            Separation at the coping can let surface water drain behind the pool shell, which accelerates backfill erosion and can eventually lead to shell movement. It also makes the pool look worse than it is  -  which affects your resale value.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">6. The equipment — pump, filter, chlorinator</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">6. The equipment  -  pump, filter, chlorinator</h2>
           <p className="text-slate-600 leading-relaxed">
             Pool equipment has a finite lifespan. A pump typically lasts 8–12 years, a sand filter 10–15 years, and a salt chlorinator 5–8 years. If the equipment is visibly old, corroded, or noisy, factor replacement costs into your offer.
           </p>
@@ -141,12 +141,12 @@ export default function BuyingHouseWithFibreglassPool() {
             A full equipment replacement (pump, filter, chlorinator) runs $3,000 to $6,000 depending on brands and sizing.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">7. Water clarity and level — clues to maintenance history</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">7. Water clarity and level  -  clues to maintenance history</h2>
           <p className="text-slate-600 leading-relaxed">
-            Clear, balanced water generally means the pool has been maintained. Green or cloudy water doesn't necessarily mean the pool itself has problems — it could just mean the current owner has neglected the chemistry. But it does make it harder to assess the shell condition, because you can't see through murky water.
+            Clear, balanced water generally means the pool has been maintained. Green or cloudy water doesn't necessarily mean the pool itself has problems  -  it could just mean the current owner has neglected the chemistry. But it does make it harder to assess the shell condition, because you can't see through murky water.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            Also check the water level. If it's significantly below the skimmer, ask why. A dropping water level can indicate a leak — and leak detection and repair on a fibreglass pool is not cheap.
+            Also check the water level. If it's significantly below the skimmer, ask why. A dropping water level can indicate a leak  -  and leak detection and repair on a fibreglass pool is not cheap.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">8. Ask the right questions</h2>
@@ -154,26 +154,26 @@ export default function BuyingHouseWithFibreglassPool() {
             The vendor or agent may not know the answers to all of these, but it's worth asking: How old is the pool? Has it ever been resurfaced? Are there any known leaks or repairs? When was the equipment last replaced? Is the pool under any warranty?
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            If the vendor is reluctant to answer — or claims not to know anything about a pool that's on their own property — treat that as a yellow flag.
+            If the vendor is reluctant to answer  -  or claims not to know anything about a pool that's on their own property  -  treat that as a yellow flag.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Why building inspectors miss pool problems</h2>
           <p className="text-slate-600 leading-relaxed">
-            A standard building and pest inspection covers the house structure, roof, electrical, plumbing, and pest damage. The pool gets a quick visual check at best — and that check is usually done by someone whose expertise is houses, not fibreglass composites.
+            A standard building and pest inspection covers the house structure, roof, electrical, plumbing, and pest damage. The pool gets a quick visual check at best  -  and that check is usually done by someone whose expertise is houses, not fibreglass composites.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             I've reviewed assessments where the building inspector gave the pool a clean bill of health, and I found widespread osmotic blistering, early delamination near the skimmer, and equipment well past its service life. One buyer used my findings to renegotiate $15,000 off the purchase price.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            A building inspector isn't the right person to assess a fibreglass pool — for the same reason you wouldn't ask a pool builder to assess your roof.
+            A building inspector isn't the right person to assess a fibreglass pool  -  for the same reason you wouldn't ask a pool builder to assess your roof.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">What to do next</h2>
           <p className="text-slate-600 leading-relaxed">
-            If you're at the early stages — browsing properties, attending open homes — use the checklist above as a starting point. Download the free <Link href="/RedFlagsGuide" className="text-orange-600 hover:underline font-medium">Red Flags Guide</Link> for a printable version you can take with you.
+            If you're at the early stages  -  browsing properties, attending open homes  -  use the checklist above as a starting point. Download the free <Link href="/RedFlagsGuide" className="text-orange-600 hover:underline font-medium">Red Flags Guide</Link> for a printable version you can take with you.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            If you're serious about a specific property and want expert eyes on the pool before you commit, the <Link href="/PoolCheckReport/order" className="text-orange-600 hover:underline font-medium">Pool Check Report ($149)</Link> gives you a written assessment based on photos of the pool. It covers surface condition, structural observations, equipment state, red flags, and actionable recommendations — delivered within 2–3 business days.
+            If you're serious about a specific property and want expert eyes on the pool before you commit, the <Link href="/PoolCheckReport/order" className="text-orange-600 hover:underline font-medium">Pool Check Report ($149)</Link> gives you a written assessment based on photos of the pool. It covers surface condition, structural observations, equipment state, red flags, and actionable recommendations  -  delivered within 2–3 business days.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             For buyers who want a structured self-assessment tool, the <Link href="/BuyerChecklist/order" className="text-orange-600 hover:underline font-medium">Buyer Checklist ($29)</Link> walks you through every inspection point a specialist would check, in plain language.
@@ -190,7 +190,7 @@ export default function BuyingHouseWithFibreglassPool() {
             href="/PoolCheckReport/order"
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
           >
-            Get a Pool Check Report — $149
+            Get a Pool Check Report  -  $149
           </Link>
           <p className="text-slate-400 text-xs mt-3 italic">
             If my report doesn't give you clear, actionable findings, get in touch and I'll make it right.
@@ -202,7 +202,7 @@ export default function BuyingHouseWithFibreglassPool() {
           <div>
             <p className="font-semibold text-slate-900 text-sm">Brady Smith</p>
             <p className="text-slate-500 text-xs mt-1">
-              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent assessments — Brady's wife runs BRE Fibreglass, but all assessments are conducted independently.
+              Fibreglass pool specialist with 10+ years hands-on experience resurfacing, repairing, and assessing fibreglass pools across Queensland. Independent assessments  -  Brady's wife runs BRE Fibreglass, but all assessments are conducted independently.
             </p>
           </div>
         </div>

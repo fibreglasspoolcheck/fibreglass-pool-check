@@ -149,7 +149,7 @@ function QuoteReviewOrderInner() {
 
     if (uploadedPaths.length === 0) throw new Error(`All ${fieldName} uploads failed`)
 
-    // 3. Confirm upload — save paths to database
+    // 3. Confirm upload  -  save paths to database
     const confirmRes = await fetch('/api/confirm-upload', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -223,7 +223,7 @@ function QuoteReviewOrderInner() {
         <div className="max-w-2xl mx-auto px-4">
           <Link href="/QuoteReview" className="text-slate-400 text-sm hover:text-white mb-4 inline-block">&larr; Back to Quote Review</Link>
           <h1 className="text-3xl font-bold mb-2">Order Your Quote Review</h1>
-          <p className="text-slate-300">$79 AUD — delivered within 2-3 business days</p>
+          <p className="text-slate-300">$79 AUD  -  delivered within 2-3 business days</p>
         </div>
       </section>
 
@@ -339,7 +339,7 @@ function QuoteReviewOrderInner() {
               disabled={loading || quoteFiles.length === 0}
               className="w-full bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
             >
-              {loading ? 'Processing...' : 'Continue to payment — $79'}
+              {loading ? 'Processing...' : 'Continue to payment  -  $79'}
             </button>
             <p className="text-xs text-slate-400 text-center">You can also email additional files after ordering by replying to your confirmation email.</p>
           </div>

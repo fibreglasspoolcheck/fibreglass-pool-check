@@ -20,7 +20,7 @@ export async function GET(request) {
       return NextResponse.json({ error: 'Invalid product' }, { status: 400 })
     }
 
-    // Basic token validation — the token is the first 12 chars of the order/lead ID
+    // Basic token validation  -  the token is the first 12 chars of the order/lead ID
     // This prevents random people from guessing URLs but isn't heavy-handed
     if (!token || token.length < 8) {
       return NextResponse.json({ error: 'Invalid token' }, { status: 403 })

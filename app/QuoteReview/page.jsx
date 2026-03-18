@@ -53,7 +53,7 @@ export default function QuoteReview() {
             <div className="text-xs font-medium text-orange-400 uppercase tracking-wide mb-3">Repair & resurfacing</div>
             <h1 className="text-4xl font-bold mb-4">Find out if your contractor&apos;s quote is fair before you commit</h1>
             <p className="text-slate-300 text-lg mb-6 leading-relaxed">
-              Pool resurfacing quotes range from $5,000 to $20,000+. Are you being overquoted? Is the scope right? Are they using the right materials? Get an independent expert review from someone who&apos;s done the work — not someone trying to sell you more.
+              Pool resurfacing quotes range from $5,000 to $20,000+. Are you being overquoted? Is the scope right? Are they using the right materials? Get an independent expert review from someone who&apos;s done the work  -  not someone trying to sell you more.
             </p>
             <div className="text-3xl font-bold mb-6">$79 <span className="text-slate-400 text-lg font-normal">AUD</span></div>
             <p className="text-slate-400 text-xs mb-4 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
@@ -156,7 +156,7 @@ export default function QuoteReview() {
               href="https://fibreglasspoolcheck.com.au/QuoteReview/order"
               className="inline-block bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Order Quote Review — $79
+              Order Quote Review  -  $79
             </Link>
             <p className="text-slate-500 text-xs mt-3 italic">If my review doesn't give you clear, actionable findings, get in touch and I'll make it right.</p>
           </div>

@@ -10,7 +10,7 @@ export default function RedFlagsGuideAccess() {
         <div className="text-green-600 text-5xl mb-6">✓</div>
         <h1 className="text-3xl font-bold text-slate-900 mb-4">Your guide is on its way!</h1>
         <p className="text-slate-600 leading-relaxed mb-8">
-          Check your inbox — I've sent the Fibreglass Pool Red Flags Guide to your email address. If you don't see it within a few minutes, check your spam or junk folder.
+          Check your inbox  -  I've sent the Fibreglass Pool Red Flags Guide to your email address. If you don't see it within a few minutes, check your spam or junk folder.
         </p>
         <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 text-left">
           <h2 className="font-bold text-slate-900 mb-3">While you're here</h2>
@@ -21,7 +21,7 @@ export default function RedFlagsGuideAccess() {
             href="/PoolCheckReport/order"
             className="inline-block bg-slate-900 hover:bg-slate-800 text-white text-sm px-4 py-2.5 rounded-lg font-medium transition-colors"
           >
-            Order a Pool Check Report — $149
+            Order a Pool Check Report  -  $149
           </a>
         </div>
       </div>

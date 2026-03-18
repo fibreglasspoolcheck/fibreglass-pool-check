@@ -8,7 +8,7 @@ import {
   notifyBradyNewOrder,
 } from '../../../lib/brevo'
 
-// Disable body parsing — Stripe needs raw body for signature verification
+// Disable body parsing  -  Stripe needs raw body for signature verification
 export const runtime = 'nodejs'
 
 export async function POST(request) {
@@ -120,7 +120,7 @@ export async function POST(request) {
         await notifyBradyNewOrder('Quote Review', order.full_name, order.email, orderId, details)
       }
     } catch (emailErr) {
-      // Log but don't fail the webhook — payment is already captured
+      // Log but don't fail the webhook  -  payment is already captured
       console.error('Email send error (non-fatal):', emailErr)
     }
   }

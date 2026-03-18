@@ -92,7 +92,7 @@ export default function Home() {
                   href="/PoolCheckReport/order"
                   className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3.5 rounded-lg font-medium text-center transition-colors"
                 >
-                  Order Pool Check Report — $149 AUD
+                  Order Pool Check Report  -  $149 AUD
                 </Link>
                 <Link
                   href="/RedFlagsGuide"
@@ -142,7 +142,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="grid grid-cols-2 gap-3 rounded-2xl overflow-hidden">
               <div className="relative">
-                <Image src="/images/walsh-before.jpg" alt="Fibreglass pool before assessment — surface damage visible" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
+                <Image src="/images/walsh-before.jpg" alt="Fibreglass pool before assessment  -  surface damage visible" width={300} height={225} className="w-full h-full object-cover rounded-xl" />
                 <span className="absolute bottom-2 left-2 bg-slate-900/80 text-white text-[10px] px-2 py-0.5 rounded">Before</span>
               </div>
               <div className="relative">
@@ -167,7 +167,7 @@ export default function Home() {
                 Fibreglass Pool Check is backed by hands-on fibreglass pool resurfacing, repair, and restoration experience. This is not recycled content from a marketing agency.
               </p>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Every assessment is written by someone who has personally worked on 250+ fibreglass pools — grinding, laminating, resurfacing, troubleshooting water loss, repairing structural damage, and explaining to owners what went wrong and what to do next.
+                Every assessment is written by someone who has personally worked on 250+ fibreglass pools  -  grinding, laminating, resurfacing, troubleshooting water loss, repairing structural damage, and explaining to owners what went wrong and what to do next.
               </p>
               <Link href="/About" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
                 More about this service &rarr;
@@ -238,7 +238,7 @@ export default function Home() {
                   href="/PoolCheckReport/order"
                   className="bg-slate-900 hover:bg-slate-800 text-white px-5 py-3 rounded-lg font-medium text-sm transition-colors"
                 >
-                  Order Pool Check Report — $149 AUD
+                  Order Pool Check Report  -  $149 AUD
                 </Link>
                 <Link
                   href="/BuyerChecklist"
@@ -252,7 +252,7 @@ export default function Home() {
               <div>
                 <Image
                   src="/images/hooper-before.jpg"
-                  alt="Fibreglass pool before — flaking, discoloured surface"
+                  alt="Fibreglass pool before  -  flaking, discoloured surface"
                   width={400}
                   height={300}
                   className="w-full h-48 object-cover rounded-xl"
@@ -324,9 +324,9 @@ export default function Home() {
           </div>
           <div className="border border-slate-200 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <p className="text-xs font-medium text-slate-500 tracking-wide uppercase mb-1">Additional Service — South East Queensland</p>
+              <p className="text-xs font-medium text-slate-500 tracking-wide uppercase mb-1">Additional Service  -  South East Queensland</p>
               <h3 className="text-lg font-semibold text-slate-900">On-Site Assessment</h3>
-              <p className="text-slate-600 text-sm">In-person inspection for Gold Coast, Brisbane, and surrounding areas. Request-only — reviewed manually before booking.</p>
+              <p className="text-slate-600 text-sm">In-person inspection for Gold Coast, Brisbane, and surrounding areas. Request-only  -  reviewed manually before booking.</p>
             </div>
             <Link href="/OnSiteAssessment" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors whitespace-nowrap">
               Request Assessment &rarr;
@@ -367,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How to Get Started — 3 product cards */}
+      {/* How to Get Started  -  3 product cards */}
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-3">How to Get Started</h2>
@@ -406,7 +406,7 @@ export default function Home() {
                 href="/PoolCheckReport/order"
                 className="inline-block bg-slate-900 hover:bg-slate-800 text-white text-sm px-5 py-2.5 rounded-lg font-medium transition-colors"
               >
-                Order Report — $149 AUD
+                Order Report  -  $149 AUD
               </Link>
             </div>
           </div>
@@ -446,7 +446,7 @@ export default function Home() {
             href="/PoolCheckReport/order"
             className="inline-block bg-white text-slate-900 hover:bg-slate-100 px-6 py-3.5 rounded-lg font-medium transition-colors"
           >
-            Order Pool Check Report — $149 AUD
+            Order Pool Check Report  -  $149 AUD
           </Link>
         </div>
       </section>
