@@ -192,7 +192,7 @@ export default function Home() {
               {
                 title: 'Responsive and professional',
                 quote: 'From our very first contact, we were impressed with the responsiveness and professionalism. The final result is perfect. I can unreservedly recommend Brady for both quality workmanship and commitment to customer satisfaction.',
-                name: 'Kelvin O.',
+                name: 'Michael H.',
                 label: 'pool owner',
               },
               {
