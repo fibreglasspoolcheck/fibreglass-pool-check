@@ -30,7 +30,7 @@ export async function POST(request) {
         'content-type': 'application/json',
       },
       body: JSON.stringify({
-        sender: { name: 'Fibreglass Pool Check Website', email: 'deliver@send.fibreglasspoolcheck.com.au' },
+        sender: { name: 'Fibreglass Pool Check Website', email: 'help@fibreglasspoolcheck.com.au' },
         to: [{ email: 'help@fibreglasspoolcheck.com.au', name: 'Brady' }],
         replyTo: { email: email, name: full_name },
         subject: `New contact message from ${safeName}`,
