@@ -3,6 +3,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Buying a House with a Fibreglass Pool | What You Need to Know',
   description: 'A fibreglass pool can add value  -  or cost a fortune. Here\'s what every buyer needs to know before purchasing a home with a fibreglass pool in Australia.',
+  alternates: {
+    canonical: '/BuyingAHouse',
+  },
 }
 
 export default function BuyingAHouse() {

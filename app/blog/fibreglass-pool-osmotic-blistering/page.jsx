@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Osmotic Blistering: Causes, Cost & What to Do',
   description: 'What osmotic blistering looks like on a fibreglass pool, why it happens, what it costs to repair (typically $8,000–$15,000+), and how to tell if you need a full resurface.',
+  alternates: {
+    canonical: '/blog/fibreglass-pool-osmotic-blistering',
+  },
   openGraph: {
     title: 'Fibreglass Pool Osmotic Blistering: Causes, Cost & What to Do',
     description: 'What osmotic blistering looks like, why it happens, and what it costs to fix.',

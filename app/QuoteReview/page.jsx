@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Repair Quote Review | Independent Expert $79',
   description: 'Get an independent expert review of your fibreglass pool resurfacing or repair quote. Find out if the scope, materials, and price are fair before you commit. $79 AUD.',
+  alternates: {
+    canonical: '/QuoteReview',
+  },
 }
 
 function QuoteReviewSchema() {

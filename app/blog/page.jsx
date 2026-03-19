@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Articles & Guides | Fibreglass Pool Check',
   description: 'Expert articles on fibreglass pool problems, repair costs, and what to look for when buying a property with a pool. Written by a specialist with 10+ years hands-on experience.',
+  alternates: {
+    canonical: '/blog',
+  },
 }
 
 const articles = [

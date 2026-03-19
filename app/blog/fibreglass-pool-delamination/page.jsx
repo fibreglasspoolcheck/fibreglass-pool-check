@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Delamination: What It Is, What It Costs, and What to Do | Expert Guide',
   description: 'A fibreglass pool specialist explains what delamination looks like, what causes it, repair costs ($500–$15,000+), and when you need to act. Practical advice from 10+ years in the trade.',
+  alternates: {
+    canonical: '/blog/fibreglass-pool-delamination',
+  },
   openGraph: {
     title: 'Fibreglass Pool Delamination: What It Is, What It Costs, and What to Do',
     description: 'A fibreglass pool specialist explains what delamination looks like, what causes it, and what it costs to fix.',
