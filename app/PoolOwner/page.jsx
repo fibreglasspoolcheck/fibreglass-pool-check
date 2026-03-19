@@ -3,6 +3,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Fibreglass Pool Owner Guide | Maintenance, Repairs & What to Expect',
   description: 'Practical information for fibreglass pool owners  -  maintenance basics, common issues, repair costs, and when to get an independent assessment before paying for work.',
+  alternates: {
+    canonical: '/PoolOwner',
+  },
 }
 
 export default function PoolOwner() {

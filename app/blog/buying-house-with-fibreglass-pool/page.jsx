@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'What to Look for When Buying a House with a Fibreglass Pool | Expert Guide',
   description: 'A fibreglass pool specialist explains the 8 things you must check before buying a property with a pool. What building inspectors miss and what can cost you $5,000–$30,000+.',
+  alternates: {
+    canonical: '/blog/buying-house-with-fibreglass-pool',
+  },
   openGraph: {
     title: 'What to Look for When Buying a House with a Fibreglass Pool',
     description: 'A fibreglass pool specialist explains the 8 things you must check before buying a property with a pool.',

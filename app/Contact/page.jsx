@@ -5,6 +5,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Contact Fibreglass Pool Check | Get in Touch',
   description: 'Have questions about fibreglass pool inspections or quote reviews? Get in touch  -  I typically respond within a few hours.',
+  alternates: {
+    canonical: '/Contact',
+  },
 }
 
 export default function Contact() {

@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Inspection vs Building Inspection: What\'s the Difference? | Expert Guide',
   description: 'A fibreglass pool specialist explains what building inspectors miss on pools  -  osmosis, delamination, cobalt leaching, bad repairs  -  and when you need a specialist fibreglass pool inspection.',
+  alternates: {
+    canonical: '/blog/fibreglass-pool-inspection-vs-building-inspection',
+  },
   openGraph: {
     title: 'Fibreglass Pool Inspection vs Building Inspection: What\'s the Difference?',
     description: 'What building inspectors miss on fibreglass pools and when you need a specialist assessment before buying.',

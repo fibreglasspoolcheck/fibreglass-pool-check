@@ -3,6 +3,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'Service Scope & Boundaries | Fibreglass Pool Check',
   description: 'Understanding what Fibreglass Pool Check does and doesn\'t cover  -  service scope, limitations, and what to expect from each assessment type.',
+  alternates: {
+    canonical: '/ServiceBoundaries',
+  },
 }
 
 export default function ServiceBoundaries() {

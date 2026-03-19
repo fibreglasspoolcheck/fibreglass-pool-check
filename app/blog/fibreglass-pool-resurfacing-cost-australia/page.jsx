@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'How Much Does Fibreglass Pool Resurfacing Cost in Australia? | 2026 Guide',
   description: 'A fibreglass specialist breaks down real resurfacing costs in Australia  -  from $5,000 patch repairs to $20,000+ full resurfaces. What affects the price and how to avoid being overquoted.',
+  alternates: {
+    canonical: '/blog/fibreglass-pool-resurfacing-cost-australia',
+  },
   openGraph: {
     title: 'How Much Does Fibreglass Pool Resurfacing Cost in Australia?',
     description: 'A fibreglass specialist breaks down real resurfacing costs in Australia  -  from patch repairs to full resurfaces.',

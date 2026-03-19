@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Buyer Inspection Checklist | What to Look For $29',
   description: 'Know what to look for when buying a house with a fibreglass pool. This expert inspection checklist covers surface defects, structural red flags, and questions to ask. Instant download. $29 AUD.',
+  alternates: {
+    canonical: '/BuyerChecklist',
+  },
 }
 
 function BuyerChecklistSchema() {

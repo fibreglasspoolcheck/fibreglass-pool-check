@@ -3,6 +3,9 @@ import Link from 'next/link'
 export const metadata = {
   title: 'On-Site Fibreglass Pool Assessment | South East Queensland',
   description: 'In-person fibreglass pool assessment from an independent specialist. Available in South East Queensland. Request-based service.',
+  alternates: {
+    canonical: '/OnSiteAssessment',
+  },
 }
 
 function OnSiteSchema() {

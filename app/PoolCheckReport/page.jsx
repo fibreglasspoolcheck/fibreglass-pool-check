@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Fibreglass Pool Inspection Report | Independent Assessment $149',
   description: 'Get a detailed fibreglass pool inspection report before you buy. Submit photos, receive an independent written assessment of pool condition, defects, and repair costs within 2-3 business days. $149 AUD.',
+  alternates: {
+    canonical: '/PoolCheckReport',
+  },
 }
 
 function PoolCheckReportSchema() {
