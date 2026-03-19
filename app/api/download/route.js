@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '../../../lib/supabase'
 import { verifyDownloadToken } from '../../../lib/download-token'
+import { rateLimit } from '../../../lib/rate-limit'
 
 // Product files stored in Supabase Storage 'products' bucket
 const PRODUCT_FILES = {
@@ -11,7 +12,15 @@ const PRODUCT_FILES = {
 // Signed URL expiry: 7 days in seconds
 const SIGNED_URL_EXPIRY = 7 * 24 * 60 * 60
 
+const limiter = rateLimit({ interval: 60 * 1000, limit: 20 })
+
 export async function GET(request) {
+  const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+  const { success } = await limiter.check(ip)
+  if (!success) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
   try {
     const { searchParams } = new URL(request.url)
     const product = searchParams.get('product')

@@ -1,4 +1,7 @@
 import { NextResponse } from 'next/server'
+import { rateLimit } from '../../../lib/rate-limit'
+
+const limiter = rateLimit({ interval: 60 * 1000, limit: 5 })
 
 function escapeHtml(str) {
   return String(str)
@@ -10,6 +13,12 @@ function escapeHtml(str) {
 }
 
 export async function POST(request) {
+  const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
+  const { success } = await limiter.check(ip)
+  if (!success) {
+    return NextResponse.json({ error: 'Too many requests' }, { status: 429 })
+  }
+
   try {
     const { full_name, email, message } = await request.json()
 
