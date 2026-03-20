@@ -3,7 +3,7 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Fibreglass Pool FAQ  -  Common Questions Answered',
-  description: 'Answers to 17 common questions about fibreglass pool inspections, quote reviews, and what to look for before buying a property with a pool.',
+  description: 'Common questions about fibreglass pool inspections and what to look for before buying a property with a pool.',
   alternates: {
     canonical: '/faq',
   },
@@ -37,14 +37,6 @@ const faqs = [
   {
     q: 'Can the report be used to negotiate the purchase price?',
     a: 'Absolutely. A written specialist report documenting pool problems gives you documented evidence to negotiate a price reduction, request repairs before settlement, or walk away from the purchase with confidence.',
-  },
-  {
-    q: 'What is a Quote Review?',
-    a: 'A Quote Review is an expert assessment of a repair or resurfacing quote you\'ve already received. We review the scope of work, the methods and materials specified, and the price \u2014 and give you a written opinion on whether it\'s reasonable, what questions to ask, and any concerns.',
-  },
-  {
-    q: 'How many quotes can be included in a Quote Review?',
-    a: 'Up to 3 quotes can be reviewed for the single $79 fee. If you have multiple quotes, sending them all gives us useful context for the review.',
   },
   {
     q: 'What is the Buyer Checklist?',

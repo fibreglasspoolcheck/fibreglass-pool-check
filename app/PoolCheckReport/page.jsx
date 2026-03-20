@@ -154,22 +154,6 @@ export default function PoolCheckReport() {
         </div>
       </section>
 
-      {/* Cross-link to Quote Review */}
-      <section className="py-16 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-xl p-6 text-center">
-            <p className="text-slate-700 text-sm mb-3">
-              Already have a repair or resurfacing quote? Get it reviewed for $79 →
-            </p>
-            <Link
-              href="/QuoteReview"
-              className="inline-block text-orange-600 hover:text-orange-700 font-medium text-sm underline"
-            >
-              Get a Quote Review
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* BRE cross-promo */}
       <section className="py-12">

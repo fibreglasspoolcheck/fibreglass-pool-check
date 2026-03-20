@@ -36,7 +36,6 @@ export default function ServiceBoundaries() {
                   'An independent assessment service  -  while Brady\'s wife runs BRE Fibreglass, all assessments are conducted independently with no influence from that relationship',
                   'A specialist opinion based on photos, documentation, or on-site inspection',
                   'A written report summarising findings and recommendations in plain language',
-                  'A quote review service for resurfacing and repair quotes',
                   'A resource to help you make more informed decisions about a pool purchase or maintenance',
                 ].map(item => (
                   <div key={item} className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
