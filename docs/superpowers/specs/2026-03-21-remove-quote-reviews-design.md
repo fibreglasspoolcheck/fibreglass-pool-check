@@ -43,8 +43,10 @@ Quote Review ($79) is removed entirely.
 - Remove `/QuoteReview` URL
 
 ### 7. Middleware (`middleware.js`)
-- Remove any QuoteReview route handling
-- Add redirect: `/QuoteReview` and `/QuoteReview/*` -> `/` (homepage)
+- Change existing `'/quotereview': '/QuoteReview'` redirect to `'/quotereview': '/'`
+- Add `'/QuoteReview': '/'` and `'/QuoteReview/order': '/'` to redirect map
+- Add `/QuoteReview` and `/QuoteReview/order` to matcher array
+- Use 308 status code (consistent with existing middleware pattern)
 
 ### 8. Stripe Config (`lib/stripe.js`)
 - Remove Quote Review product/price configuration
@@ -52,6 +54,7 @@ Quote Review ($79) is removed entirely.
 ### 9. API Routes
 - `app/api/confirm-upload/route.js` - remove Quote Review field handling
 - `app/api/webhook/route.js` - remove Quote Review order processing
+- `app/api/checkout/route.js` - no changes needed (removing `quote_review` from `PRODUCTS` in `lib/stripe.js` automatically prevents checkout), but verify no hardcoded quote_review references exist
 
 ### 10. Email Templates (`lib/brevo.js`)
 - Remove Quote Review email template references
@@ -71,8 +74,9 @@ Quote Review ($79) is removed entirely.
 - `app/blog/fibreglass-pool-resurfacing-cost-australia/page.jsx`
 
 ### 13. Redirect
-- `/QuoteReview` -> `/` (301 redirect via middleware or next.config.js)
-- `/QuoteReview/order` -> `/` (301 redirect)
+- `/QuoteReview` -> `/` (308 redirect via middleware)
+- `/QuoteReview/order` -> `/` (308 redirect via middleware)
+- `/quotereview` -> `/` (308 redirect, replaces existing case-fix redirect)
 - Prevents 404s from any Google-indexed or bookmarked URLs
 
 ## Out of Scope
@@ -80,10 +84,11 @@ Quote Review ($79) is removed entirely.
 - Google Ads changes (separate task)
 - New product creation
 - Design/layout changes beyond removing Quote Review content
+- Supabase `quote_review_orders` table retained for historical order data. No schema changes required.
 
 ## Verification
 - `npm run build` passes
-- No references to "Quote Review" or "QuoteReview" in any source files (except redirect config)
+- Grep for `QuoteReview`, `Quote Review`, `quote_review`, and `quote-review` returns zero results in source files (except redirect config in middleware)
 - `/QuoteReview` returns 301 redirect to homepage
 - Nav and footer only show remaining products
 - Homepage hero shows updated tagline
