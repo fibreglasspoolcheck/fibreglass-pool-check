@@ -23,6 +23,39 @@ function HomeSchema() {
       "name": "Australia"
     },
     "serviceType": "Fibreglass Pool Inspection",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "4",
+      "reviewCount": "4"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Kelvin O." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "We bought a house with a pool, and the pool was not all it seemed. Brady displays amazing attention to detail. Even our water carter said he's never seen a better looking renovated pool."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Michael H." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "From our very first contact, we were impressed with the responsiveness and professionalism. The final result is perfect. I can unreservedly recommend Brady for both quality workmanship and commitment to customer satisfaction."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Linton P." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "From the beginning I was informed of the scope of works, possible variations and the time frames to complete the work."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Russell W." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "In Brady's mind, the job had to be done right, and it certainly was."
+      }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Pool Assessment Services",
