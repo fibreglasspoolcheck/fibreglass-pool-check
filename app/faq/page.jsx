@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: 'What areas do you service?',
-    a: 'Our photo-based reports (Pool Check Report, Quote Review, Buyer Checklist) are available Australia-wide. Our on-site assessment is available in South East Queensland only.',
+    a: 'Our photo-based reports (Pool Check Report, Buyer Checklist) are available Australia-wide. Our on-site assessment is available in South East Queensland only.',
   },
   {
     q: 'How do I pay?',

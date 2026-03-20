@@ -94,7 +94,7 @@ export default function ServiceBoundaries() {
                   <h3 className="font-semibold text-green-800 mb-2">Australia-wide</h3>
                   <ul className="text-sm text-slate-700 space-y-1">
                     <li>✓ Pool Check Report (photo-based)</li>
-                    <li>✓ Quote Review</li>
+
                     <li>✓ Buyer Checklist</li>
                     <li>✓ Red Flags Guide</li>
                   </ul>
