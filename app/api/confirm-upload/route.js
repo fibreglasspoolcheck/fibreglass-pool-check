@@ -19,14 +19,13 @@ export async function POST(request) {
     }
 
     // Whitelist allowed field names to prevent column injection
-    const ALLOWED_FIELDS = ['photos', 'quote_files', 'pool_photos']
+    const ALLOWED_FIELDS = ['photos']
     const safeFieldName = ALLOWED_FIELDS.includes(fieldName) ? fieldName : 'photos'
 
     const supabase = createServerClient()
 
     const tableMap = {
       pool_check_report: 'report_orders',
-      quote_review: 'quote_review_orders',
     }
     const table = tableMap[productType]
 

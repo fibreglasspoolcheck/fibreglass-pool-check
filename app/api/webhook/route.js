@@ -4,7 +4,6 @@ import { createServerClient } from '../../../lib/supabase'
 import {
   sendBuyerChecklistDelivery,
   sendReportAcknowledgement,
-  sendQuoteReviewAcknowledgement,
   notifyBradyNewOrder,
 } from '../../../lib/brevo'
 
@@ -99,25 +98,6 @@ export async function POST(request) {
         ].filter(Boolean).join('<br/>')
 
         await notifyBradyNewOrder('Pool Check Report', order.full_name, order.email, orderId, details)
-
-      } else if (productType === 'quote_review') {
-        // Send acknowledgement to customer
-        await sendQuoteReviewAcknowledgement(order.full_name, order.email, orderId)
-        await supabase
-          .from('quote_review_orders')
-          .update({ ack_status: 'sent', ack_sent_at: new Date().toISOString() })
-          .eq('id', orderId)
-
-        // Notify Brady with details
-        const details = [
-          order.pool_address && `Pool address: ${order.pool_address}`,
-          order.num_quotes && `Number of quotes: ${order.num_quotes}`,
-          order.main_concern && `Main concern: ${order.main_concern}`,
-          order.quote_files?.length && `Quote files: ${order.quote_files.length}`,
-          order.pool_photos?.length && `Pool photos: ${order.pool_photos.length}`,
-        ].filter(Boolean).join('<br/>')
-
-        await notifyBradyNewOrder('Quote Review', order.full_name, order.email, orderId, details)
       }
     } catch (emailErr) {
       // Log but don't fail the webhook  -  payment is already captured
