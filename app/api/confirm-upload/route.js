@@ -18,6 +18,10 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
+    // Whitelist allowed field names to prevent column injection
+    const ALLOWED_FIELDS = ['photos', 'quote_files', 'pool_photos']
+    const safeFieldName = ALLOWED_FIELDS.includes(fieldName) ? fieldName : 'photos'
+
     const supabase = createServerClient()
 
     const tableMap = {
@@ -33,16 +37,16 @@ export async function POST(request) {
     // Fetch existing file paths
     const { data: order } = await supabase
       .from(table)
-      .select(fieldName || 'photos')
+      .select(safeFieldName)
       .eq('id', orderId)
       .single()
 
-    const existingPaths = order?.[fieldName || 'photos'] || []
+    const existingPaths = order?.[safeFieldName] || []
     const allPaths = [...existingPaths, ...paths]
 
     const { error: updateError } = await supabase
       .from(table)
-      .update({ [fieldName || 'photos']: allPaths })
+      .update({ [safeFieldName]: allPaths })
       .eq('id', orderId)
 
     if (updateError) {
