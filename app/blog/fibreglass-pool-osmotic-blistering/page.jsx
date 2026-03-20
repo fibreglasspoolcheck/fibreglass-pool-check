@@ -82,7 +82,7 @@ export default function FibreglassPoolOsmoticBlistering() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
             <p className="text-sm text-orange-800 font-medium mb-1">Got blisters on your pool?</p>
             <p className="text-sm text-orange-700">
-              Send me photos and I'll assess the severity in a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>. If you've already got a resurfacing quote, get it reviewed for <Link href="/QuoteReview/order" className="underline font-medium">$79</Link>.
+              Send me photos and I'll assess the severity in a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>.
             </p>
           </div>
 
@@ -196,13 +196,6 @@ export default function FibreglassPoolOsmoticBlistering() {
             If your pool has been resurfaced with a modern epoxy or vinyl ester barrier coat system, the risk of future osmotic blistering is significantly reduced. The barrier coat acts as a much more effective water barrier than the original gelcoat.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">Got a resurfacing quote? Get it reviewed.</h2>
-          <p className="text-slate-600 leading-relaxed">
-            If you've already been told your pool needs resurfacing and you have a quote, the <Link href="/QuoteReview/order" className="text-orange-600 hover:underline font-medium">Quote Review ($79)</Link> is worth doing before you sign. I'll check whether the recommended scope of work is appropriate, the materials are right, and the price is within the expected range.
-          </p>
-          <p className="text-slate-600 leading-relaxed mt-3">
-            I've seen quotes that underspec the surface system to win on price (which leads to the problem recurring within a few years), and I've seen quotes that include unnecessary work to inflate the total. An independent second opinion costs $79 and can save you thousands.
-          </p>
         </div>
 
         {/* CTA */}
@@ -217,12 +210,6 @@ export default function FibreglassPoolOsmoticBlistering() {
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Get a Pool Check Report  -  $149
-            </Link>
-            <Link
-              href="/QuoteReview/order"
-              className="inline-block border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Get a Quote Review  -  $79
             </Link>
           </div>
           <p className="text-slate-400 text-xs mt-3 italic">

@@ -242,7 +242,7 @@ export default function FibreglassPoolResurfacingCostAustralia() {
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
             <p className="text-sm text-orange-800 font-medium mb-1">Already have a quote and want a second opinion?</p>
             <p className="text-sm text-orange-700">
-              Use the <Link href="/QuoteReview" className="underline font-medium">Quote Review service</Link>  -  send me your quote and pool photos, and I'll tell you whether the scope, pricing, and approach look reasonable for your specific pool.
+              Use the <Link href="/PoolCheckReport" className="underline font-medium">Pool Check Report</Link>  -  send me your pool photos and I'll assess the condition and recommend what work is actually needed.
             </p>
           </div>
 
@@ -259,7 +259,7 @@ export default function FibreglassPoolResurfacingCostAustralia() {
             If your pool surface is showing its age and you want to understand what you're dealing with before talking to contractors, the <Link href="/PoolCheckReport/order" className="text-orange-600 hover:underline font-medium">Pool Check Report ($149)</Link> gives you a written assessment of your pool's condition, likely repair needs, and what you should expect to pay  -  based on photos you send me.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            If you've already got a quote and want to know whether it's fair, the <Link href="/QuoteReview" className="text-orange-600 hover:underline font-medium">Quote Review</Link> is designed exactly for that.
+            If you want to understand what your pool actually needs before committing to repairs, the <Link href="/PoolCheckReport" className="text-orange-600 hover:underline font-medium">Pool Check Report</Link> gives you an independent assessment.
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
             And if you just want to learn more about the warning signs of pool surface failure, grab the free <Link href="/RedFlagsGuide" className="text-orange-600 hover:underline font-medium">Red Flags Guide</Link>  -  it covers the most common problems I see and what they typically mean.
@@ -278,12 +278,6 @@ export default function FibreglassPoolResurfacingCostAustralia() {
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Get a Pool Check Report  -  $149
-            </Link>
-            <Link
-              href="/QuoteReview"
-              className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Get a Quote Review
             </Link>
           </div>
           <p className="text-slate-400 text-xs mt-3 italic">

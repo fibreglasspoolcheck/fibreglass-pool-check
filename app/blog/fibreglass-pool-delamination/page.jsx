@@ -230,7 +230,7 @@ export default function FibreglassPoolDelamination() {
             If you're on the Gold Coast or in the SEQ region and your pool has delamination, I also run <a href="https://brefibreglass.com.au" className="text-orange-600 hover:underline font-medium" target="_blank" rel="noopener noreferrer">BRE Fibreglass</a>  -  a fibreglass pool resurfacing and repair business. We handle everything from patch repairs to full resurfaces, and I can give you an honest assessment of what your pool actually needs (and what it doesn't).
           </p>
           <p className="text-slate-600 leading-relaxed mt-3">
-            If you're outside SEQ, the <Link href="/QuoteReview" className="text-orange-600 hover:underline font-medium">Quote Review service</Link> can help you evaluate quotes you've received from local repairers  -  so you know whether the price is fair and the scope of work is right.
+            If you're outside SEQ, the <Link href="/PoolCheckReport" className="text-orange-600 hover:underline font-medium">Pool Check Report</Link> can help you understand the condition of your pool before committing to repairs.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mt-10 mb-4">The bottom line</h2>
@@ -254,12 +254,6 @@ export default function FibreglassPoolDelamination() {
               className="inline-block bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
               Get a Pool Check Report  -  $149
-            </Link>
-            <Link
-              href="/QuoteReview"
-              className="inline-block bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Get a Quote Review  -  $99
             </Link>
           </div>
           <p className="text-slate-400 text-xs mt-3 italic">
