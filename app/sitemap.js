@@ -15,12 +15,6 @@ export default function sitemap() {
             priority: 0.9,
     },
     {
-            url: `${baseUrl}/QuoteReview`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-    },
-    {
             url: `${baseUrl}/BuyerChecklist`,
             lastModified: new Date(),
             changeFrequency: 'monthly',

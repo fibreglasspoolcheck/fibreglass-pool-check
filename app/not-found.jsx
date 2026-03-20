@@ -33,7 +33,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
           <div className="border border-slate-200 rounded-xl p-6 text-left">
             <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">$149 AUD</p>
             <h2 className="text-lg font-bold text-slate-900 mb-2">Pool Check Report</h2>
@@ -42,17 +42,6 @@ export default function NotFound() {
             </p>
             <Link href="/PoolCheckReport/order" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
               Order report &rarr;
-            </Link>
-          </div>
-
-          <div className="border border-slate-200 rounded-xl p-6 text-left">
-            <p className="text-xs font-medium text-slate-500 uppercase tracking-wide mb-2">$79 AUD</p>
-            <h2 className="text-lg font-bold text-slate-900 mb-2">Quote Review</h2>
-            <p className="text-slate-600 text-sm leading-relaxed mb-4">
-              Expert second opinion on fibreglass pool repair or resurfacing quotes.
-            </p>
-            <Link href="/QuoteReview" className="text-sm font-medium text-slate-900 hover:text-orange-600 transition-colors">
-              Review my quote &rarr;
             </Link>
           </div>
 

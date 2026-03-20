@@ -20,7 +20,6 @@ export default function Footer() {
             <h3 className="text-white text-sm font-semibold mb-3">Reports & Services</h3>
             <ul className="space-y-2">
               <li><Link href="/PoolCheckReport" className="text-sm text-slate-400 hover:text-white transition-colors">Pool Check Report</Link></li>
-              <li><Link href="/QuoteReview" className="text-sm text-slate-400 hover:text-white transition-colors">Quote Review</Link></li>
               <li><Link href="/BuyerChecklist" className="text-sm text-slate-400 hover:text-white transition-colors">Buyer Checklist</Link></li>
               <li><Link href="/OnSiteAssessment" className="text-sm text-slate-400 hover:text-white transition-colors">On-Site Assessment</Link></li>
             </ul>

@@ -6,10 +6,10 @@ import Script from 'next/script'
 export const metadata = {
   metadataBase: new URL('https://fibreglasspoolcheck.com.au'),
   title: {
-    default: 'Independent Fibreglass Pool Checks & Quote Reviews Australia',
+    default: 'Independent Fibreglass Pool Checks Australia',
     template: '%s | Fibreglass Pool Check',
   },
-  description: 'Expert fibreglass pool inspection reports, quote reviews and buyer guidance from an independent specialist with 10+ years experience.',
+  description: 'Expert fibreglass pool inspection reports and buyer guidance from an independent specialist with 10+ years experience.',
   openGraph: {
     siteName: 'Fibreglass Pool Check',
     locale: 'en_AU',
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
               "@type": ["Organization", "LocalBusiness"],
               "name": "Fibreglass Pool Check",
               "url": "https://fibreglasspoolcheck.com.au",
-              "description": "Independent fibreglass pool inspection reports, quote reviews and buyer guidance from an independent specialist with 10+ years experience.",
+              "description": "Independent fibreglass pool inspection reports and buyer guidance from an independent specialist with 10+ years experience.",
               "founder": {
                 "@type": "Person",
                 "name": "Brady Smith",

@@ -55,9 +55,6 @@ export default function Nav() {
             <Link href="/PoolCheckReport" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               Pool Check Report
             </Link>
-            <Link href="/QuoteReview" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
-              Quote Review
-            </Link>
             <Link href="/BuyerChecklist" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
               Buyer Checklist
             </Link>

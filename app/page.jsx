@@ -2,8 +2,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const metadata = {
-  title: 'Independent Fibreglass Pool Checks & Quote Reviews Australia',
-  description: 'Get an independent fibreglass pool inspection report, quote review, or buyer checklist from a specialist with 250+ pools assessed. Australia-wide.',
+  title: 'Independent Fibreglass Pool Checks Australia',
+  description: 'Get an independent fibreglass pool inspection report or buyer checklist from a specialist with 250+ pools assessed. Australia-wide.',
 }
 
 function HomeSchema() {
@@ -12,7 +12,7 @@ function HomeSchema() {
     "@type": "ProfessionalService",
     "name": "Fibreglass Pool Check",
     "url": "https://fibreglasspoolcheck.com.au",
-    "description": "Independent fibreglass pool inspection reports, quote reviews and buyer guidance from an independent specialist with 10+ years experience.",
+    "description": "Independent fibreglass pool inspection reports and buyer guidance from an independent specialist with 10+ years experience.",
     "founder": {
       "@type": "Person",
       "name": "Brady Smith",
@@ -74,16 +74,6 @@ function HomeSchema() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Quote Review",
-            "description": "Expert second opinion on fibreglass pool repair or resurfacing quotes."
-          },
-          "price": "79",
-          "priceCurrency": "AUD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
             "name": "Buyer Checklist",
             "description": "Expert checklist for assessing a fibreglass pool yourself before purchase."
           },
@@ -115,7 +105,7 @@ export default function Home() {
                 Fibreglass Pool Specialist &middot; Independent Assessment
               </p>
               <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-6">
-                Independent Fibreglass Pool Checks & Quote Reviews
+                Independent Fibreglass Pool Checks
               </h1>
               <p className="text-slate-600 text-lg leading-relaxed mb-8">
                 Photo-based fibreglass pool assessment and decision support for buyers and owners who want practical clarity before they buy, accept a quote, or spend money on repairs or resurfacing.
