@@ -20,6 +20,14 @@ const REDIRECTS = {
 }
 
 export function middleware(request) {
+  // www -> non-www redirect (must be first, before pathname checks)
+  const host = request.headers.get('host') || ''
+  if (host.startsWith('www.')) {
+    const url = request.nextUrl.clone()
+    url.host = host.replace(/^www\./, '')
+    return NextResponse.redirect(url, 301)
+  }
+
   const { pathname } = request.nextUrl
 
   // JavaScript object key lookup is case-sensitive,
@@ -35,19 +43,6 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: [
-    '/contact',
-    '/about',
-    '/poolcheckreport',
-    '/quotereview',
-    '/QuoteReview',
-    '/QuoteReview/order',
-    '/buyerchecklist',
-    '/redflagsguide',
-    '/onsiteassessment',
-    '/buyingahouse',
-    '/poolowner',
-    '/serviceboundaries',
-    '/FAQ',
-  ],
+  // Match all routes except static files and Next.js internals
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 }
