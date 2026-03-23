@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPC Master Audit Report - 23 March 2026</title>
+<style>
+  :root {
+    --critical: #dc2626;
+    --high: #ea580c;
+    --medium: #d97706;
+    --low: #2563eb;
+    --good: #16a34a;
+    --bg: #0f172a;
+    --card: #1e293b;
+    --card-alt: #334155;
+    --text: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border: #475569;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+  h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.5rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+  h3 { font-size: 1.15rem; margin: 1.5rem 0 0.75rem; }
+  .subtitle { color: var(--text-muted); margin-bottom: 2rem; }
+  .card { background: var(--card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid var(--border); }
+  .card-alt { background: var(--card-alt); }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-critical { background: var(--critical); color: #fff; }
+  .badge-high { background: var(--high); color: #fff; }
+  .badge-medium { background: var(--medium); color: #fff; }
+  .badge-low { background: var(--low); color: #fff; }
+  .badge-good { background: var(--good); color: #fff; }
+  .badge-info { background: var(--border); color: #fff; }
+  .score-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .score-box { flex: 1; min-width: 140px; background: var(--card); border-radius: 12px; padding: 1.25rem; text-align: center; border: 1px solid var(--border); }
+  .score-box .number { font-size: 2.5rem; font-weight: 800; }
+  .score-box .label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .score-critical .number { color: var(--critical); }
+  .score-high .number { color: var(--high); }
+  .score-medium .number { color: var(--medium); }
+  .score-low .number { color: var(--low); }
+  .score-good .number { color: var(--good); }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  th, td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+  th { color: var(--text-muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  tr:last-child td { border-bottom: none; }
+  .status-ok { color: var(--good); }
+  .status-warn { color: var(--medium); }
+  .status-bad { color: var(--critical); }
+  ul { padding-left: 1.25rem; }
+  li { margin-bottom: 0.4rem; }
+  code { background: var(--card-alt); padding: 2px 6px; border-radius: 4px; font-size: 0.85rem; font-family: 'SF Mono', 'Fira Code', monospace; }
+  .verdict-box { background: linear-gradient(135deg, #1e3a5f, #1e293b); border: 2px solid #3b82f6; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+  .verdict-box h2 { border: none; margin-top: 0; }
+  .action-item { display: flex; gap: 0.75rem; align-items: flex-start; margin-bottom: 1rem; }
+  .action-num { background: var(--high); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; margin-top: 2px; }
+  .toc { background: var(--card); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid var(--border); }
+  .toc a { color: #60a5fa; text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .toc ol { padding-left: 1.5rem; }
+  .toc li { margin-bottom: 0.3rem; }
+  .pro { color: var(--good); }
+  .con { color: var(--critical); }
+  .highlight { background: rgba(234, 88, 12, 0.15); border-left: 4px solid var(--high); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+  .finding { margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid rgba(71,85,105,0.5); }
+  .finding:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .finding-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } .score-row { flex-direction: column; } }
+  .market-stat { text-align: center; padding: 1rem; }
+  .market-stat .big { font-size: 2rem; font-weight: 800; color: #60a5fa; }
+  .market-stat .desc { font-size: 0.85rem; color: var(--text-muted); }
+  .footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 3rem; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Fibreglass Pool Check - Master Audit Report</h1>
+<p class="subtitle">fibreglasspoolcheck.com.au | Generated 23 March 2026 | 5 parallel audits compiled</p>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="score-row">
+  <div class="score-box score-critical"><div class="number">5</div><div class="label">Critical</div></div>
+  <div class="score-box score-high"><div class="number">8</div><div class="label">High</div></div>
+  <div class="score-box score-medium"><div class="number">11</div><div class="label">Medium</div></div>
+  <div class="score-box score-low"><div class="number">6</div><div class="label">Low</div></div>
+  <div class="score-box score-good"><div class="number">7/10</div><div class="label">Overall</div></div>
+</div>
+
+<div class="highlight">
+  <strong>Bottom line:</strong> The website is well-built technically but <strong>invisible to Google</strong> and has <strong>open database security holes</strong>. Nobody can find it, and if they could, customer data is exposed. Fix these two things and you have a viable business with zero direct competitors in Australia.
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#tldr">TL;DR - Is It Working?</a></li>
+    <li><a href="#health">Site Health & Infrastructure</a></li>
+    <li><a href="#security">Security Findings</a></li>
+    <li><a href="#code">Code Quality Review</a></li>
+    <li><a href="#seo">SEO & Indexing</a></li>
+    <li><a href="#analytics">Analytics & Notifications</a></li>
+    <li><a href="#stripe">Stripe & Payments</a></li>
+    <li><a href="#market">Market Viability</a></li>
+    <li><a href="#pros-cons">Pros & Cons</a></li>
+    <li><a href="#actions">Prioritised Action Plan</a></li>
+  </ol>
+</div>
+
+<!-- 1. TL;DR -->
+<h2 id="tldr">1. TL;DR - Is It Working?</h2>
+<div class="card">
+  <table>
+    <tr><td><strong>Is the site online?</strong></td><td class="status-ok">Yes - 200 OK, 159ms response, Vercel Sydney edge</td></tr>
+    <tr><td><strong>Is SSL working?</strong></td><td class="status-ok">Yes - Let's Encrypt, 79 days until expiry, auto-renews</td></tr>
+    <tr><td><strong>Can Google find it?</strong></td><td class="status-bad">NO - site:fibreglasspoolcheck.com.au returns zero results</td></tr>
+    <tr><td><strong>Is anyone visiting?</strong></td><td class="status-warn">Unknown - GA4 is installed but probably no organic traffic due to indexing</td></tr>
+    <tr><td><strong>Has anyone bought anything?</strong></td><td class="status-bad">No purchases yet - Stripe webhook untested with real payment</td></tr>
+    <tr><td><strong>Would I be notified?</strong></td><td class="status-ok">Yes - Brevo emails go to help@fibreglasspoolcheck.com.au for all events</td></tr>
+    <tr><td><strong>Is customer data safe?</strong></td><td class="status-bad">NO - Supabase RLS policies allow anyone to read all orders</td></tr>
+    <tr><td><strong>Is Stripe properly secured?</strong></td><td class="status-ok">Yes - webhook signature verification is correct</td></tr>
+    <tr><td><strong>Is the code well-built?</strong></td><td class="status-ok">Yes - clean, ~1,600 LOC, proper error handling</td></tr>
+    <tr><td><strong>Is the business idea viable?</strong></td><td class="status-ok">Yes - large market, zero direct competitors, strong value prop</td></tr>
+  </table>
+</div>
+
+<!-- 2. SITE HEALTH -->
+<h2 id="health">2. Site Health & Infrastructure</h2>
+<div class="card">
+  <h3>Server & Performance</h3>
+  <table>
+    <tr><th>Check</th><th>Result</th><th>Status</th></tr>
+    <tr><td>HTTP Status</td><td>200 OK</td><td class="status-ok">Pass</td></tr>
+    <tr><td>Response Time</td><td>159ms (cached)</td><td class="status-ok">Pass</td></tr>
+    <tr><td>Server</td><td>Vercel (Sydney - syd1)</td><td class="status-ok">Pass</td></tr>
+    <tr><td>HTTP to HTTPS</td><td>308 redirect</td><td class="status-ok">Pass</td></tr>
+    <tr><td>www to non-www</td><td>301 redirect</td><td class="status-ok">Pass</td></tr>
+    <tr><td>SSL Certificate</td><td>Let's Encrypt R13, expires 11 June 2026</td><td class="status-ok">Pass</td></tr>
+    <tr><td>HSTS</td><td>max-age=63072000 (no preload)</td><td class="status-warn">Partial</td></tr>
+    <tr><td>Compression</td><td>Unconfirmed via curl</td><td class="status-warn">Check</td></tr>
+    <tr><td>Blog/Dynamic Pages</td><td>660-754ms (uncached SSR)</td><td class="status-warn">Acceptable</td></tr>
+  </table>
+
+  <h3>Security Headers</h3>
+  <table>
+    <tr><th>Header</th><th>Value</th><th>Status</th></tr>
+    <tr><td>Strict-Transport-Security</td><td>max-age=63072000</td><td class="status-ok">Present</td></tr>
+    <tr><td>X-Content-Type-Options</td><td>nosniff</td><td class="status-ok">Present</td></tr>
+    <tr><td>X-Frame-Options</td><td>DENY</td><td class="status-ok">Present</td></tr>
+    <tr><td>Referrer-Policy</td><td>strict-origin-when-cross-origin</td><td class="status-ok">Present</td></tr>
+    <tr><td>Permissions-Policy</td><td>camera=(), microphone=(), geolocation=()</td><td class="status-ok">Present</td></tr>
+    <tr><td>Content-Security-Policy</td><td>-</td><td class="status-bad">Missing</td></tr>
+  </table>
+</div>
+
+<!-- 3. SECURITY -->
+<h2 id="security">3. Security Findings</h2>
+
+<div class="card">
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-critical">Critical</span> <strong>All order tables readable by anyone</strong></div>
+    <p>The RLS policies on <code>report_orders</code>, <code>checklist_orders</code>, and <code>quote_review_orders</code> have SELECT with <code>qual: true</code>. Anyone with the public anon key (visible in browser JS) can read every customer's name, email, pool address, and payment details.</p>
+    <p><strong>Fix:</strong> Drop the "Allow anon read by id" SELECT policies on all three tables. No client code reads from them.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-critical">Critical</span> <strong>Checkout route has no ownership verification</strong></div>
+    <p>Anyone who knows an orderId can initiate a checkout session for that order, leaking the customer's email address. Combined with the open SELECT policy above, attackers can enumerate all orders.</p>
+    <p><strong>Fix:</strong> Require the customer's email in the checkout request and verify it matches the order.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-critical">Critical</span> <strong>Upload routes accept any orderId</strong></div>
+    <p>The <code>upload-url</code> and <code>confirm-upload</code> API routes accept any orderId with no ownership check. An attacker can attach files to or overwrite photos on any existing order.</p>
+    <p><strong>Fix:</strong> Require email verification against the order record before generating upload URLs.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-critical">Critical</span> <strong>contact-uploads bucket is public with 50MB limit</strong></div>
+    <p>The Supabase storage bucket <code>contact-uploads</code> is publicly readable and writable. Can be abused as free file hosting or to store malicious content, running up storage costs.</p>
+    <p><strong>Fix:</strong> Make the bucket private, serve files through signed URLs.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-critical">Critical</span> <strong>Next.js 14.2.35 has 4 known vulnerabilities</strong></div>
+    <p>Including HTTP request smuggling (GHSA-ggv3-7p47-pfv8) and DoS via React Server Components (GHSA-h25m-26qc-wcjf). These are not fully patched in any 14.x release.</p>
+    <p><strong>Fix:</strong> Upgrade to Next.js 15.x (breaking changes - test thoroughly).</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>HMAC token truncated to 128 bits</strong></div>
+    <p>Download tokens use <code>.slice(0, 32)</code> on hex output, halving the HMAC output space. Not immediately exploitable but unnecessary weakness.</p>
+    <p><strong>Fix:</strong> Use full HMAC output. Note: breaks existing download links.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>No email format validation on any API route</strong></div>
+    <p>Email fields accept any string. Can waste Brevo quota and damage sender reputation with bounces.</p>
+    <p><strong>Fix:</strong> Add server-side email regex validation on all routes.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>No CSRF protection</strong></div>
+    <p>All POST routes accept any origin. An attacker could craft forms on other sites to spam endpoints.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>Stripe success_url uses request Origin header</strong></div>
+    <p>An attacker could set <code>Origin: https://evil.com</code> to redirect post-payment to a phishing page.</p>
+    <p><strong>Fix:</strong> Hardcode origin to <code>https://fibreglasspoolcheck.com.au</code>.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>Rate limiter is in-memory, ineffective on Vercel</strong></div>
+    <p>Each serverless invocation gets a fresh <code>Map</code>. Rate limiting is essentially non-functional in production.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>DOWNLOAD_TOKEN_SECRET missing from .env.local.example</strong></div>
+    <p>The code throws if this env var is missing, but it's not documented in the example file.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-low">Low</span> <strong>Fallback token in red-flags-guide route</strong></div>
+    <p>If DB insert fails, all download links share the same HMAC input (<code>'fallback-token'</code>). One valid link works for everyone.</p>
+    <p><strong>Fix:</strong> Use <code>crypto.randomUUID()</code> instead of static fallback.</p>
+  </div>
+</div>
+
+<!-- 4. CODE QUALITY -->
+<h2 id="code">4. Code Quality Review</h2>
+
+<div class="card">
+  <h3>What's Done Well</h3>
+  <ul>
+    <li>Clean separation of concerns - components, lib, API routes</li>
+    <li>Stripe webhook signature verification correctly implemented</li>
+    <li>HTML escaping on all user inputs in emails via <code>escapeHtml()</code></li>
+    <li>HMAC-SHA256 with timing-safe comparison for download tokens</li>
+    <li>Email failures don't break the payment webhook</li>
+    <li>Error boundary, loading state, and 404 page all present</li>
+    <li>Proper Next.js Image component with alt tags throughout</li>
+    <li>Semantic HTML with proper heading hierarchy</li>
+    <li>~1,600 LOC across 16 files - lean and maintainable</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h3>Issues Found</h3>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>Footer uses <code>class</code> instead of <code>className</code></strong></div>
+    <p><code>Footer.jsx</code> line 55 - styles silently don't apply, React logs a console warning.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>Hardcoded absolute URLs in PoolCheckReport</strong></div>
+    <p>Two <code>Link</code> components use <code>https://fibreglasspoolcheck.com.au/...</code> instead of relative paths. Breaks dev/preview and bypasses client-side navigation.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-high">High</span> <strong>Orphaned quote_review_orders table</strong></div>
+    <p>Table exists in Supabase with 3 rows and active RLS policies, but the feature was removed from the site. Anon INSERT is still enabled.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>No favicon</strong></div>
+    <p>Missing from <code>/public/</code> and <code>/app/</code>. Browsers 404 on every page load.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>Inconsistent messaging: "7 warning signs" vs "10 warning signs"</strong></div>
+    <p>BuyingAHouse page says 7, RedFlagsGuide page says 10. One is wrong.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>Unused remote image patterns</strong></div>
+    <p><code>cdn.pixabay.com</code> and <code>media.base44.com</code> in next.config.js are never used. Leftover attack surface.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>Missing canonicals and breadcrumbs on some pages</strong></div>
+    <p>RedFlagsGuide missing canonical URL. BuyingAHouse and PoolOwner missing BreadcrumbSchema.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-medium">Medium</span> <strong>BuyerChecklist schema uses relative URL</strong></div>
+    <p>Structured data URLs must be absolute for Google to parse them.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-low">Low</span> <strong>Google Ads conversion labels may be wrong</strong></div>
+    <p><code>send_to</code> values use human-readable names (<code>red_flags_guide</code>) instead of Ads-format labels. Conversion tracking may not be working.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-low">Low</span> <strong>Sitemap uses <code>new Date()</code> for all entries</strong></div>
+    <p>Every crawl shows today's date. Blog posts should use actual publication dates.</p>
+  </div>
+
+  <div class="finding">
+    <div class="finding-header"><span class="badge badge-low">Low</span> <strong>Unused Tailwind brand color tokens</strong></div>
+    <p><code>brand.dark</code> and <code>brand.orange</code> defined but never referenced.</p>
+  </div>
+</div>
+
+<!-- 5. SEO & INDEXING -->
+<h2 id="seo">5. SEO & Indexing</h2>
+
+<div class="card">
+  <div class="highlight" style="margin-top:0">
+    <strong>THE #1 PROBLEM:</strong> A <code>site:fibreglasspoolcheck.com.au</code> Google search returns <strong>zero results</strong>. The site is effectively invisible. This is why you're not making money.
+  </div>
+
+  <h3>What's In Place</h3>
+  <table>
+    <tr><th>Check</th><th>Status</th></tr>
+    <tr><td>Meta title & description</td><td class="status-ok">Present on all pages</td></tr>
+    <tr><td>Canonical URLs</td><td class="status-warn">Most pages (RedFlagsGuide missing)</td></tr>
+    <tr><td>OpenGraph tags</td><td class="status-ok">Present</td></tr>
+    <tr><td>Structured data</td><td class="status-ok">Organization, ProfessionalService, Product, FAQ, Article, Breadcrumb</td></tr>
+    <tr><td>robots.txt</td><td class="status-ok">200 OK, correctly configured</td></tr>
+    <tr><td>sitemap.xml</td><td class="status-ok">200 OK, 17 URLs</td></tr>
+    <tr><td>Blog content</td><td class="status-ok">5 articles published</td></tr>
+    <tr><td>Google Search Console</td><td class="status-warn">Sitemap needs resubmission</td></tr>
+  </table>
+
+  <h3>URL Problems</h3>
+  <p>The site uses PascalCase URLs (<code>/PoolCheckReport</code>). Lowercase variants return <strong>hard 404s</strong>:</p>
+  <table>
+    <tr><th>URL Typed</th><th>Result</th></tr>
+    <tr><td>/pool-check-report</td><td class="status-bad">404 - Dead</td></tr>
+    <tr><td>/buyer-checklist</td><td class="status-bad">404 - Dead</td></tr>
+    <tr><td>/red-flags-guide</td><td class="status-bad">404 - Dead</td></tr>
+    <tr><td>/contact</td><td class="status-ok">308 redirect to /Contact</td></tr>
+    <tr><td>/PoolCheckReport</td><td class="status-ok">200 OK</td></tr>
+    <tr><td>/BuyerChecklist</td><td class="status-ok">200 OK</td></tr>
+  </table>
+  <p style="margin-top:0.75rem"><strong>Fix:</strong> Add lowercase-to-PascalCase redirects in <code>middleware.js</code> (NOT next.config.js - causes infinite loops).</p>
+
+  <h3>Why Google Isn't Indexing</h3>
+  <p>Likely causes (in order of probability):</p>
+  <ol>
+    <li>Site is very new (launched ~19 March 2026) - Google hasn't crawled enough yet</li>
+    <li>Sitemap was not successfully submitted to GSC (quota exceeded 19 March)</li>
+    <li>Google may be confused by the PascalCase URLs + 404s on lowercase equivalents</li>
+    <li>Need to manually request indexing for key pages in Search Console</li>
+  </ol>
+</div>
+
+<!-- 6. ANALYTICS -->
+<h2 id="analytics">6. Analytics & Notifications</h2>
+
+<div class="card">
+  <h3>What's Installed</h3>
+  <table>
+    <tr><th>System</th><th>Status</th><th>Details</th></tr>
+    <tr><td>Google Analytics (GA4)</td><td class="status-ok">Installed</td><td>Property: G-GGKLMQL660</td></tr>
+    <tr><td>Google Ads Tracking</td><td class="status-ok">Installed</td><td>AW-18010642704 with 3 conversion events</td></tr>
+    <tr><td>Vercel Analytics</td><td class="status-bad">Not installed</td><td>Would give real-time visitor data</td></tr>
+  </table>
+
+  <h3>Email Notifications (via Brevo)</h3>
+  <p>All notifications go to: <code>help@fibreglasspoolcheck.com.au</code></p>
+  <table>
+    <tr><th>Event</th><th>Notification</th></tr>
+    <tr><td>Contact form submission</td><td class="status-ok">Email with customer details + message</td></tr>
+    <tr><td>Red Flags Guide download</td><td class="status-ok">Email with lead name + email</td></tr>
+    <tr><td>Buyer Checklist purchase</td><td class="status-ok">Email with customer details + auto-delivers PDF</td></tr>
+    <tr><td>Pool Check Report purchase</td><td class="status-ok">Email with full order details (address, photos, issue summary)</td></tr>
+  </table>
+
+  <h3>What's Missing</h3>
+  <ul>
+    <li>No real-time visitor notifications (you only know someone visited if they take an action)</li>
+    <li>No email nurture sequence after Red Flags Guide download</li>
+    <li>No way to see visitor count without logging into Google Analytics</li>
+  </ul>
+</div>
+
+<!-- 7. STRIPE -->
+<h2 id="stripe">7. Stripe & Payments</h2>
+
+<div class="card">
+  <table>
+    <tr><th>Component</th><th>Status</th><th>Notes</th></tr>
+    <tr><td>Stripe SDK</td><td class="status-ok">Installed</td><td>API version 2023-10-16</td></tr>
+    <tr><td>Pool Check Report ($149)</td><td class="status-ok">Configured</td><td>14900 cents AUD</td></tr>
+    <tr><td>Buyer Checklist ($29)</td><td class="status-ok">Configured</td><td>2900 cents AUD</td></tr>
+    <tr><td>Checkout Sessions</td><td class="status-ok">Working</td><td>Creates session with customer email</td></tr>
+    <tr><td>Webhook Signature</td><td class="status-ok">Verified</td><td>Uses STRIPE_WEBHOOK_SECRET</td></tr>
+    <tr><td>Auto-delivery (Checklist)</td><td class="status-ok">Configured</td><td>PDF sent via Brevo on payment</td></tr>
+    <tr><td>Report Acknowledgement</td><td class="status-ok">Configured</td><td>Email sent with 2-3 day timeline</td></tr>
+    <tr><td>End-to-end test</td><td class="status-bad">Not done</td><td>No real purchase has occurred yet</td></tr>
+  </table>
+  <p style="margin-top:1rem"><strong>Recommendation:</strong> Do a test purchase in Stripe test mode to verify the full chain: order creation -> checkout -> webhook -> email delivery -> download link.</p>
+</div>
+
+<!-- 8. MARKET VIABILITY -->
+<h2 id="market">8. Market Viability</h2>
+
+<div class="card">
+  <div class="score-row">
+    <div class="market-stat"><div class="big">3.1M</div><div class="desc">Australians with pools</div></div>
+    <div class="market-stat"><div class="big">65-70%</div><div class="desc">Are fibreglass</div></div>
+    <div class="market-stat"><div class="big">79K</div><div class="desc">Pool property sales/yr</div></div>
+    <div class="market-stat"><div class="big">0</div><div class="desc">Direct competitors</div></div>
+  </div>
+
+  <h3>Competition Analysis</h3>
+  <p><strong>Nobody in Australia offers a digital/remote fibreglass pool condition assessment.</strong> This concept is novel.</p>
+  <ul>
+    <li><strong>Poolwerx</strong> - in-person inspections, $200-500+, generic (not fibreglass-specific)</li>
+    <li><strong>Building inspectors</strong> - pool is an add-on, focused on safety compliance</li>
+    <li><strong>Pool safety inspectors</strong> - fencing/barrier compliance only</li>
+    <li><strong>NSW Gov checklists</strong> - free but safety-only, not condition assessment</li>
+  </ul>
+
+  <h3>Price Point Assessment</h3>
+  <table>
+    <tr><th>Product</th><th>Price</th><th>Market Context</th><th>Verdict</th></tr>
+    <tr><td>Red Flags Guide</td><td>Free</td><td>Standard lead magnet</td><td class="status-ok">Good</td></tr>
+    <tr><td>Buyer Checklist</td><td>$29</td><td>Checklists are generally free online</td><td class="status-warn">Harder sell</td></tr>
+    <tr><td>Pool Check Report</td><td>$149</td><td>Physical inspections cost $200-500+</td><td class="status-ok">Excellent value</td></tr>
+    <tr><td>On-Site Assessment</td><td>Quote</td><td>Premium tier, SEQ only</td><td class="status-ok">Appropriate</td></tr>
+  </table>
+
+  <h3>Revenue Potential (Year 1, Organic Only)</h3>
+  <ul>
+    <li>With SEO fixed + consistent content: 5-15 report sales/month = <strong>$750-$2,250/month</strong></li>
+    <li>20-30% of report buyers may have significant issues</li>
+    <li>30-50% of those could convert to BRE repair jobs at <strong>$6,500-$22,000 each</strong></li>
+    <li>FPC is essentially a <strong>paid lead generation system for BRE Fibreglass</strong></li>
+  </ul>
+</div>
+
+<!-- 9. PROS & CONS -->
+<h2 id="pros-cons">9. Honest Pros & Cons</h2>
+
+<div class="two-col">
+  <div class="card">
+    <h3 class="pro">Strengths</h3>
+    <ul>
+      <li>Zero direct competitors in digital fibreglass pool assessment</li>
+      <li>Genuine 10+ year expertise that can't be faked</li>
+      <li>Smart funnel: digital products feed BRE repair revenue</li>
+      <li>Scalable - serves all of Australia digitally</li>
+      <li>$149 report undercuts $200-500 physical inspections</li>
+      <li>Large addressable market (millions of fibreglass pools)</li>
+      <li>Low operating costs (no inventory/premises)</li>
+      <li>Well-built, clean codebase</li>
+      <li>"Swimming pool" was the #1 searched property feature in 2025</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 class="con">Weaknesses</h3>
+    <ul>
+      <li><strong>NOT INDEXED BY GOOGLE</strong> - the #1 blocker</li>
+      <li>Open RLS policies expose customer data</li>
+      <li>Novel concept requires market education</li>
+      <li>Trust barrier for $149 photo-based assessment</li>
+      <li>Each report requires Brady's time (caps scalability)</li>
+      <li>$29 checklist may cannibalise $149 report</li>
+      <li>No email nurture sequence after lead capture</li>
+      <li>Seasonal demand (peaks spring/summer)</li>
+      <li>On-site work limited to SEQ</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 10. ACTION PLAN -->
+<h2 id="actions">10. Prioritised Action Plan</h2>
+
+<div class="verdict-box">
+  <h2 style="color: #f97316;">URGENT - Fix Before Anything Else</h2>
+
+  <div class="action-item">
+    <div class="action-num">1</div>
+    <div>
+      <strong>Fix Supabase RLS policies</strong> <span class="badge badge-critical">Critical</span><br>
+      Drop "Allow anon read by id" SELECT policies on report_orders, checklist_orders, quote_review_orders. One SQL migration, zero client code changes. <strong>Claude can do this now.</strong>
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">2</div>
+    <div>
+      <strong>Add ownership verification to API routes</strong> <span class="badge badge-critical">Critical</span><br>
+      Checkout, upload-url, and confirm-upload routes need email verification against the order. <strong>Claude can do this now.</strong>
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">3</div>
+    <div>
+      <strong>Make contact-uploads bucket private</strong> <span class="badge badge-critical">Critical</span><br>
+      Currently public read/write with 50MB limit. <strong>Claude can do this now.</strong>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Phase 1: Get Found (Week 1) - Claude Can Do All Of This</h3>
+
+  <div class="action-item">
+    <div class="action-num">4</div>
+    <div>
+      <strong>Add lowercase URL redirects in middleware.js</strong><br>
+      /pool-check-report -> /PoolCheckReport, /buyer-checklist -> /BuyerChecklist, /red-flags-guide -> /RedFlagsGuide. These are currently hard 404s.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">5</div>
+    <div>
+      <strong>Resubmit sitemap to Google Search Console</strong> <span class="badge badge-info">Brady manual</span><br>
+      Previous submission failed (quota exceeded 19 March). Request indexing for homepage, /PoolCheckReport, /blog, and all 5 articles.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">6</div>
+    <div>
+      <strong>Fix sitemap dates</strong><br>
+      Use actual publication dates instead of <code>new Date()</code> for blog posts.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">7</div>
+    <div>
+      <strong>Add missing canonicals and breadcrumbs</strong><br>
+      RedFlagsGuide canonical, BuyingAHouse + PoolOwner breadcrumbs, BuyerChecklist absolute URL in schema.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">8</div>
+    <div>
+      <strong>Fix the code bugs</strong><br>
+      Footer <code>class</code> -> <code>className</code>, hardcoded absolute URLs, "7 vs 10 warning signs" inconsistency, hardcoded Supabase URL in brevo.js.
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Phase 2: Drive Traffic (Weeks 2-4) - Claude Can Do All Of This</h3>
+
+  <div class="action-item">
+    <div class="action-num">9</div>
+    <div>
+      <strong>Write 5-10 SEO blog posts</strong><br>
+      Target: "buying house with pool QLD", "fibreglass pool cracks", "how long do fibreglass pools last", "pool resurfacing cost Australia 2026", "fibreglass pool osmosis signs". 1,500-2,000 words each.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">10</div>
+    <div>
+      <strong>Build email nurture sequence</strong><br>
+      7 emails triggered by Red Flags Guide download. Educate -> build trust -> case study -> pitch report. Set up in Brevo automation.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">11</div>
+    <div>
+      <strong>Create sample/redacted report PDF</strong><br>
+      Show prospects what they get for $149. Blur personal details but show depth and quality.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">12</div>
+    <div>
+      <strong>Install Vercel Analytics</strong><br>
+      One-line addition to layout.jsx. Gives real-time visitor data without checking GA.
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Phase 3: Harden & Improve (Month 2+)</h3>
+
+  <div class="action-item">
+    <div class="action-num">13</div>
+    <div>
+      <strong>Upgrade Next.js 14 to 15</strong><br>
+      Patches 4 known vulnerabilities. Major version - needs testing.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">14</div>
+    <div>
+      <strong>Add Content-Security-Policy header</strong><br>
+      Last missing security header.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">15</div>
+    <div>
+      <strong>Add favicon</strong><br>
+      Currently 404ing on every page load.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">16</div>
+    <div>
+      <strong>Clean up orphaned quote_review_orders table</strong><br>
+      Remove anon policies on the dead table.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">17</div>
+    <div>
+      <strong>Set up Google Business Profile</strong> <span class="badge badge-info">Brady manual</span><br>
+      Free, gives local search visibility for Brisbane/Gold Coast immediately.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">18</div>
+    <div>
+      <strong>Do a test purchase end-to-end</strong> <span class="badge badge-info">Brady manual</span><br>
+      Verify: order creation -> Stripe checkout -> webhook fires -> email delivered -> download link works.
+    </div>
+  </div>
+
+  <div class="action-item">
+    <div class="action-num">19</div>
+    <div>
+      <strong>Draft referral partner outreach</strong><br>
+      Templates for buyer's agents and conveyancers in Brisbane/Gold Coast. They encounter pool properties daily with nobody to refer to.
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  FPC Master Audit Report | Generated by Claude Code | 23 March 2026<br>
+  5 parallel agents: Site Auditor, Codebase Explorer, Market Researcher, Code Reviewer, Security Reviewer
+</div>
+
+</div>
+</body>
+</html>

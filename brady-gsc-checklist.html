@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brady's Manual Tasks - FPC</title>
+<style>
+  :root { --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --green: #16a34a; --orange: #ea580c; --blue: #3b82f6; --border: #475569; --red: #dc2626; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; padding: 2rem 1rem; }
+  .container { max-width: 700px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  .subtitle { color: var(--muted); margin-bottom: 1.5rem; font-size: 0.9rem; }
+  .step { background: var(--card); border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; border: 1px solid var(--border); position: relative; }
+  .step-num { position: absolute; top: -10px; left: 16px; background: var(--orange); color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.85rem; }
+  .step h2 { font-size: 1.1rem; margin-bottom: 0.5rem; padding-left: 1.5rem; }
+  .step p { color: var(--muted); font-size: 0.9rem; }
+  .step .action { color: var(--text); font-size: 0.95rem; margin: 0.5rem 0; }
+  .url-box { background: #0f172a; border: 1px solid var(--border); border-radius: 8px; padding: 0.5rem 0.75rem; font-family: monospace; font-size: 0.85rem; color: #60a5fa; margin: 0.4rem 0; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; }
+  .url-box:hover { border-color: var(--blue); }
+  .url-box::after { content: 'click to copy'; font-size: 0.7rem; color: var(--muted); margin-left: auto; font-family: sans-serif; }
+  .url-box.copied::after { content: 'copied!'; color: var(--green); }
+  .note { background: rgba(59,130,246,0.1); border-left: 3px solid var(--blue); padding: 0.75rem 1rem; border-radius: 0 8px 8px 0; margin: 0.75rem 0; font-size: 0.85rem; color: var(--muted); }
+  .done-section { background: linear-gradient(135deg, #14532d, #0f172a); border: 2px solid var(--green); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; text-align: center; }
+  .done-section h2 { color: var(--green); margin-bottom: 0.5rem; }
+  .checkbox { width: 20px; height: 20px; margin-right: 0.5rem; vertical-align: middle; accent-color: var(--green); cursor: pointer; }
+  label { cursor: pointer; display: block; padding: 0.25rem 0; }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+  .time { display: inline-block; background: var(--border); color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+  .done-box { background: rgba(22,163,106,0.1); border: 1px solid var(--green); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; }
+  .done-box h3 { color: var(--green); font-size: 0.9rem; margin-bottom: 0.25rem; }
+  .done-box p { font-size: 0.85rem; color: var(--muted); }
+  .section-header { font-size: 1.2rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>FPC - What Brady Needs To Do</h1>
+<p class="subtitle">Updated 23 March 2026. Claude has already fixed everything it can. These are the steps only you can do.</p>
+
+<div class="done-box">
+  <h3>Claude Already Did These (deployed to Vercel):</h3>
+  <p>Fixed Supabase RLS security holes, added API ownership verification, locked storage bucket, added lowercase URL redirects, fixed SEO (canonicals, breadcrumbs, sitemap dates), fixed code bugs (favicon, CSP header, Footer, absolute URLs, warning sign count), hardened download tokens, added email validation.</p>
+</div>
+
+<!-- GSC SECTION -->
+<h2 class="section-header">Google Search Console</h2>
+<p style="color: var(--muted); margin-bottom: 1rem; font-size: 0.9rem;">The homepage is already indexed. Check each page below - only request indexing for pages that say "URL is not on Google".</p>
+
+<div class="step">
+  <div class="step-num">1</div>
+  <h2>Open GSC and check each page</h2>
+  <p class="action">Go to:</p>
+  <div class="url-box" onclick="copyUrl(this)">https://search.google.com/search-console</div>
+  <p class="action">Select <strong>fibreglasspoolcheck.com.au</strong></p>
+  <p class="action">Click <strong>URL Inspection</strong> (top search bar)</p>
+  <p class="action">Paste each URL below one at a time. If it says <strong>"URL is not on Google"</strong>, click <strong>Request Indexing</strong>. If it says "URL is on Google", tick the box and move on.</p>
+
+  <div class="note">You can skip any URL that already shows "URL is on Google" - no action needed for those.</div>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/</div>
+  <label><input type="checkbox" class="checkbox"> Homepage - already indexed, skip</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/PoolCheckReport</div>
+  <label><input type="checkbox" class="checkbox"> Pool Check Report</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/BuyerChecklist</div>
+  <label><input type="checkbox" class="checkbox"> Buyer Checklist</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/RedFlagsGuide</div>
+  <label><input type="checkbox" class="checkbox"> Red Flags Guide</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/Contact</div>
+  <label><input type="checkbox" class="checkbox"> Contact</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog</div>
+  <label><input type="checkbox" class="checkbox"> Blog index</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog/buying-house-with-fibreglass-pool</div>
+  <label><input type="checkbox" class="checkbox"> Buying house article</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog/fibreglass-pool-osmotic-blistering</div>
+  <label><input type="checkbox" class="checkbox"> Osmotic blistering</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog/fibreglass-pool-resurfacing-cost-australia</div>
+  <label><input type="checkbox" class="checkbox"> Resurfacing cost</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog/fibreglass-pool-inspection-vs-building-inspection</div>
+  <label><input type="checkbox" class="checkbox"> Inspection vs building inspection</label>
+
+  <div class="url-box" onclick="copyUrl(this)">https://fibreglasspoolcheck.com.au/blog/fibreglass-pool-delamination</div>
+  <label><input type="checkbox" class="checkbox"> Delamination</label>
+</div>
+
+<div class="step">
+  <div class="step-num">2</div>
+  <h2>Check for crawl errors</h2>
+  <p class="action">Left sidebar > <strong>Pages</strong> (under Indexing)</p>
+  <p>Look for anything red or showing errors. Screenshot anything weird and show Claude next session.</p>
+  <label><input type="checkbox" class="checkbox"> Checked for crawl errors</label>
+</div>
+
+<hr class="divider">
+
+<!-- BRE SECTION -->
+<h2 class="section-header">BRE Fibreglass (while you're in GSC)</h2>
+
+<div class="step">
+  <div class="step-num">3</div>
+  <h2>Switch to BRE and do the same</h2>
+  <p class="action">Switch to <strong>brefibreglass.com.au</strong> property in GSC</p>
+  <p class="action">Go to <strong>Sitemaps</strong> > Submit <code>sitemap.xml</code> (if not already submitted)</p>
+  <p class="action">Then URL Inspection for each - only request indexing if NOT already indexed:</p>
+  <div class="url-box" onclick="copyUrl(this)">https://brefibreglass.com.au/</div>
+  <div class="url-box" onclick="copyUrl(this)">https://brefibreglass.com.au/PoolResurfacing</div>
+  <div class="url-box" onclick="copyUrl(this)">https://brefibreglass.com.au/blog</div>
+  <div class="url-box" onclick="copyUrl(this)">https://brefibreglass.com.au/Gallery</div>
+  <label><input type="checkbox" class="checkbox"> BRE checked + indexed where needed</label>
+</div>
+
+<hr class="divider">
+
+<!-- STRIPE SECTION -->
+<h2 class="section-header">Test the Payment Flow</h2>
+
+<div class="step">
+  <div class="step-num">4</div>
+  <h2>Do a test purchase</h2>
+  <p class="action">Go to your site and buy the Buyer Checklist ($29) as if you were a customer.</p>
+  <p class="action">Use your real email so you can verify:</p>
+  <ul style="padding-left: 1.5rem; margin: 0.5rem 0;">
+    <li style="color: var(--text);">Order creates successfully</li>
+    <li style="color: var(--text);">Stripe checkout loads</li>
+    <li style="color: var(--text);">Payment goes through</li>
+    <li style="color: var(--text);">You get a notification email at help@fibreglasspoolcheck.com.au</li>
+    <li style="color: var(--text);">Customer gets their PDF delivery email</li>
+    <li style="color: var(--text);">Success page shows correctly</li>
+  </ul>
+  <div class="note">This is a real $29 charge. You're testing the full chain. You can refund yourself in Stripe dashboard after.</div>
+  <label><input type="checkbox" class="checkbox"> Test purchase completed</label>
+  <label><input type="checkbox" class="checkbox"> Brady notification email received</label>
+  <label><input type="checkbox" class="checkbox"> Customer delivery email received</label>
+  <label><input type="checkbox" class="checkbox"> Refunded in Stripe dashboard</label>
+</div>
+
+<hr class="divider">
+
+<!-- VERCEL ENV VARS -->
+<h2 class="section-header">Vercel Environment Variables (quick check)</h2>
+
+<div class="step">
+  <div class="step-num">5</div>
+  <h2>Verify these env vars are set</h2>
+  <p class="action">Go to <strong>vercel.com</strong> > FPC project > Settings > Environment Variables</p>
+  <p>Check these exist (don't need to see the values, just that they're there):</p>
+  <ul style="padding-left: 1.5rem; margin: 0.5rem 0;">
+    <li style="color: var(--text);"><code>DOWNLOAD_TOKEN_SECRET</code></li>
+    <li style="color: var(--text);"><code>SUPABASE_SERVICE_ROLE_KEY</code></li>
+    <li style="color: var(--text);"><code>STRIPE_WEBHOOK_SECRET</code></li>
+  </ul>
+  <div class="note">If DOWNLOAD_TOKEN_SECRET is missing, generate one: open terminal, run <code>node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"</code> and paste the result as the value.</div>
+  <label><input type="checkbox" class="checkbox"> All env vars confirmed</label>
+</div>
+
+<hr class="divider">
+
+<div class="done-section">
+  <h2>All Done!</h2>
+  <p>Everything Claude could automate is deployed. Everything above is the stuff only you can do with your browser logins.</p>
+  <p style="margin-top:0.75rem; font-size:0.85rem; color: var(--muted);">Tell Claude "manual tasks done" when finished. Next up: more blog content, email nurture sequence, and monitoring rankings.</p>
+</div>
+
+</div>
+
+<script>
+function copyUrl(el) {
+  const text = el.textContent.replace('click to copy', '').replace('copied!', '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    el.classList.add('copied');
+    setTimeout(() => el.classList.remove('copied'), 2000);
+  });
+}
+</script>
+</body>
+</html>
