@@ -2,6 +2,7 @@ import './globals.css'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata = {
   metadataBase: new URL('https://fibreglasspoolcheck.com.au'),
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
