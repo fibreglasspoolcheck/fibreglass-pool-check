@@ -27,6 +27,9 @@ export const metadata = {
     card: 'summary_large_image',
     images: ['/images/og-image.jpg'],
   },
+  icons: {
+    icon: '/favicon.svg',
+  },
   robots: {
     index: true,
     follow: true,

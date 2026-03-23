@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Fibreglass Pool Owner Guide | Maintenance, Repairs & What to Expect',
@@ -11,6 +12,10 @@ export const metadata = {
 export default function PoolOwner() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Pool Owner', url: '/PoolOwner' }
+      ]} />
       {/* Hero */}
       <section className="bg-slate-900 text-white py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

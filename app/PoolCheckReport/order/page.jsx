@@ -129,6 +129,7 @@ function PoolCheckReportOrderInner() {
         orderId: currentOrderId,
         productType: 'pool_check_report',
         fieldName,
+        email: form.email,
         files: files.map(f => ({ name: f.name })),
       }),
     })
@@ -156,6 +157,7 @@ function PoolCheckReportOrderInner() {
         orderId: currentOrderId,
         productType: 'pool_check_report',
         fieldName,
+        email: form.email,
         paths: uploadedPaths,
       }),
     })
@@ -179,6 +181,7 @@ function PoolCheckReportOrderInner() {
         body: JSON.stringify({
           productType: 'pool_check_report',
           orderId: currentOrderId,
+          email: form.email,
         }),
       })
 

@@ -4,6 +4,9 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 export const metadata = {
   title: 'Free Fibreglass Pool Red Flags Guide',
   description: 'Download our free guide to the 10 warning signs every fibreglass pool buyer needs to know. Written by a specialist with 250+ pools assessed.',
+  alternates: {
+    canonical: '/RedFlagsGuide',
+  },
 }
 
 export default function RedFlagsGuide() {

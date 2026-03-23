@@ -1,3 +1,4 @@
+import crypto from 'crypto'
 import { NextResponse } from 'next/server'
 import { createServerClient } from '../../../lib/supabase'
 import { sendRedFlagsGuide, addContactToBrevoList } from '../../../lib/brevo'
@@ -19,6 +20,11 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Name and email required' }, { status: 400 })
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
+    }
+
     // Save lead to Supabase
     const supabase = createServerClient()
     const { data: lead, error: dbError } = await supabase
@@ -32,7 +38,7 @@ export async function POST(request) {
       // Continue anyway  -  sending the guide is more important than saving the lead
     }
 
-    const leadId = lead?.id || 'fallback-token'
+    const leadId = lead?.id || crypto.randomUUID()
 
     // Send guide via Brevo
     await sendRedFlagsGuide(firstName, email, leadId)

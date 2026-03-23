@@ -12,9 +12,9 @@ export async function POST(request) {
   }
 
   try {
-    const { orderId, productType, fieldName, paths } = await request.json()
+    const { orderId, productType, fieldName, paths, email } = await request.json()
 
-    if (!orderId || !productType || !paths || !paths.length) {
+    if (!orderId || !productType || !paths || !paths.length || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
@@ -33,12 +33,16 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Invalid product type' }, { status: 400 })
     }
 
-    // Fetch existing file paths
+    // Fetch existing file paths and verify ownership via email
     const { data: order } = await supabase
       .from(table)
-      .select(safeFieldName)
+      .select(`email, ${safeFieldName}`)
       .eq('id', orderId)
       .single()
+
+    if (!order || order.email !== email) {
+      return NextResponse.json({ error: 'Order not found' }, { status: 404 })
+    }
 
     const existingPaths = order?.[safeFieldName] || []
     const allPaths = [...existingPaths, ...paths]

@@ -74,6 +74,7 @@ function BuyerChecklistOrderInner() {
         body: JSON.stringify({
           productType: 'buyer_checklist',
           orderId: order.id,
+          email: email,
         }),
       })
 

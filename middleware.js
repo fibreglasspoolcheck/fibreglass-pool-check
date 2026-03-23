@@ -7,15 +7,22 @@ const REDIRECTS = {
   '/contact': '/Contact',
   '/about': '/About',
   '/poolcheckreport': '/PoolCheckReport',
+  '/pool-check-report': '/PoolCheckReport',
   '/quotereview': '/',
   '/QuoteReview': '/',
   '/QuoteReview/order': '/',
   '/buyerchecklist': '/BuyerChecklist',
+  '/buyer-checklist': '/BuyerChecklist',
   '/redflagsguide': '/RedFlagsGuide',
+  '/red-flags-guide': '/RedFlagsGuide',
   '/onsiteassessment': '/OnSiteAssessment',
+  '/on-site-assessment': '/OnSiteAssessment',
   '/buyingahouse': '/BuyingAHouse',
+  '/buying-a-house': '/BuyingAHouse',
   '/poolowner': '/PoolOwner',
+  '/pool-owner': '/PoolOwner',
   '/serviceboundaries': '/ServiceBoundaries',
+  '/service-boundaries': '/ServiceBoundaries',
   '/FAQ': '/faq',
 }
 
@@ -36,7 +43,7 @@ export function middleware(request) {
   if (destination) {
     const url = request.nextUrl.clone()
     url.pathname = destination
-    return NextResponse.redirect(url, 308)
+    return NextResponse.redirect(url, 301)
   }
 
   return NextResponse.next()

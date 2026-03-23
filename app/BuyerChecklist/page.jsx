@@ -23,7 +23,7 @@ function BuyerChecklistSchema() {
       "@type": "Offer",
       "price": "29",
       "priceCurrency": "AUD",
-      "url": "/BuyerChecklist/order",
+      "url": "https://fibreglasspoolcheck.com.au/BuyerChecklist/order",
       "availability": "https://schema.org/InStock"
     }
   }

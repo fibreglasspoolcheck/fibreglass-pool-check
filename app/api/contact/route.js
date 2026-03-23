@@ -26,6 +26,11 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Missing fields' }, { status: 400 })
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email address' }, { status: 400 })
+    }
+
     const safeName = escapeHtml(full_name)
     const safeEmail = escapeHtml(email)
     const safeMessage = escapeHtml(message)

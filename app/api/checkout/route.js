@@ -13,18 +13,18 @@ export async function POST(request) {
   }
 
   try {
-    const { productType, orderId } = await request.json()
+    const { productType, orderId, email } = await request.json()
 
     const product = PRODUCTS[productType]
     if (!product) {
       return NextResponse.json({ error: 'Invalid product type' }, { status: 400 })
     }
 
-    if (!orderId) {
-      return NextResponse.json({ error: 'Missing order ID' }, { status: 400 })
+    if (!orderId || !email) {
+      return NextResponse.json({ error: 'Missing order ID or email' }, { status: 400 })
     }
 
-    // Fetch order to get customer email
+    // Fetch order and verify ownership via email
     const supabase = createServerClient()
     const { data: order } = await supabase
       .from(product.table)
@@ -32,7 +32,11 @@ export async function POST(request) {
       .eq('id', orderId)
       .single()
 
-    const origin = request.headers.get('origin') || 'https://fibreglasspoolcheck.com.au'
+    if (!order || order.email !== email) {
+      return NextResponse.json({ error: 'Order not found' }, { status: 404 })
+    }
+
+    const origin = 'https://fibreglasspoolcheck.com.au'
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],

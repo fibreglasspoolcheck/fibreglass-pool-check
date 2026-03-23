@@ -12,13 +12,28 @@ export async function POST(request) {
   }
 
   try {
-    const { orderId, productType, fieldName, files } = await request.json()
+    const { orderId, productType, fieldName, files, email } = await request.json()
 
-    if (!orderId || !productType || !files || !files.length) {
+    if (!orderId || !productType || !files || !files.length || !email) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
     const supabase = createServerClient()
+
+    // Verify ownership via email
+    const tableMap = { pool_check_report: 'report_orders' }
+    const verifyTable = tableMap[productType]
+    if (verifyTable) {
+      const { data: order } = await supabase
+        .from(verifyTable)
+        .select('email')
+        .eq('id', orderId)
+        .single()
+      if (!order || order.email !== email) {
+        return NextResponse.json({ error: 'Order not found' }, { status: 404 })
+      }
+    }
+
     const signedUrls = []
 
     for (const file of files) {

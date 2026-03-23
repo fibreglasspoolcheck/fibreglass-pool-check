@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 
 export const metadata = {
   title: 'Buying a House with a Fibreglass Pool | What You Need to Know',
@@ -11,6 +12,10 @@ export const metadata = {
 export default function BuyingAHouse() {
   return (
     <>
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Buying a House', url: '/BuyingAHouse' }
+      ]} />
       {/* Hero */}
       <section className="bg-slate-900 text-white py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +151,7 @@ export default function BuyingAHouse() {
                   </div>
                   <div className="p-4 bg-orange-50 rounded-lg">
                     <div className="font-semibold text-slate-900 text-sm mb-1">Free Red Flags Guide</div>
-                    <p className="text-slate-500 text-xs leading-relaxed mb-3">Learn the 7 warning signs that every pool buyer should know.</p>
+                    <p className="text-slate-500 text-xs leading-relaxed mb-3">Learn the 10 warning signs that every pool buyer should know.</p>
                     <Link
                       href="/RedFlagsGuide"
                       className="block text-orange-600 hover:text-orange-700 text-center py-2 px-4 rounded-lg text-sm font-medium border border-orange-300 hover:border-orange-400 transition-colors"
