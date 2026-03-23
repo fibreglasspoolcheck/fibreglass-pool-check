@@ -45,6 +45,41 @@ const articles = [
     date: '2026-03-16',
     readTime: '8 min read',
   },
+  {
+    slug: 'how-long-does-fibreglass-pool-last',
+    title: 'How long does a fibreglass pool last? (Honest answer from a specialist)',
+    description: 'Realistic pool lifespans, what affects longevity, signs of ageing, and when you should actually worry  -  from a specialist with 10+ years experience.',
+    date: '2026-03-23',
+    readTime: '8 min read',
+  },
+  {
+    slug: 'fibreglass-pool-cracks-hairline-vs-structural',
+    title: 'Fibreglass pool cracks: hairline vs  structural  -  when to worry',
+    description: 'The difference between hairline and structural cracks in fibreglass pools, what each looks like, when to DIY vs call a professional, and realistic repair costs.',
+    date: '2026-03-23',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'real-cost-owning-pool-australia',
+    title: 'The real cost of owning a pool in Australia (annual breakdown)',
+    description: 'An honest annual cost breakdown for owning a pool in Australia  -  chemicals, electricity, insurance, repairs, and the hidden costs nobody warns you about.',
+    date: '2026-03-23',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'things-building-inspectors-miss-about-pools',
+    title: '10 things building inspectors miss about pools',
+    description: 'The 10 most common pool problems that building inspectors miss during pre-purchase inspections  -  and what each one can cost you.',
+    date: '2026-03-23',
+    readTime: '9 min read',
+  },
+  {
+    slug: 'fibreglass-pool-fading-discolouration',
+    title: 'Fibreglass pool fading and discolouration: causes and fixes',
+    description: 'Why fibreglass pools fade and discolour, the difference between UV damage, chemical damage, and osmosis staining, and what can actually be fixed vs what needs resurfacing.',
+    date: '2026-03-23',
+    readTime: '8 min read',
+  },
 ]
 
 export default function BlogIndex() {

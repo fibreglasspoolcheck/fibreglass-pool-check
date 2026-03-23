@@ -70,7 +70,7 @@ export default function sitemap() {
     },
     {
             url: `${baseUrl}/blog`,
-            lastModified: '2026-03-16',
+            lastModified: '2026-03-23',
             changeFrequency: 'weekly',
             priority: 0.7,
     },
@@ -101,6 +101,36 @@ export default function sitemap() {
     {
             url: `${baseUrl}/blog/fibreglass-pool-delamination`,
             lastModified: '2026-03-16',
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/how-long-does-fibreglass-pool-last`,
+            lastModified: '2026-03-23',
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-cracks-hairline-vs-structural`,
+            lastModified: '2026-03-23',
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/real-cost-owning-pool-australia`,
+            lastModified: '2026-03-23',
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/things-building-inspectors-miss-about-pools`,
+            lastModified: '2026-03-23',
+            changeFrequency: 'monthly',
+            priority: 0.8,
+    },
+    {
+            url: `${baseUrl}/blog/fibreglass-pool-fading-discolouration`,
+            lastModified: '2026-03-23',
             changeFrequency: 'monthly',
             priority: 0.8,
     },
