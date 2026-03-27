@@ -34,46 +34,46 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-        <div className="text-green-600 text-3xl mb-3">✓</div>
-        <h3 className="font-bold text-slate-900 mb-2">Message sent!</h3>
-        <p className="text-slate-600 text-sm">We'll get back to you within 1 business day.</p>
+        <div className="text-green-600 text-3xl mb-3">&#10003;</div>
+        <h3 className="font-bold text-ink mb-2">Message sent!</h3>
+        <p className="text-ink-light text-sm">We'll get back to you within 1 business day.</p>
       </div>
     )
   }
 
   return (
-    <div className="bg-slate-50 border border-slate-200 rounded-xl p-8">
+    <div className="bg-warm-white border border-border-warm rounded-xl p-8">
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">Your name</label>
+          <label className="block text-sm font-medium text-ink-light mb-1">Your name</label>
           <input
             type="text"
             required
             value={name}
             onChange={e => setName(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+            className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink"
             placeholder="Full name"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">Email address</label>
+          <label className="block text-sm font-medium text-ink-light mb-1">Email address</label>
           <input
             type="email"
             required
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+            className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink"
             placeholder="you@example.com"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">Message</label>
+          <label className="block text-sm font-medium text-ink-light mb-1">Message</label>
           <textarea
             required
             rows={5}
             value={message}
             onChange={e => setMessage(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 resize-none"
+            className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink resize-none"
             placeholder="How can we help?"
           />
         </div>
@@ -81,9 +81,9 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
+          className="w-full bg-deep hover:bg-ink disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
         >
-          {loading ? 'Sending…' : 'Send message'}
+          {loading ? 'Sending\u2026' : 'Send message'}
         </button>
       </form>
     </div>

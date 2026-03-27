@@ -42,8 +42,8 @@ export default function RedFlagsForm() {
     return (
       <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
         <div className="text-green-600 text-4xl mb-4">&#10003;</div>
-        <h3 className="text-xl font-bold text-slate-900 mb-2">Check your inbox!</h3>
-        <p className="text-slate-600 text-sm">
+        <h3 className="text-xl font-bold text-ink mb-2">Check your inbox!</h3>
+        <p className="text-ink-light text-sm">
           I've sent the Red Flags Guide to <strong>{email}</strong>. Check your spam folder if you don't see it within a few minutes.
         </p>
       </div>
@@ -51,29 +51,29 @@ export default function RedFlagsForm() {
   }
 
   return (
-    <div className="bg-slate-50 border border-slate-200 rounded-xl p-8">
-      <h3 className="text-xl font-bold text-slate-900 mb-2">Get the free guide</h3>
-      <p className="text-slate-600 text-sm mb-6">Enter your details below and I'll email it to you right away.</p>
+    <div className="bg-warm-white border border-border-warm rounded-xl p-8">
+      <h3 className="text-xl font-serif text-ink mb-2">Get the free guide</h3>
+      <p className="text-ink-light text-sm mb-6">Enter your details below and I'll email it to you right away.</p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">First name</label>
+          <label className="block text-sm font-medium text-ink-light mb-1">First name</label>
           <input
             type="text"
             required
             value={name}
             onChange={e => setName(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+            className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink"
             placeholder="Your first name"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-1">Email address</label>
+          <label className="block text-sm font-medium text-ink-light mb-1">Email address</label>
           <input
             type="email"
             required
             value={email}
             onChange={e => setEmail(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900"
+            className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink"
             placeholder="you@example.com"
           />
         </div>
@@ -81,11 +81,11 @@ export default function RedFlagsForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
+          className="w-full bg-accent hover:bg-accent-hover disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
         >
           {loading ? 'Sending...' : 'Send me the guide'}
         </button>
-        <p className="text-xs text-slate-400">No spam. You can unsubscribe at any time.</p>
+        <p className="text-xs text-warm-grey">No spam. You can unsubscribe at any time.</p>
       </form>
     </div>
   )

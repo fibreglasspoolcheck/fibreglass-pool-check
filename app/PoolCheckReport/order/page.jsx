@@ -211,7 +211,7 @@ function PoolCheckReportOrderInner() {
           <p className="text-ink-light mb-2">Thanks for your order. I've received your photos and payment.</p>
           <p className="text-ink-light mb-6">Your Pool Check Report will be delivered to your email within <strong>2-3 business days</strong>.</p>
           <p className="text-sm text-warm-grey mb-8">If you have additional photos or notes, reply to the confirmation email and I'll include them.</p>
-          <Link href="/" className="text-orange-600 hover:underline text-sm">Back to home</Link>
+          <Link href="/" className="text-accent hover:underline text-sm">Back to home</Link>
         </div>
       </div>
     )
@@ -235,11 +235,11 @@ function PoolCheckReportOrderInner() {
             1. Your details
           </span>
           <span className="text-warm-grey">&rarr;</span>
-          <span className={`px-3 py-1 rounded-full ${step === 'upload' ? 'bg-deep text-white' : step === 'form' ? 'bg-slate-100 text-warm-grey' : 'bg-green-100 text-green-800'}`}>
+          <span className={`px-3 py-1 rounded-full ${step === 'upload' ? 'bg-deep text-white' : step === 'form' ? 'bg-warm-white text-warm-grey' : 'bg-green-100 text-green-800'}`}>
             2. Upload photos
           </span>
           <span className="text-warm-grey">&rarr;</span>
-          <span className="px-3 py-1 rounded-full bg-slate-100 text-warm-grey">
+          <span className="px-3 py-1 rounded-full bg-warm-white text-warm-grey">
             3. Payment
           </span>
         </div>
@@ -309,7 +309,7 @@ function PoolCheckReportOrderInner() {
               </label>
               <label className="flex items-start gap-3 text-sm">
                 <input type="checkbox" required checked={form.agreeBoundaries} onChange={e => updateForm('agreeBoundaries', e.target.checked)} className="mt-0.5" />
-                <span className="text-ink-light">I understand this is a photo-based assessment, not a physical inspection, and accept the <Link href="/ServiceBoundaries" className="text-orange-600 hover:underline">service scope</Link>.</span>
+                <span className="text-ink-light">I understand this is a photo-based assessment, not a physical inspection, and accept the <Link href="/ServiceBoundaries" className="text-accent hover:underline">service scope</Link>.</span>
               </label>
             </div>
 
@@ -355,7 +355,7 @@ function PoolCheckReportOrderInner() {
                 <p className="text-sm font-medium text-ink-light">{photos.length} photo{photos.length !== 1 ? 's' : ''} selected</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {photos.map((file, i) => (
-                    <div key={i} className="relative bg-slate-100 rounded-lg p-2 text-xs text-ink-light">
+                    <div key={i} className="relative bg-warm-white rounded-lg p-2 text-xs text-ink-light">
                       <button onClick={() => removePhoto(i)} className="absolute top-1 right-1 w-5 h-5 bg-red-100 text-red-600 rounded-full text-xs flex items-center justify-center hover:bg-red-200">&times;</button>
                       <p className="truncate">{file.name}</p>
                       <p className="text-warm-grey">{(file.size / 1024 / 1024).toFixed(1)} MB</p>

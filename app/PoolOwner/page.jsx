@@ -78,8 +78,8 @@ export default function PoolOwner() {
                       ],
                     },
                   ].map(({ type, colour, items }) => (
-                    <div key={type} className={`rounded-xl p-5 border ${colour === 'green' ? 'border-green-200 bg-green-50' : colour === 'orange' ? 'border-orange-200 bg-orange-50' : 'border-red-200 bg-red-50'}`}>
-                      <h3 className={`font-serif mb-3 text-sm ${colour === 'green' ? 'text-green-800' : colour === 'orange' ? 'text-orange-800' : 'text-red-800'}`}>{type}</h3>
+                    <div key={type} className={`rounded-xl p-5 border ${colour === 'green' ? 'border-green-200 bg-green-50' : colour === 'orange' ? 'border-amber-200 bg-amber-50' : 'border-red-200 bg-red-50'}`}>
+                      <h3 className={`font-serif mb-3 text-sm ${colour === 'green' ? 'text-green-800' : colour === 'orange' ? 'text-amber-800' : 'text-red-800'}`}>{type}</h3>
                       <ul className="space-y-1">
                         {items.map(item => (
                           <li key={item} className="text-ink-light text-sm flex items-start gap-2">
