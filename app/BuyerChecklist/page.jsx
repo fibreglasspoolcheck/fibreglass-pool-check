@@ -186,9 +186,7 @@ export default function BuyerChecklist() {
           <p className="text-slate-600 mb-8">The checklist is your starting point. The report is the deep dive.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border-2 border-slate-900 rounded-xl p-6 relative">
-              <div className="absolute -top-3 left-4">
-                <span className="bg-slate-900 text-white text-xs font-medium px-3 py-1 rounded-full">You&apos;re here</span>
-              </div>
+              <span className="absolute -top-3 left-4 bg-slate-900 text-white text-xs font-medium px-3 py-1 rounded-full">You&apos;re here</span>
               <h3 className="font-bold text-slate-900 mb-1">Buyer Checklist</h3>
               <div className="text-orange-600 font-bold text-lg mb-3">$29</div>
               <p className="text-slate-500 text-xs mb-4">Best for: early-stage buyers attending open homes</p>

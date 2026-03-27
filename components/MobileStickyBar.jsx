@@ -17,7 +17,8 @@ export default function MobileStickyBar({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setVisible(!entry.isIntersecting)
+        const shouldShow = !entry.isIntersecting
+        setVisible((prev) => prev === shouldShow ? prev : shouldShow)
       },
       { threshold: 0 }
     )
