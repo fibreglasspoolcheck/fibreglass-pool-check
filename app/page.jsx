@@ -98,7 +98,7 @@ export default function Home() {
       <HomeSchema />
 
       {/* Hero */}
-      <section className="bg-white">
+      <section className="bg-cream">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -114,7 +114,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   href="/PoolCheckReport/order"
-                  className="bg-ink hover:bg-ink text-white px-6 py-3.5 rounded-lg font-medium text-center transition-colors"
+                  className="bg-deep hover:bg-ink text-white px-6 py-3.5 rounded-lg font-medium text-center transition-colors"
                 >
                   Order Pool Check Report  -  $149 AUD
                 </Link>
