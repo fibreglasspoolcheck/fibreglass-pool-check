@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
+import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
   title: 'Fibreglass Pool Articles & Guides | Fibreglass Pool Check',
@@ -90,54 +91,49 @@ export default function BlogIndex() {
         { name: 'Articles', url: '/blog' }
       ]} />
 
-      <section className="bg-slate-900 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold mb-4">Fibreglass Pool Articles & Guides</h1>
-          <p className="text-slate-300 text-lg">
-            Practical advice on fibreglass pool problems, repair costs, and buying decisions  -  from a specialist with 10+ years hands-on experience.
-          </p>
+      <section className="bg-deep text-white py-16 lg:py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[50%] h-full pointer-events-none" style={{ background: 'radial-gradient(circle at top right, rgba(212,98,43,0.06) 0%, transparent 60%)' }} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-2xl">
+            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.1em] text-accent font-sans mb-4">Articles</span>
+            <h1 className="font-serif text-4xl leading-[1.15] tracking-[-0.01em] text-white mb-5">
+              Fibreglass pool guides and articles
+            </h1>
+            <p className="text-warm-grey text-lg leading-relaxed">
+              Expert articles on fibreglass pool problems, repair costs, and what to look for when buying a property with a pool.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+      <section className="py-16 bg-cream">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article) => (
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="block border border-slate-200 rounded-xl p-6 hover:border-slate-300 hover:shadow-sm transition-all"
+                className="bg-white border border-border-warm rounded-xl p-6 hover:border-warm-grey transition-colors group"
               >
-                <div className="flex items-center gap-3 text-xs text-slate-400 mb-3">
-                  <time dateTime={article.date}>{new Date(article.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}</time>
-                  <span>&middot;</span>
-                  <span>{article.readTime}</span>
+                <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-accent font-sans mb-3">
+                  {article.readTime}
                 </div>
-                <h2 className="text-xl font-bold text-slate-900 mb-2">{article.title}</h2>
-                <p className="text-slate-600 text-sm leading-relaxed">{article.description}</p>
-                <span className="inline-block mt-3 text-orange-600 text-sm font-medium">Read article →</span>
+                <h2 className="font-serif text-lg text-ink mb-2 group-hover:text-accent transition-colors">
+                  {article.title}
+                </h2>
+                <p className="text-warm-grey text-sm leading-relaxed mb-3">
+                  {article.description}
+                </p>
+                <time className="text-warm-grey text-xs" dateTime={article.date}>
+                  {new Date(article.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-50 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Need expert eyes on a specific pool?</h2>
-          <p className="text-slate-600 mb-6 max-w-lg mx-auto">
-            These articles give you general guidance. For a specific pool, get a written assessment from an independent specialist.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/PoolCheckReport/order" className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
-              Get a Pool Check Report  -  $149
-            </Link>
-            <Link href="/RedFlagsGuide" className="border border-slate-300 hover:border-slate-400 text-slate-700 px-6 py-3 rounded-lg font-medium transition-colors">
-              Free Red Flags Guide
-            </Link>
-          </div>
-        </div>
-      </section>
+      <DarkCTA />
     </>
   )
 }
