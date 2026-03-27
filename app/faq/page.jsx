@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
+import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
   title: 'Fibreglass Pool FAQ  -  Common Questions Answered',
@@ -106,37 +107,42 @@ export default function FAQ() {
         { name: 'Home', url: '/' },
         { name: 'FAQ', url: '/faq' }
       ]} />
-      <section className="bg-slate-900 text-white py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">Frequently asked questions</h1>
-            <p className="text-slate-300 text-lg">
+      <section className="bg-deep text-white py-16 lg:py-20 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[50%] h-full pointer-events-none" style={{ background: 'radial-gradient(circle at top right, rgba(212,98,43,0.06) 0%, transparent 60%)' }} />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-3xl">
+            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.1em] text-accent font-sans mb-4">Support</span>
+            <h1 className="font-serif text-4xl lg:text-5xl leading-[1.15] tracking-[-0.01em] text-white mb-5">
+              Frequently asked questions
+            </h1>
+            <p className="text-warm-grey text-lg leading-relaxed">
               Everything you need to know about our reports and services.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-cream">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6">
             {faqs.map((faq, i) => (
-              <div key={i} className="border border-slate-200 rounded-xl p-6">
-                <h2 className="font-semibold text-slate-900 mb-3 text-base">{faq.q}</h2>
-                <p className="text-slate-600 text-sm leading-relaxed">{faq.a}</p>
+              <div key={i} className="border border-border-warm rounded-xl p-6 bg-white">
+                <h2 className="font-serif text-base text-ink mb-3">{faq.q}</h2>
+                <p className="text-ink-light text-sm leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-slate-50 border border-slate-200 rounded-xl p-8 text-center">
-            <h2 className="font-bold text-slate-900 mb-2">Still have questions?</h2>
-            <p className="text-slate-600 text-sm mb-4">We&apos;re happy to help before you order.</p>
-            <Link href="/Contact" className="text-sm font-medium text-slate-900 underline hover:text-orange-600 transition-colors">
+          <div className="mt-12 bg-warm-white border border-border-warm rounded-xl p-8 text-center">
+            <h2 className="font-serif text-ink mb-2">Still have questions?</h2>
+            <p className="text-ink-light text-sm mb-4">We&apos;re happy to help before you order.</p>
+            <Link href="/Contact" className="text-sm font-medium text-ink underline hover:text-accent transition-colors">
               Get in touch &rarr;
             </Link>
           </div>
         </div>
       </section>
+      <DarkCTA />
     </>
   )
 }
