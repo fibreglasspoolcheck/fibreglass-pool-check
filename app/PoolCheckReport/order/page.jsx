@@ -11,7 +11,7 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
 
 export default function PoolCheckReportOrder() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center"><p className="text-slate-400">Loading...</p></div>}>
+    <Suspense fallback={<div className="min-h-screen bg-cream flex items-center justify-center"><p className="text-warm-grey">Loading...</p></div>}>
       <PoolCheckReportOrderInner />
     </Suspense>
   )
@@ -200,17 +200,17 @@ function PoolCheckReportOrderInner() {
   // Payment confirmed
   if (step === 'paid') {
     return (
-      <div className="min-h-screen bg-white py-16">
+      <div className="min-h-screen bg-cream py-16">
         <div className="max-w-xl mx-auto px-4 text-center">
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h1 className="text-3xl font-bold text-slate-900 mb-4">Payment confirmed</h1>
-          <p className="text-slate-600 mb-2">Thanks for your order. I've received your photos and payment.</p>
-          <p className="text-slate-600 mb-6">Your Pool Check Report will be delivered to your email within <strong>2-3 business days</strong>.</p>
-          <p className="text-sm text-slate-500 mb-8">If you have additional photos or notes, reply to the confirmation email and I'll include them.</p>
+          <h1 className="text-3xl font-bold font-serif text-ink mb-4">Payment confirmed</h1>
+          <p className="text-ink-light mb-2">Thanks for your order. I've received your photos and payment.</p>
+          <p className="text-ink-light mb-6">Your Pool Check Report will be delivered to your email within <strong>2-3 business days</strong>.</p>
+          <p className="text-sm text-warm-grey mb-8">If you have additional photos or notes, reply to the confirmation email and I'll include them.</p>
           <Link href="/" className="text-orange-600 hover:underline text-sm">Back to home</Link>
         </div>
       </div>
@@ -218,28 +218,28 @@ function PoolCheckReportOrderInner() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-cream">
       {/* Header */}
-      <section className="bg-slate-900 text-white py-10">
+      <section className="bg-deep text-white py-10">
         <div className="max-w-2xl mx-auto px-4">
-          <Link href="/PoolCheckReport" className="text-slate-400 text-sm hover:text-white mb-4 inline-block">&larr; Back to Pool Check Report</Link>
-          <h1 className="text-3xl font-bold mb-2">Order Your Pool Check Report</h1>
-          <p className="text-slate-300">$149 AUD  -  delivered within 2-3 business days</p>
+          <Link href="/PoolCheckReport" className="text-warm-grey text-sm hover:text-white mb-4 inline-block">&larr; Back to Pool Check Report</Link>
+          <h1 className="text-3xl font-bold font-serif mb-2">Order Your Pool Check Report</h1>
+          <p className="text-warm-grey">$149 AUD  -  delivered within 2-3 business days</p>
         </div>
       </section>
 
       <div className="max-w-2xl mx-auto px-4 py-10">
         {/* Progress steps */}
         <div className="flex items-center justify-center gap-2 mb-10 text-sm">
-          <span className={`px-3 py-1 rounded-full ${step === 'form' ? 'bg-slate-900 text-white' : 'bg-green-100 text-green-800'}`}>
+          <span className={`px-3 py-1 rounded-full ${step === 'form' ? 'bg-deep text-white' : 'bg-green-100 text-green-800'}`}>
             1. Your details
           </span>
-          <span className="text-slate-300">&rarr;</span>
-          <span className={`px-3 py-1 rounded-full ${step === 'upload' ? 'bg-slate-900 text-white' : step === 'form' ? 'bg-slate-100 text-slate-400' : 'bg-green-100 text-green-800'}`}>
+          <span className="text-warm-grey">&rarr;</span>
+          <span className={`px-3 py-1 rounded-full ${step === 'upload' ? 'bg-deep text-white' : step === 'form' ? 'bg-slate-100 text-warm-grey' : 'bg-green-100 text-green-800'}`}>
             2. Upload photos
           </span>
-          <span className="text-slate-300">&rarr;</span>
-          <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-400">
+          <span className="text-warm-grey">&rarr;</span>
+          <span className="px-3 py-1 rounded-full bg-slate-100 text-warm-grey">
             3. Payment
           </span>
         </div>
@@ -255,23 +255,23 @@ function PoolCheckReportOrderInner() {
           <form onSubmit={handleFormSubmit} className="space-y-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">Full name *</label>
-                <input type="text" required value={form.fullName} onChange={e => updateForm('fullName', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <label className="block text-sm font-medium text-ink-light mb-1">Full name *</label>
+                <input type="text" required value={form.fullName} onChange={e => updateForm('fullName', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">Email *</label>
-                <input type="email" required value={form.email} onChange={e => updateForm('email', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" />
+                <label className="block text-sm font-medium text-ink-light mb-1">Email *</label>
+                <input type="email" required value={form.email} onChange={e => updateForm('email', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" />
               </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="sm:col-span-2">
-                <label className="block text-sm font-medium text-slate-700 mb-1">Pool address / suburb</label>
-                <input type="text" value={form.poolAddress} onChange={e => updateForm('poolAddress', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="e.g. 12 Smith St, Kelvin Grove" />
+                <label className="block text-sm font-medium text-ink-light mb-1">Pool address / suburb</label>
+                <input type="text" value={form.poolAddress} onChange={e => updateForm('poolAddress', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" placeholder="e.g. 12 Smith St, Kelvin Grove" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">State</label>
-                <select value={form.state} onChange={e => updateForm('state', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900">
+                <label className="block text-sm font-medium text-ink-light mb-1">State</label>
+                <select value={form.state} onChange={e => updateForm('state', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink">
                   <option value="">Select</option>
                   {STATES.map(s => <option key={s} value={s}>{s}</option>)}
                 </select>
@@ -279,8 +279,8 @@ function PoolCheckReportOrderInner() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">I am a...</label>
-              <select value={form.audienceType} onChange={e => updateForm('audienceType', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900">
+              <label className="block text-sm font-medium text-ink-light mb-1">I am a...</label>
+              <select value={form.audienceType} onChange={e => updateForm('audienceType', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink">
                 <option value="">Select</option>
                 {AUDIENCE_TYPES.map(t => <option key={t} value={t}>{t}</option>)}
               </select>
@@ -288,32 +288,32 @@ function PoolCheckReportOrderInner() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">Approximate pool age</label>
-                <input type="text" value={form.poolAge} onChange={e => updateForm('poolAge', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="e.g. 10 years, unknown" />
+                <label className="block text-sm font-medium text-ink-light mb-1">Approximate pool age</label>
+                <input type="text" value={form.poolAge} onChange={e => updateForm('poolAge', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" placeholder="e.g. 10 years, unknown" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">Pool brand (if known)</label>
-                <input type="text" value={form.poolBrand} onChange={e => updateForm('poolBrand', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="e.g. Compass, Leisure Pools" />
+                <label className="block text-sm font-medium text-ink-light mb-1">Pool brand (if known)</label>
+                <input type="text" value={form.poolBrand} onChange={e => updateForm('poolBrand', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" placeholder="e.g. Compass, Leisure Pools" />
               </div>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Briefly describe your concern or what you'd like assessed</label>
-              <textarea rows={3} value={form.issueSummary} onChange={e => updateForm('issueSummary', e.target.value)} className="w-full border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-900" placeholder="e.g. Noticed some blistering on the walls, buying at auction next week..." />
+              <label className="block text-sm font-medium text-ink-light mb-1">Briefly describe your concern or what you'd like assessed</label>
+              <textarea rows={3} value={form.issueSummary} onChange={e => updateForm('issueSummary', e.target.value)} className="w-full border border-border-warm rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-ink" placeholder="e.g. Noticed some blistering on the walls, buying at auction next week..." />
             </div>
 
-            <div className="space-y-3 bg-slate-50 rounded-lg p-4">
+            <div className="space-y-3 bg-warm-white rounded-lg p-4">
               <label className="flex items-start gap-3 text-sm">
                 <input type="checkbox" required checked={form.confirmFibreglass} onChange={e => updateForm('confirmFibreglass', e.target.checked)} className="mt-0.5" />
-                <span className="text-slate-700">I confirm the pool is a fibreglass (composite) pool, not concrete, vinyl or tiled.</span>
+                <span className="text-ink-light">I confirm the pool is a fibreglass (composite) pool, not concrete, vinyl or tiled.</span>
               </label>
               <label className="flex items-start gap-3 text-sm">
                 <input type="checkbox" required checked={form.agreeBoundaries} onChange={e => updateForm('agreeBoundaries', e.target.checked)} className="mt-0.5" />
-                <span className="text-slate-700">I understand this is a photo-based assessment, not a physical inspection, and accept the <Link href="/ServiceBoundaries" className="text-orange-600 hover:underline">service scope</Link>.</span>
+                <span className="text-ink-light">I understand this is a photo-based assessment, not a physical inspection, and accept the <Link href="/ServiceBoundaries" className="text-orange-600 hover:underline">service scope</Link>.</span>
               </label>
             </div>
 
-            <button type="submit" disabled={loading} className="w-full bg-slate-900 hover:bg-slate-800 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors">
+            <button type="submit" disabled={loading} className="w-full bg-deep hover:bg-ink disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors">
               {loading ? 'Saving...' : 'Continue to photo upload'}
             </button>
           </form>
@@ -323,9 +323,9 @@ function PoolCheckReportOrderInner() {
         {step === 'upload' && (
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-bold text-slate-900 mb-2">Upload your pool photos</h2>
-              <p className="text-slate-600 text-sm mb-1">The more I can see, the more thorough the report. Aim for 5-10 clear photos showing:</p>
-              <ul className="text-sm text-slate-600 list-disc pl-5 mt-2 space-y-1">
+              <h2 className="text-xl font-bold font-serif text-ink mb-2">Upload your pool photos</h2>
+              <p className="text-ink-light text-sm mb-1">The more I can see, the more thorough the report. Aim for 5-10 clear photos showing:</p>
+              <ul className="text-sm text-ink-light list-disc pl-5 mt-2 space-y-1">
                 <li>Full pool overview from each end</li>
                 <li>Close-ups of any damage, blistering, discolouration</li>
                 <li>Pool coping and tile line</li>
@@ -334,7 +334,7 @@ function PoolCheckReportOrderInner() {
               </ul>
             </div>
 
-            <div className="border-2 border-dashed border-slate-300 rounded-lg p-8 text-center">
+            <div className="border-2 border-dashed border-border-warm rounded-lg p-8 text-center">
               <input
                 type="file"
                 multiple
@@ -344,21 +344,21 @@ function PoolCheckReportOrderInner() {
                 id="photo-upload"
               />
               <label htmlFor="photo-upload" className="cursor-pointer">
-                <div className="text-slate-400 text-4xl mb-2">&#128247;</div>
-                <p className="text-sm text-slate-600 font-medium">Click to select photos</p>
-                <p className="text-xs text-slate-400 mt-1">JPG, PNG or WebP. Max 5MB each. Up to {MAX_PHOTOS} photos.</p>
+                <div className="text-warm-grey text-4xl mb-2">&#128247;</div>
+                <p className="text-sm text-ink-light font-medium">Click to select photos</p>
+                <p className="text-xs text-warm-grey mt-1">JPG, PNG or WebP. Max 5MB each. Up to {MAX_PHOTOS} photos.</p>
               </label>
             </div>
 
             {photos.length > 0 && (
               <div className="space-y-2">
-                <p className="text-sm font-medium text-slate-700">{photos.length} photo{photos.length !== 1 ? 's' : ''} selected</p>
+                <p className="text-sm font-medium text-ink-light">{photos.length} photo{photos.length !== 1 ? 's' : ''} selected</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {photos.map((file, i) => (
-                    <div key={i} className="relative bg-slate-100 rounded-lg p-2 text-xs text-slate-600">
+                    <div key={i} className="relative bg-slate-100 rounded-lg p-2 text-xs text-ink-light">
                       <button onClick={() => removePhoto(i)} className="absolute top-1 right-1 w-5 h-5 bg-red-100 text-red-600 rounded-full text-xs flex items-center justify-center hover:bg-red-200">&times;</button>
                       <p className="truncate">{file.name}</p>
-                      <p className="text-slate-400">{(file.size / 1024 / 1024).toFixed(1)} MB</p>
+                      <p className="text-warm-grey">{(file.size / 1024 / 1024).toFixed(1)} MB</p>
                     </div>
                   ))}
                 </div>
@@ -369,12 +369,12 @@ function PoolCheckReportOrderInner() {
               <button
                 onClick={handleUploadAndCheckout}
                 disabled={loading}
-                className="flex-1 bg-orange-600 hover:bg-orange-700 disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
+                className="flex-1 bg-accent hover:bg-accent-hover disabled:opacity-60 text-white py-3 rounded-lg text-sm font-medium transition-colors"
               >
                 {loading ? 'Processing...' : `Continue to payment  -  $149`}
               </button>
             </div>
-            <p className="text-xs text-slate-400 text-center">You can also email additional photos after ordering by replying to your confirmation email.</p>
+            <p className="text-xs text-warm-grey text-center">You can also email additional photos after ordering by replying to your confirmation email.</p>
           </div>
         )}
       </div>
