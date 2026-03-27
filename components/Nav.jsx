@@ -7,33 +7,30 @@ export default function Nav() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="border-b border-slate-200 bg-white sticky top-0 z-50">
+    <header className="border-b border-white/10 bg-deep sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="font-bold text-slate-900 text-lg tracking-tight">
+          <Link href="/" className="font-serif text-white text-lg tracking-tight">
             Fibreglass Pool Check
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/PoolCheckReport" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <Link href="/PoolCheckReport" className="text-sm text-[#a09a94] hover:text-white font-sans transition-colors">
               Get Report
             </Link>
-            <Link href="/faq" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <Link href="/faq" className="text-sm text-[#a09a94] hover:text-white font-sans transition-colors">
               FAQ
             </Link>
-            <Link href="/About" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <Link href="/About" className="text-sm text-[#a09a94] hover:text-white font-sans transition-colors">
               About
             </Link>
-            <Link href="/Contact" className="text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <Link href="/Contact" className="text-sm text-[#a09a94] hover:text-white font-sans transition-colors">
               Contact
             </Link>
           </nav>
 
-          {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-slate-600"
+            className="md:hidden p-2 text-[#a09a94]"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -49,30 +46,29 @@ export default function Nav() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
-          <nav className="md:hidden border-t border-slate-100 py-4 flex flex-col gap-4">
-            <Link href="/PoolCheckReport" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+          <nav className="md:hidden border-t border-white/10 py-4 flex flex-col gap-4">
+            <Link href="/PoolCheckReport" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               Pool Check Report
             </Link>
-            <Link href="/BuyerChecklist" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/BuyerChecklist" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               Buyer Checklist
             </Link>
-            <Link href="/blog" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/blog" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               Articles
             </Link>
-            <Link href="/faq" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/faq" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               FAQ
             </Link>
-            <Link href="/About" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/About" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               About
             </Link>
-            <Link href="/Contact" className="text-sm text-slate-700 hover:text-slate-900" onClick={() => setOpen(false)}>
+            <Link href="/Contact" className="text-sm text-[#a09a94] hover:text-white font-sans" onClick={() => setOpen(false)}>
               Contact
             </Link>
             <Link
               href="/PoolCheckReport/order"
-              className="bg-slate-900 text-white text-sm px-4 py-2 rounded-lg text-center hover:bg-slate-800 transition-colors"
+              className="bg-accent hover:bg-accent-hover text-white text-sm px-4 py-2 rounded-lg text-center font-sans font-medium transition-colors"
               onClick={() => setOpen(false)}
             >
               Order Now
