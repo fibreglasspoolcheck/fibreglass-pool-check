@@ -87,9 +87,9 @@ export default function FibreglassPoolCracksHairlineVsStructural() {
                   I've assessed hundreds of fibreglass pools with cracks of every kind  -  from surface crazing that's purely cosmetic to structural fractures that needed major repair work. This article explains what each type looks like, what causes it, and what it's likely to cost you.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Got a crack you're not sure about?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Got a crack you're not sure about?</p>
+                  <p className="text-sm text-ink-light">
                     Get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  send me photos and I'll tell you exactly what you're dealing with and what it'll cost to fix.
                   </p>
                 </div>
@@ -218,9 +218,9 @@ export default function FibreglassPoolCracksHairlineVsStructural() {
                   <li><strong>Shell replacement:</strong> In rare cases where the structural damage is too extensive, the pool shell may need to be removed and replaced. Cost: $30,000 to $60,000+. This is uncommon but worth mentioning so you understand the extreme end.</li>
                 </ul>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Buying a property with a cracked pool?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Buying a property with a cracked pool?</p>
+                  <p className="text-sm text-ink-light">
                     Don't rely on the building inspector's assessment. Download the free <Link href="/RedFlagsGuide" className="underline font-medium">Red Flags Guide</Link> to know what to photograph, or get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link> for a specialist assessment before you exchange contracts.
                   </p>
                 </div>
@@ -253,21 +253,21 @@ export default function FibreglassPoolCracksHairlineVsStructural() {
 
                 <h2 className="font-serif text-2xl text-ink mt-10 mb-4">Quick reference: crack type, urgency, and cost</h2>
                 <div className="overflow-x-auto my-6">
-                  <table className="w-full text-sm text-left border border-slate-200 rounded-lg">
-                    <thead className="bg-slate-50">
+                  <table className="w-full text-sm text-left border border-border-warm rounded-lg">
+                    <thead className="bg-warm-white">
                       <tr>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Crack type</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Urgency</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Typical repair cost</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Crack type</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Urgency</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Typical repair cost</th>
                       </tr>
                     </thead>
                     <tbody className="text-ink-light">
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Surface crazing</td>
                         <td className="px-4 py-3">Low  -  monitor</td>
                         <td className="px-4 py-3">$0 (monitor) to $800 (spot repair)</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Gelcoat crack</td>
                         <td className="px-4 py-3">Moderate  -  repair within months</td>
                         <td className="px-4 py-3">$500 to $4,000</td>

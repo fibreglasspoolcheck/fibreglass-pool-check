@@ -91,9 +91,9 @@ export default function FibreglassPoolInspectionVsBuildingInspection() {
                   This article breaks down exactly what each type of inspection covers, what gets missed, and how to make the right call before you buy.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Need a pool assessed before settlement?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Need a pool assessed before settlement?</p>
+                  <p className="text-sm text-ink-light">
                     Get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  a written specialist assessment of the pool's condition based on your photos. Delivered in 2–3 business days.
                   </p>
                 </div>
@@ -193,49 +193,49 @@ export default function FibreglassPoolInspectionVsBuildingInspection() {
                   Here's how the costs compare:
                 </p>
                 <div className="overflow-x-auto mt-4">
-                  <table className="w-full text-sm text-ink-light border border-slate-200 rounded-lg">
+                  <table className="w-full text-sm text-ink-light border border-border-warm rounded-lg">
                     <thead>
-                      <tr className="bg-slate-50">
-                        <th className="text-left p-3 font-semibold text-ink border-b border-slate-200"></th>
-                        <th className="text-left p-3 font-semibold text-ink border-b border-slate-200">Building inspection</th>
-                        <th className="text-left p-3 font-semibold text-ink border-b border-slate-200">Pool Check Report</th>
+                      <tr className="bg-warm-white">
+                        <th className="text-left p-3 font-semibold text-ink border-b border-border-warm"></th>
+                        <th className="text-left p-3 font-semibold text-ink border-b border-border-warm">Building inspection</th>
+                        <th className="text-left p-3 font-semibold text-ink border-b border-border-warm">Pool Check Report</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Cost</td>
-                        <td className="p-3 border-b border-slate-100">$300–$600</td>
-                        <td className="p-3 border-b border-slate-100">$149</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Cost</td>
+                        <td className="p-3 border-b border-border-warm">$300–$600</td>
+                        <td className="p-3 border-b border-border-warm">$149</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Covers the house</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
-                        <td className="p-3 border-b border-slate-100">No</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Covers the house</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
+                        <td className="p-3 border-b border-border-warm">No</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Detailed pool assessment</td>
-                        <td className="p-3 border-b border-slate-100">No</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Detailed pool assessment</td>
+                        <td className="p-3 border-b border-border-warm">No</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Identifies osmosis</td>
-                        <td className="p-3 border-b border-slate-100">Unlikely</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Identifies osmosis</td>
+                        <td className="p-3 border-b border-border-warm">Unlikely</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Identifies delamination</td>
-                        <td className="p-3 border-b border-slate-100">No</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Identifies delamination</td>
+                        <td className="p-3 border-b border-border-warm">No</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Assesses previous repairs</td>
-                        <td className="p-3 border-b border-slate-100">No</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Assesses previous repairs</td>
+                        <td className="p-3 border-b border-border-warm">No</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
                       </tr>
                       <tr>
-                        <td className="p-3 border-b border-slate-100 font-medium">Repair cost estimates</td>
-                        <td className="p-3 border-b border-slate-100">No</td>
-                        <td className="p-3 border-b border-slate-100">Yes</td>
+                        <td className="p-3 border-b border-border-warm font-medium">Repair cost estimates</td>
+                        <td className="p-3 border-b border-border-warm">No</td>
+                        <td className="p-3 border-b border-border-warm">Yes</td>
                       </tr>
                       <tr>
                         <td className="p-3 font-medium">Assessed by pool specialist</td>

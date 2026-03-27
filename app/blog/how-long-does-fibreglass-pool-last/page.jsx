@@ -91,9 +91,9 @@ export default function HowLongDoesFibreglassPoolLast() {
                   Here's what I'd tell you if you asked me in person.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Worried about a specific pool?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Worried about a specific pool?</p>
+                  <p className="text-sm text-ink-light">
                     Get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  I'll assess your pool's current condition from photos and tell you how much life it has left, what needs attention now, and what can wait.
                   </p>
                 </div>
@@ -185,9 +185,9 @@ export default function HowLongDoesFibreglassPoolLast() {
                   <li><strong>Shell flex or bulging:</strong> If you can push the pool wall in with your hand and it moves, there's an issue with the backfill or ground support. This is structural and needs investigation.</li>
                 </ul>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Not sure what you're looking at?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Not sure what you're looking at?</p>
+                  <p className="text-sm text-ink-light">
                     Download the free <Link href="/RedFlagsGuide" className="underline font-medium">Red Flags Guide</Link> for photos of the most common problems, or use the <Link href="/BuyerChecklist" className="underline font-medium">Buyer Checklist ($29)</Link> for a structured walkthrough of every inspection point.
                   </p>
                 </div>

@@ -87,9 +87,9 @@ export default function FibreglassPoolOsmoticBlistering() {
                   This article explains what osmotic blistering actually is, why it happens, what it costs to fix, and how to tell whether your pool needs urgent action or can be monitored.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Got blisters on your pool?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Got blisters on your pool?</p>
+                  <p className="text-sm text-ink-light">
                     Send me photos and I'll assess the severity in a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>.
                   </p>
                 </div>
@@ -131,16 +131,16 @@ export default function FibreglassPoolOsmoticBlistering() {
                 <p className="text-ink-light leading-relaxed">
                   Repair costs depend on the severity and the size of the pool. Here are typical ranges I see in Australia:
                 </p>
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-6">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-6">
                   <div className="space-y-4">
-                    <div className="flex justify-between items-start border-b border-slate-200 pb-3">
+                    <div className="flex justify-between items-start border-b border-border-warm pb-3">
                       <div>
                         <p className="font-semibold text-ink text-sm">Individual blister repair</p>
                         <p className="text-ink-light text-xs mt-0.5">Grinding, filling, and spot-coating individual blisters</p>
                       </div>
                       <p className="font-bold text-ink text-sm whitespace-nowrap ml-4">$500 – $2,000</p>
                     </div>
-                    <div className="flex justify-between items-start border-b border-slate-200 pb-3">
+                    <div className="flex justify-between items-start border-b border-border-warm pb-3">
                       <div>
                         <p className="font-semibold text-ink text-sm">Full pool resurface (gelcoat)</p>
                         <p className="text-ink-light text-xs mt-0.5">Strip, prep, and recoat the entire pool surface</p>
@@ -170,7 +170,7 @@ export default function FibreglassPoolOsmoticBlistering() {
                     { label: 'Get a professional assessment', desc: 'Multiple blisters across different areas, some larger than 10mm, surface starting to feel rough or uneven in patches.' },
                     { label: 'Resurface is likely needed', desc: 'Widespread blistering across walls and/or floor, blisters weeping fluid, surface feels soft or spongy in areas, visible delamination starting.' },
                   ].map((item, i) => (
-                    <div key={i} className="flex gap-3 bg-slate-50 rounded-lg p-4">
+                    <div key={i} className="flex gap-3 bg-warm-white rounded-lg p-4">
                       <div className="w-6 h-6 bg-deep text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
                         {i + 1}
                       </div>

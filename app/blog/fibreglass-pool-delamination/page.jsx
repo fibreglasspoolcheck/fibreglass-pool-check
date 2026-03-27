@@ -87,9 +87,9 @@ export default function FibreglassPoolDelamination() {
                   I've been resurfacing and repairing fibreglass pools for over 10 years. Delamination is something I deal with regularly, and in this article I'll explain exactly what it is, what causes it, how to tell if it's serious, and what your repair options look like.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Not sure what you're looking at?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Not sure what you're looking at?</p>
+                  <p className="text-sm text-ink-light">
                     Upload photos of your pool surface and get an expert written assessment with a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>. I'll tell you exactly what's going on and what it'll cost to fix.
                   </p>
                 </div>
@@ -180,7 +180,7 @@ export default function FibreglassPoolDelamination() {
                   The cost depends on pool size, surface condition, access, and the coating system used. A standard 8m x 4m pool in reasonable condition will generally sit in the $8,000 to $12,000 range. Larger pools, pools with laminate damage, or pools requiring significant prep work can push past $15,000.
                 </p>
 
-                <div className="bg-slate-50 border border-slate-200 rounded-xl p-6 my-8">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
                   <p className="text-sm text-ink font-medium mb-1">Not sure which repair you need?</p>
                   <p className="text-sm text-ink-light">
                     A <Link href="/PoolCheckReport/order" className="underline font-medium text-accent">Pool Check Report</Link> gives you a clear assessment of the damage and a realistic cost estimate based on your specific pool. No guesswork.

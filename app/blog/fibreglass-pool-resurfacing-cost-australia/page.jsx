@@ -91,9 +91,9 @@ export default function FibreglassPoolResurfacingCostAustralia() {
                   This guide breaks down real-world costs, explains what drives the price, and gives you the questions to ask so you don't end up paying more than you should.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Not sure if your pool needs resurfacing?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Not sure if your pool needs resurfacing?</p>
+                  <p className="text-sm text-ink-light">
                     Get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  I'll assess your pool's condition from photos and tell you whether resurfacing is warranted, what type you need, and what you should expect to pay.
                   </p>
                 </div>
@@ -104,27 +104,27 @@ export default function FibreglassPoolResurfacingCostAustralia() {
                 </p>
 
                 <div className="overflow-x-auto my-6">
-                  <table className="w-full text-sm text-left border border-slate-200 rounded-lg">
-                    <thead className="bg-slate-50">
+                  <table className="w-full text-sm text-left border border-border-warm rounded-lg">
+                    <thead className="bg-warm-white">
                       <tr>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Type of work</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Typical cost range</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Type of work</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Typical cost range</th>
                       </tr>
                     </thead>
                     <tbody className="text-ink-light">
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Localised patch repair (1–3 small areas)</td>
                         <td className="px-4 py-3">$800 – $3,000</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Gel coat respray (cosmetic refresh, no structural work)</td>
                         <td className="px-4 py-3">$5,000 – $9,000</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Full resurface  -  gel coat over prepared surface</td>
                         <td className="px-4 py-3">$8,000 – $15,000</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Full resurface  -  epoxy or polyurethane coating</td>
                         <td className="px-4 py-3">$6,000 – $12,000</td>
                       </tr>
@@ -247,9 +247,9 @@ export default function FibreglassPoolResurfacingCostAustralia() {
                   <li><strong>They haven't properly assessed the pool.</strong> If a contractor quotes over the phone or from a single photo without inspecting the pool in person, the quote is either padded with contingency (you pay for their uncertainty) or too low (and you'll get hit with variations once work starts).</li>
                 </ul>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Already have a quote and want a second opinion?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Already have a quote and want a second opinion?</p>
+                  <p className="text-sm text-ink-light">
                     Use the <Link href="/PoolCheckReport" className="underline font-medium">Pool Check Report</Link>  -  send me your pool photos and I'll assess the condition and recommend what work is actually needed.
                   </p>
                 </div>

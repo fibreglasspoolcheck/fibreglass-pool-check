@@ -91,9 +91,9 @@ export default function BuyingHouseWithFibreglassPool() {
                   This guide covers the eight things I check on every pool assessment, so you know what to look for at the next open home.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Short on time?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Short on time?</p>
+                  <p className="text-sm text-ink-light">
                     Download the free <Link href="/RedFlagsGuide" className="underline font-medium">Red Flags Guide</Link> for a quick-reference checklist you can take to inspections, or get a full <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link> where I assess your specific pool from photos.
                   </p>
                 </div>

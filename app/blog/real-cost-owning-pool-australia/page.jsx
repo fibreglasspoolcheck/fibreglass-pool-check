@@ -87,9 +87,9 @@ export default function RealCostOwningPoolAustralia() {
                   I work on fibreglass pools every day. I see what homeowners actually spend  -  not the best-case numbers the pool industry quotes, and not the worst-case scare figures either. Here's my honest breakdown of what a pool costs to own in Australia, based on what I see in the real world.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Buying a property with a pool?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Buying a property with a pool?</p>
+                  <p className="text-sm text-ink-light">
                     These numbers help you budget. But if you want to know the condition of a specific pool before you buy, get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  it'll tell you what repairs are coming and what they'll cost.
                   </p>
                 </div>
@@ -105,47 +105,47 @@ export default function RealCostOwningPoolAustralia() {
                 <h2 className="font-serif text-2xl text-ink mt-10 mb-4">Annual cost breakdown</h2>
 
                 <div className="overflow-x-auto my-6">
-                  <table className="w-full text-sm text-left border border-slate-200 rounded-lg">
-                    <thead className="bg-slate-50">
+                  <table className="w-full text-sm text-left border border-border-warm rounded-lg">
+                    <thead className="bg-warm-white">
                       <tr>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Expense</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Annual cost range</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Expense</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Annual cost range</th>
                       </tr>
                     </thead>
                     <tbody className="text-ink-light">
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Chemicals (salt, acid, stabiliser, etc.)</td>
                         <td className="px-4 py-3">$400 to $800</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Electricity (pump, chlorinator, heating if applicable)</td>
                         <td className="px-4 py-3">$600 to $1,500</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Water (top-ups, backwashing)</td>
                         <td className="px-4 py-3">$100 to $300</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Pool servicing / cleaning</td>
                         <td className="px-4 py-3">$0 (DIY) to $2,400 (professional)</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Insurance (pool-related premium increase)</td>
                         <td className="px-4 py-3">$100 to $300</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Pool safety compliance (inspection, fencing maintenance)</td>
                         <td className="px-4 py-3">$50 to $200</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Minor repairs and consumables</td>
                         <td className="px-4 py-3">$100 to $500</td>
                       </tr>
-                      <tr className="bg-slate-50 font-semibold">
+                      <tr className="bg-warm-white font-semibold">
                         <td className="px-4 py-3">Total (DIY maintenance)</td>
                         <td className="px-4 py-3">$1,350 to $3,600</td>
                       </tr>
-                      <tr className="bg-slate-50 font-semibold">
+                      <tr className="bg-warm-white font-semibold">
                         <td className="px-4 py-3">Total (professional maintenance)</td>
                         <td className="px-4 py-3">$2,750 to $6,000</td>
                       </tr>
@@ -224,36 +224,36 @@ export default function RealCostOwningPoolAustralia() {
                 </p>
 
                 <div className="overflow-x-auto my-6">
-                  <table className="w-full text-sm text-left border border-slate-200 rounded-lg">
-                    <thead className="bg-slate-50">
+                  <table className="w-full text-sm text-left border border-border-warm rounded-lg">
+                    <thead className="bg-warm-white">
                       <tr>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Major expense</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Cost</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Frequency</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Major expense</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Cost</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Frequency</th>
                       </tr>
                     </thead>
                     <tbody className="text-ink-light">
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Gelcoat resurface</td>
                         <td className="px-4 py-3">$8,000 to $15,000</td>
                         <td className="px-4 py-3">Every 10 to 15 years</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Pump replacement</td>
                         <td className="px-4 py-3">$800 to $2,000</td>
                         <td className="px-4 py-3">Every 8 to 12 years</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Filter replacement or media change</td>
                         <td className="px-4 py-3">$300 to $1,500</td>
                         <td className="px-4 py-3">Every 5 to 15 years</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Chlorinator cell replacement</td>
                         <td className="px-4 py-3">$400 to $900</td>
                         <td className="px-4 py-3">Every 3 to 7 years</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Pool fence repairs / compliance upgrade</td>
                         <td className="px-4 py-3">$500 to $3,000</td>
                         <td className="px-4 py-3">As needed</td>

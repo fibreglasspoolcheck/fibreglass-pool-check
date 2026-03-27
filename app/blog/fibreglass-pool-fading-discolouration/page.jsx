@@ -91,9 +91,9 @@ export default function FibreglassPoolFadingDiscolouration() {
                   Here's how to tell the difference.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Not sure what's causing your pool's colour change?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Not sure what's causing your pool's colour change?</p>
+                  <p className="text-sm text-ink-light">
                     Get a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link>  -  send me photos and I'll identify the cause and tell you whether it's cosmetic, fixable, or something more serious.
                   </p>
                 </div>
@@ -215,55 +215,55 @@ export default function FibreglassPoolFadingDiscolouration() {
                   Not at all. This is a cosmetic characteristic of the manufacturing process, not a defect or sign of damage. If the colour variation has been there since installation and hasn't changed, it's just how the pool was made. No action needed.
                 </p>
 
-                <div className="bg-orange-50 border border-orange-200 rounded-xl p-6 my-8">
-                  <p className="text-sm text-orange-800 font-medium mb-1">Not sure which type of discolouration you're looking at?</p>
-                  <p className="text-sm text-orange-700">
+                <div className="bg-warm-white border border-border-warm rounded-xl p-6 my-8">
+                  <p className="text-sm text-ink font-medium mb-1">Not sure which type of discolouration you're looking at?</p>
+                  <p className="text-sm text-ink-light">
                     Download the free <Link href="/RedFlagsGuide" className="underline font-medium">Red Flags Guide</Link> for visual references of common pool problems, or send me photos for a <Link href="/PoolCheckReport/order" className="underline font-medium">Pool Check Report ($149)</Link> and I'll identify exactly what's going on.
                   </p>
                 </div>
 
                 <h2 className="font-serif text-2xl text-ink mt-10 mb-4">Quick reference: cause, fix, and cost</h2>
                 <div className="overflow-x-auto my-6">
-                  <table className="w-full text-sm text-left border border-slate-200 rounded-lg">
-                    <thead className="bg-slate-50">
+                  <table className="w-full text-sm text-left border border-border-warm rounded-lg">
+                    <thead className="bg-warm-white">
                       <tr>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Cause</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Fixable without resurfacing?</th>
-                        <th className="px-4 py-3 font-semibold text-ink border-b border-slate-200">Typical cost</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Cause</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Fixable without resurfacing?</th>
+                        <th className="px-4 py-3 font-semibold text-ink border-b border-border-warm">Typical cost</th>
                       </tr>
                     </thead>
                     <tbody className="text-ink-light">
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">UV fading (mild)</td>
                         <td className="px-4 py-3">Yes  -  polish/compound</td>
                         <td className="px-4 py-3">$300 to $800</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">UV fading (severe)</td>
                         <td className="px-4 py-3">No  -  resurface needed</td>
                         <td className="px-4 py-3">$8,000 to $15,000</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Calcium scaling</td>
                         <td className="px-4 py-3">Yes  -  acid wash</td>
                         <td className="px-4 py-3">$400 to $1,200</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Metal staining</td>
                         <td className="px-4 py-3">Usually  -  chemical treatment</td>
                         <td className="px-4 py-3">$200 to $600</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Chemical etching</td>
                         <td className="px-4 py-3">No  -  resurface needed</td>
                         <td className="px-4 py-3">$8,000 to $15,000</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Osmosis staining</td>
                         <td className="px-4 py-3">No  -  osmosis repair + resurface</td>
                         <td className="px-4 py-3">$10,000 to $18,000+</td>
                       </tr>
-                      <tr className="border-b border-slate-100">
+                      <tr className="border-b border-border-warm">
                         <td className="px-4 py-3">Algae staining</td>
                         <td className="px-4 py-3">Usually  -  shock + clean</td>
                         <td className="px-4 py-3">$50 to $500</td>
