@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema'
+import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
   title: 'About Fibreglass Pool Check | Independent Fibreglass Pool Specialist',
@@ -47,27 +48,29 @@ export default function About() {
         { name: 'Home', url: '/' },
         { name: 'About', url: '/About' }
       ]} />
-      <section className="bg-slate-900 text-white py-16 lg:py-20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-deep text-white py-16 lg:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-deep via-deep to-ink/80 pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">10+ years hands-on with fibreglass pools</h1>
-            <p className="text-slate-300 text-lg leading-relaxed">
+            <div className="text-accent text-sm font-medium tracking-wide uppercase mb-4">About</div>
+            <h1 className="font-serif text-4xl mb-4">10+ years hands-on with fibreglass pools</h1>
+            <p className="text-warm-grey text-lg leading-relaxed">
               I've spent over a decade resurfacing, repairing, and assessing fibreglass pools across Queensland. Now I use that experience to give buyers, owners, and sellers the independent expertise they need before making expensive decisions.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="bg-cream py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
-              <div className="w-24 h-24 bg-slate-900 rounded-full mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl font-bold">BS</span>
+              <div className="w-24 h-24 bg-deep rounded-full mb-6 flex items-center justify-center">
+                <span className="text-white text-2xl font-serif">BS</span>
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Brady</h2>
-              <div className="text-orange-600 text-sm font-medium mb-4">Fibreglass Pool Specialist</div>
-              <div className="space-y-4 text-slate-600 leading-relaxed">
+              <h2 className="font-serif text-2xl text-ink mb-2">Brady</h2>
+              <div className="text-accent text-sm font-medium mb-4">Fibreglass Pool Specialist</div>
+              <div className="space-y-4 text-ink-light leading-relaxed">
                 <p>
                   I started Fibreglass Pool Check because I kept seeing the same thing: buyers getting burned by pool problems that could have been spotted by someone who knows what to look for. Building inspectors check the house  -  not the pool. And the repair bills that follow can run into tens of thousands of dollars.
                 </p>
@@ -81,8 +84,8 @@ export default function About() {
             </div>
 
             <div className="space-y-6">
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
-                <h3 className="font-bold text-slate-900 mb-4">By the numbers</h3>
+              <div className="bg-warm-white border border-border-warm rounded-xl p-6">
+                <h3 className="font-serif text-ink mb-4">By the numbers</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { stat: '250+', label: 'Pools assessed' },
@@ -90,20 +93,20 @@ export default function About() {
                     { stat: 'AUS-wide', label: 'Digital reports' },
                     { stat: '100%', label: 'Independent' },
                   ].map((item) => (
-                    <div key={item.label} className="text-center py-4 border border-slate-200 rounded-lg bg-white">
-                      <div className="text-2xl font-bold text-slate-900">{item.stat}</div>
-                      <div className="text-xs text-slate-500 mt-1">{item.label}</div>
+                    <div key={item.label} className="text-center py-4 border border-border-warm rounded-lg bg-cream">
+                      <div className="text-2xl font-serif text-ink">{item.stat}</div>
+                      <div className="text-xs text-warm-grey mt-1">{item.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-slate-50 border border-slate-200 rounded-xl p-6">
-                <h3 className="font-bold text-slate-900 mb-3">Case study: Mary Valley, QLD</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-3">
+              <div className="bg-warm-white border border-border-warm rounded-xl p-6">
+                <h3 className="font-serif text-ink mb-3">Case study: Mary Valley, QLD</h3>
+                <p className="text-ink-light text-sm leading-relaxed mb-3">
                   A buyer under contract contacted me after a standard building inspection gave their pool a clean pass. My assessment identified significant osmotic blistering and early signs of delamination  -  repairs that would have cost tens of thousands of dollars.
                 </p>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-ink-light text-sm leading-relaxed">
                   Armed with the written report, the buyer renegotiated the purchase price and proceeded with the purchase on much better terms.
                 </p>
               </div>
@@ -113,60 +116,60 @@ export default function About() {
       </section>
 
       {/* Hands-on track record */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-warm-white py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">Hands-on track record</h2>
-          <p className="text-slate-600 mb-8 max-w-2xl">
+          <h2 className="font-serif text-2xl text-ink mb-3">Hands-on track record</h2>
+          <p className="text-ink-light mb-8 max-w-2xl">
             Before launching Fibreglass Pool Check, I spent over a decade resurfacing and repairing fibreglass pools across Queensland. Here's what my clients had to say.
           </p>
 
           {/* Before/after gallery */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <div className="rounded-xl overflow-hidden border border-border-warm bg-cream">
               <div className="grid grid-cols-2">
                 <div className="relative">
                   <Image src="/images/hooper-before.jpg" alt="Pool before renovation  -  Hooper project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
+                  <span className="absolute bottom-1 left-1 bg-deep/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
                   <Image src="/images/hooper-after.jpg" alt="Pool after renovation  -  Hooper project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
+                  <span className="absolute bottom-1 left-1 bg-accent/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>
               <div className="p-3">
-                <p className="text-slate-500 text-xs">Jindalee, QLD  -  concrete to fibreglass conversion</p>
+                <p className="text-warm-grey text-xs">Jindalee, QLD  -  concrete to fibreglass conversion</p>
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <div className="rounded-xl overflow-hidden border border-border-warm bg-cream">
               <div className="grid grid-cols-2">
                 <div className="relative">
                   <Image src="/images/walsh-before.jpg" alt="Pool before renovation  -  Walsh project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
+                  <span className="absolute bottom-1 left-1 bg-deep/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
                   <Image src="/images/walsh-after.jpg" alt="Pool after renovation  -  Walsh project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
+                  <span className="absolute bottom-1 left-1 bg-accent/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>
               <div className="p-3">
-                <p className="text-slate-500 text-xs">Gympie, QLD  -  full fibreglass resurface</p>
+                <p className="text-warm-grey text-xs">Gympie, QLD  -  full fibreglass resurface</p>
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden border border-slate-200 bg-white">
+            <div className="rounded-xl overflow-hidden border border-border-warm bg-cream">
               <div className="grid grid-cols-2">
                 <div className="relative">
                   <Image src="/images/fowler-before.jpg" alt="Pool before renovation  -  Fowler project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-slate-900/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
+                  <span className="absolute bottom-1 left-1 bg-deep/80 text-white text-[10px] px-1.5 py-0.5 rounded">Before</span>
                 </div>
                 <div className="relative">
                   <Image src="/images/fowler-after.jpg" alt="Pool after renovation  -  Fowler project" width={300} height={260} className="w-full h-32 object-cover" />
-                  <span className="absolute bottom-1 left-1 bg-orange-600/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
+                  <span className="absolute bottom-1 left-1 bg-accent/90 text-white text-[10px] px-1.5 py-0.5 rounded">After</span>
                 </div>
               </div>
               <div className="p-3">
-                <p className="text-slate-500 text-xs">QLD  -  complete pool renovation</p>
+                <p className="text-warm-grey text-xs">QLD  -  complete pool renovation</p>
               </div>
             </div>
           </div>
@@ -225,7 +228,7 @@ export default function About() {
                 image: "/images/maryvalley-after.jpg",
               },
             ].map((item) => (
-              <div key={item.name} className="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col sm:flex-row">
+              <div key={item.name} className="bg-cream border border-border-warm rounded-xl overflow-hidden flex flex-col sm:flex-row">
                 <div className="relative w-full sm:w-48 h-40 sm:h-auto flex-shrink-0">
                   <Image
                     src={item.image}
@@ -235,13 +238,13 @@ export default function About() {
                   />
                 </div>
                 <div className="p-5 flex flex-col justify-center">
-                  <svg className="w-5 h-5 text-orange-600/30 mb-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-accent/30 mb-2 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                   </svg>
-                  <p className="text-slate-700 text-sm leading-relaxed mb-3">{item.quote}</p>
+                  <p className="text-ink-light text-sm leading-relaxed mb-3">{item.quote}</p>
                   <div className="text-sm">
-                    <span className="font-semibold text-slate-900">{item.name}</span>
-                    {item.location && <span className="text-slate-400 ml-1"> -  {item.location}</span>}
+                    <span className="font-semibold text-ink">{item.name}</span>
+                    {item.location && <span className="text-warm-grey ml-1"> -  {item.location}</span>}
                   </div>
                 </div>
               </div>
@@ -250,9 +253,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="bg-cream py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-8">How I work</h2>
+          <h2 className="font-serif text-2xl text-ink mb-8">How I work</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
@@ -268,37 +271,16 @@ export default function About() {
                 body: 'My reports are written to be understood by people who are not pool experts. No jargon  -  just clear findings and actionable guidance.'
               },
             ].map((item) => (
-              <div key={item.title} className="bg-white border border-slate-200 rounded-xl p-6">
-                <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{item.body}</p>
+              <div key={item.title} className="bg-warm-white border border-border-warm rounded-xl p-6">
+                <h3 className="font-serif text-ink mb-2">{item.title}</h3>
+                <p className="text-ink-light text-sm leading-relaxed">{item.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-slate-900 py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">Ready to get started?</h2>
-          <p className="text-slate-300 mb-8 max-w-md mx-auto text-sm">
-            Order a report, review your quote, or grab the free Red Flags Guide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/PoolCheckReport/order"
-              className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Order a Pool Check Report
-            </Link>
-            <Link
-              href="/Contact"
-              className="border border-white/30 hover:border-white/60 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Get in touch
-            </Link>
-          </div>
-        </div>
-      </section>
+      <DarkCTA />
     </>
   )
 }
