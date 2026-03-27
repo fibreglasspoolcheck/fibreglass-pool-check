@@ -4,7 +4,7 @@ import DarkCTA from '../components/DarkCTA'
 
 export const metadata = {
   title: 'Independent Fibreglass Pool Checks Australia',
-  description: 'Get an independent fibreglass pool inspection report or buyer checklist from a specialist with 250+ pools assessed. Australia-wide.',
+  description: 'Get an independent fibreglass pool inspection report or buyer checklist from a specialist with 250+ pools resurfaced. Australia-wide.',
 }
 
 function HomeSchema() {

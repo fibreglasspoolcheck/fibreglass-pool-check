@@ -56,7 +56,7 @@ export default function PoolCheckReport() {
       <DarkHero
         label="Most popular service"
         title="Know exactly what you're buying before it costs you thousands"
-        description="Fibreglass pool repairs can run $5,000 to $30,000+. Building inspectors aren't trained to catch fibreglass-specific issues. Get a detailed, independent assessment from a specialist who's worked on 250+ pools."
+        description="Fibreglass pool repairs can run $5,000 to $30,000+. Building inspectors aren't trained to catch fibreglass-specific issues. Get a detailed, independent assessment from a specialist who's resurfaced 250+ pools."
         price="$149"
         ctaText="Order Your Report"
         ctaHref="/PoolCheckReport/order"

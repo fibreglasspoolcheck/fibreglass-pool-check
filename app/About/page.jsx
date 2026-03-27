@@ -5,7 +5,7 @@ import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
   title: 'About | Independent Fibreglass Pool Specialist',
-  description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
+  description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools resurfaced across Australia.',
   alternates: {
     canonical: '/About',
   },
@@ -30,7 +30,7 @@ function AboutSchema() {
       "Fibreglass pool repair",
       "Pool structural assessment"
     ],
-    "description": "Independent fibreglass pool specialist with 10+ years hands-on experience and 250+ pools assessed across Australia."
+    "description": "Independent fibreglass pool specialist with 10+ years hands-on experience and 250+ pools resurfaced across Australia."
   }
   return (
     <script
@@ -88,7 +88,7 @@ export default function About() {
                 <h3 className="font-serif text-ink mb-4">By the numbers</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {[
-                    { stat: '250+', label: 'Pools assessed' },
+                    { stat: '250+', label: 'Pools resurfaced' },
                     { stat: '10+', label: 'Years experience' },
                     { stat: 'AUS-wide', label: 'Digital reports' },
                     { stat: '100%', label: 'Independent' },

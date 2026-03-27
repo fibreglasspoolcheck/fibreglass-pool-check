@@ -59,7 +59,7 @@ export default function BuyerChecklist() {
               Inspect the pool yourself, like a specialist would
             </h1>
             <p className="text-warm-grey text-lg leading-relaxed mb-6">
-              A missed fibreglass pool defect can cost <strong className="text-white">$5,000 to $20,000+</strong> in repairs. This step-by-step checklist, written by a specialist with 10+ years and 250+ pools assessed, tells you exactly what to look for, what to photograph, and when to walk away.
+              A missed fibreglass pool defect can cost <strong className="text-white">$5,000 to $20,000+</strong> in repairs. This step-by-step checklist, written by a specialist with 10+ years and 250+ pools resurfaced, tells you exactly what to look for, what to photograph, and when to walk away.
             </p>
             <div className="text-3xl font-bold text-white mb-6">
               $29 <span className="text-warm-grey text-lg font-normal">AUD</span>

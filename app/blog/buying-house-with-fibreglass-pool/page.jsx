@@ -84,7 +84,7 @@ export default function BuyingHouseWithFibreglassPool() {
                 </p>
 
                 <p className="text-ink-light leading-relaxed mt-4">
-                  I've assessed over 250 fibreglass pools across Australia, and the same problems come up again and again. Most of them are invisible to someone who hasn't worked with fibreglass  -  and that includes most building inspectors.
+                  I've resurfaced over 250 fibreglass pools across Australia, and the same problems come up again and again. Most of them are invisible to someone who hasn't worked with fibreglass  -  and that includes most building inspectors.
                 </p>
 
                 <p className="text-ink-light leading-relaxed mt-4">

@@ -5,7 +5,7 @@ import ContentSidebar from '../../components/ContentSidebar'
 
 export const metadata = {
   title: 'Free Fibreglass Pool Red Flags Guide',
-  description: 'Download our free guide to the 10 warning signs every fibreglass pool buyer needs to know. Written by a specialist with 250+ pools assessed.',
+  description: 'Download our free guide to the 10 warning signs every fibreglass pool buyer needs to know. Written by a specialist with 250+ pools resurfaced.',
   alternates: {
     canonical: '/RedFlagsGuide',
   },
@@ -27,7 +27,7 @@ export default function RedFlagsGuide() {
             <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.1em] text-accent font-sans mb-4">Free download</span>
             <h1 className="font-serif text-4xl lg:text-5xl leading-[1.15] tracking-[-0.01em] text-white mb-5">Fibreglass Pool Red Flags Guide</h1>
             <p className="text-warm-grey text-lg leading-relaxed">
-              The 10 warning signs every fibreglass pool buyer needs to know. Written by a specialist with 250+ pools assessed.
+              The 10 warning signs every fibreglass pool buyer needs to know. Written by a specialist with 250+ pools resurfaced.
             </p>
           </div>
         </div>
