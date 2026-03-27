@@ -1,8 +1,23 @@
 import './globals.css'
+import { DM_Serif_Display, DM_Sans } from 'next/font/google'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
+
+const dmSerif = DM_Serif_Display({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-dm-serif',
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
+  display: 'swap',
+})
 
 export const metadata = {
   metadataBase: new URL('https://fibreglasspoolcheck.com.au'),
@@ -89,7 +104,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="flex flex-col min-h-screen">
+      <body className={`${dmSerif.variable} ${dmSans.variable} font-sans flex flex-col min-h-screen`}>
         <Nav />
         <main className="flex-1">
           {children}
