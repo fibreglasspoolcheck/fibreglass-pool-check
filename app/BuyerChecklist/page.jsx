@@ -75,6 +75,7 @@ export default function BuyerChecklist() {
                 width={500}
                 height={600}
                 priority
+                unoptimized
                 className="w-full max-w-sm h-auto rounded-2xl"
               />
               <p className="text-slate-400 text-xs text-center mt-3">Instant download. Use on your phone at the open home.</p>

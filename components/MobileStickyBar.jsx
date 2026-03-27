@@ -3,7 +3,12 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-export default function MobileStickyBar({ targetId }) {
+export default function MobileStickyBar({
+  targetId,
+  href = '/BuyerChecklist/order',
+  title = 'Buyer Checklist',
+  subtitle = '$29 AUD - Instant download',
+}) {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -29,11 +34,11 @@ export default function MobileStickyBar({ targetId }) {
     >
       <div className="flex items-center justify-between max-w-6xl mx-auto">
         <div>
-          <div className="font-semibold text-slate-900 text-sm">Buyer Checklist</div>
-          <div className="text-slate-500 text-xs">$29 AUD - Instant download</div>
+          <div className="font-semibold text-slate-900 text-sm">{title}</div>
+          <div className="text-slate-500 text-xs">{subtitle}</div>
         </div>
         <Link
-          href="/BuyerChecklist/order"
+          href={href}
           className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
         >
           Get it
