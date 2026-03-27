@@ -4,7 +4,7 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
-  title: 'About Fibreglass Pool Check | Independent Fibreglass Pool Specialist',
+  title: 'About | Independent Fibreglass Pool Specialist',
   description: 'Meet Brady, the independent fibreglass pool specialist behind Fibreglass Pool Check. 10+ years experience, 250+ pools assessed across Australia.',
   alternates: {
     canonical: '/About',

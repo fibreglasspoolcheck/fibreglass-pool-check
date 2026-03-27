@@ -2,7 +2,7 @@ import Link from 'next/link'
 import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
-  title: 'Service Scope & Boundaries | Fibreglass Pool Check',
+  title: 'Service Scope & Boundaries',
   description: 'Understanding what Fibreglass Pool Check does and doesn\'t cover  -  service scope, limitations, and what to expect from each assessment type.',
   alternates: {
     canonical: '/ServiceBoundaries',

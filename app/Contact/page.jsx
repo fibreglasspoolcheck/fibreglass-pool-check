@@ -4,7 +4,7 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
-  title: 'Contact Fibreglass Pool Check | Get in Touch',
+  title: 'Contact | Get in Touch',
   description: 'Have questions about fibreglass pool inspections? Get in touch  -  I typically respond within a few hours.',
   alternates: {
     canonical: '/Contact',

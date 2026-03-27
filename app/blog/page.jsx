@@ -3,7 +3,7 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema'
 import DarkCTA from '../../components/DarkCTA'
 
 export const metadata = {
-  title: 'Fibreglass Pool Articles & Guides | Fibreglass Pool Check',
+  title: 'Fibreglass Pool Articles & Guides',
   description: 'Expert articles on fibreglass pool problems, repair costs, and what to look for when buying a property with a pool. Written by a specialist with 10+ years hands-on experience.',
   alternates: {
     canonical: '/blog',
