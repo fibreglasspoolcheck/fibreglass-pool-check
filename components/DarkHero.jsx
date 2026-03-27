@@ -12,7 +12,7 @@ export default function DarkHero({
 }) {
   return (
     <section className="bg-deep text-white py-16 lg:py-20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-[rgba(212,98,43,0.06)] to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[50%] h-full pointer-events-none" style={{ background: 'radial-gradient(circle at top right, rgba(212,98,43,0.06) 0%, transparent 60%)' }} />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-2xl">
           {label && (

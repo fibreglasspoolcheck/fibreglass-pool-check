@@ -42,7 +42,7 @@ export default function ContentSidebar({
             </div>
           )}
           {!hideRedFlagsGuide && (
-            <div className="p-4 bg-[#fdf8f5] rounded-lg">
+            <div className="p-4 bg-cream rounded-lg">
               <div className="font-semibold text-ink text-sm mb-1">Free Red Flags Guide</div>
               <p className="text-warm-grey text-xs leading-relaxed mb-3">
                 10 warning signs every pool buyer should know.
